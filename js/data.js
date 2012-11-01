@@ -31,7 +31,7 @@ var json = {
         {
           "data": {
             "url": "http://fedoraproject.org/easyfix", 
-            "description": "A list of easy-to-fix problems for the Fedora Infrastructure team.  Interested in getting into helping out with sysadmin work or web application development?  This should be useful to you.\n"
+            "description": "A list of easy-to-fix problems for the different projects in Fedora.  Interested in getting into helping out with sysadmin work or web application development?  This should be useful to you.\n"
           }, 
           "name": "Easyfix", 
           "id": 4
@@ -81,11 +81,19 @@ var json = {
           }, 
           "name": "The Planet", 
           "id": 10
+        }, 
+        {
+          "data": {
+            "url": "http://lists.fedoraproject.org", 
+            "description": "Mailing lists are used for communication within the community. There are lists for generic topics and lists more dedicated to a specific topic, there is for sure one for you.\n"
+          }, 
+          "name": "The Mailing lists", 
+          "id": 11
         }
       ]
     }, 
     {
-      "id": 11, 
+      "id": 12, 
       "name": "For Packagers", 
       "children": [
         {
@@ -94,7 +102,7 @@ var json = {
             "description": "Manage ACLs of your packages.\n"
           }, 
           "name": "PkgDB", 
-          "id": 12
+          "id": 13
         }, 
         {
           "data": {
@@ -102,7 +110,7 @@ var json = {
             "description": "Build your packages in a safe and trusted environment.\n"
           }, 
           "name": "Koji", 
-          "id": 13
+          "id": 14
         }, 
         {
           "data": {
@@ -110,7 +118,7 @@ var json = {
             "description": "The tool you will use to push your packages to the Fedora repositories as an update, first an update to be tested (repository: updates-testing) then a stable updates (repository: updates).\n"
           }, 
           "name": "Bodhi", 
-          "id": 14
+          "id": 15
         }, 
         {
           "data": {
@@ -118,12 +126,12 @@ var json = {
             "description": "The best place for someone outside the community to find out what is in the Fedora repositories. Which packages is present, in which version, who is maintaining it, what patches have been applied, what bugs have been reported against it. All this kind of questions can be answered there.\n"
           }, 
           "name": "Packages", 
-          "id": 15
+          "id": 16
         }
       ]
     }, 
     {
-      "id": 16, 
+      "id": 17, 
       "name": "Other", 
       "children": [
         {
@@ -132,7 +140,7 @@ var json = {
             "description": "A \"cardiogram\" for the <a href=\"http://fedmsg.com\">fedmsg</a> project.\n"
           }, 
           "name": "Busmon", 
-          "id": 17
+          "id": 18
         }, 
         {
           "data": {
@@ -140,7 +148,7 @@ var json = {
             "description": "TODO -- I dunno what to say about this.\n"
           }, 
           "name": "MirrorManager", 
-          "id": 18
+          "id": 19
         }, 
         {
           "data": {
@@ -148,7 +156,7 @@ var json = {
             "description": "Down for everyone, or just me?\n"
           }, 
           "name": "Status", 
-          "id": 19
+          "id": 20
         }, 
         {
           "data": {
@@ -156,7 +164,7 @@ var json = {
             "description": "Project hosting.\n"
           }, 
           "name": "Fedora Hosted", 
-          "id": 20
+          "id": 21
         }, 
         {
           "data": {
@@ -164,7 +172,7 @@ var json = {
             "description": "Spec files..."
           }, 
           "name": "SCM", 
-          "id": 21
+          "id": 22
         }, 
         {
           "data": {
@@ -172,7 +180,7 @@ var json = {
             "description": "Is telia down?\n"
           }, 
           "name": "Nagios", 
-          "id": 22
+          "id": 23
         }, 
         {
           "data": {
@@ -180,7 +188,7 @@ var json = {
             "description": "What happened to that httpd root process again?\n"
           }, 
           "name": "Collectd", 
-          "id": 23
+          "id": 24
         }
       ]
     }
