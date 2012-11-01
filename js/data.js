@@ -1,65 +1,86 @@
 var json = {
   "id": 0, 
-  "description": "This is a landing page for Fedora Apps.  Fedora Infrastructure is <em>huge</em>; this page details only the public facing portion of it all.  Explore!\n", 
+  "data": {
+    "description": "This is a landing page for Fedora Apps.  Fedora Infrastructure is <em>huge</em>; this page details only the public facing portion of it all.  Explore!\n"
+  }, 
+  "name": "Fedora Apps", 
   "children": [
     {
       "id": 1, 
-      "description": "No clue what's going on?  That's okay.. take a look at some of these sites -- they might help you get your bearings.\n", 
+      "data": {
+        "description": "No clue what's going on?  That's okay.. take a look at some of these sites -- they might help you get your bearings.\n"
+      }, 
+      "name": "For New People", 
       "children": [
         {
-          "url": "http://ask.fedoraproject.org/", 
-          "id": 2, 
+          "data": {
+            "url": "http://ask.fedoraproject.org/", 
+            "description": "Any question at all about Fedora?  Ask it here.\n"
+          }, 
           "name": "Ask Fedora", 
-          "description": "Any question at all about Fedora?  Ask it here.\n"
+          "id": 2
         }, 
         {
-          "url": "http://apps.fedoraproject.org/tagger", 
-          "id": 3, 
+          "data": {
+            "url": "http://apps.fedoraproject.org/tagger", 
+            "description": "Help build a tag cloud of all our packages.. It's actually really useful.  It'll help improve the search of the \"Packages\" webapp.\n"
+          }, 
           "name": "Tagger", 
-          "description": "Help build a tag cloud of all our packages.. It's actually really useful.  It'll help improve the search of the \"Packages\" webapp.\n"
+          "id": 3
         }, 
         {
-          "url": "http://fedoraproject.org/easyfix", 
-          "id": 4, 
+          "data": {
+            "url": "http://fedoraproject.org/easyfix", 
+            "description": "A list of easy-to-fix problems for the Fedora Infrastructure team.  Interested in getting into helping out with sysadmin work or web application development?  This should be useful to you.\n"
+          }, 
           "name": "Easyfix", 
-          "description": "A list of easy-to-fix problems for the Fedora Infrastructure team.  Interested in getting into helping out with sysadmin work or web application development?  This should be useful to you.\n"
+          "id": 4
         }, 
         {
-          "url": "http://docs.fedoraproject.org", 
-          "id": 5, 
+          "data": {
+            "url": "http://docs.fedoraproject.org", 
+            "description": "RTFM!  Everything you could ever want to know. Probably the best place to find documentation about Fedora, including the changes between releases (and a big kudos to the translation teams to keep this resource up to date in the different languages!)\n"
+          }, 
           "name": "Docs", 
-          "description": "RTFM!  Everything you could ever want to know. Probably the best place to find documentation about Fedora, including the changes between releases (and a big kudos to the translation teams to keep this ressource up to date in the different languages!)\n"
+          "id": 5
         }
-      ], 
-      "name": "For New People"
+      ]
     }, 
     {
       "id": 6, 
       "name": "For the Community", 
       "children": [
         {
-          "url": "http://fedoraproject.org/wiki", 
-          "id": 7, 
+          "data": {
+            "url": "http://fedoraproject.org/wiki", 
+            "description": "Maintain your own user profile page, contribute to documents about features, process, and governance.\n"
+          }, 
           "name": "The Wiki", 
-          "description": "Maintain your own user profile page, contribute to documents about features, process, and governance.\n"
+          "id": 7
         }, 
         {
-          "url": "http://admin.fedoraproject.org/voting", 
-          "id": 8, 
+          "data": {
+            "url": "http://admin.fedoraproject.org/voting", 
+            "description": "As a member of the community, you can now vote for the different steering committees, for this you will use the Election application.  Voting is a right and a duty as a member of the community; it is one of the things you can do to influence the development of Fedora.\n"
+          }, 
           "name": "Elections", 
-          "description": "As a member of the community, you can now vote for the different steering committees, for this you will use the Election application.  Voting is a right and a duty as a member of the community; it is one of the things you can do to influence the development of Fedora.\n"
+          "id": 8
         }, 
         {
-          "url": "http://fedorapeople.org", 
-          "id": 9, 
+          "data": {
+            "url": "http://fedorapeople.org", 
+            "description": "Being a community member you gain access to fedorapeople which provides you with a space on the web where you can upload files to share them with the community.\n"
+          }, 
           "name": "FedoraPeople", 
-          "description": "Being a community member you gain access to fedorapeople which provides you with a space on the web where you can upload files to share them with the community.\n"
+          "id": 9
         }, 
         {
-          "url": "http://planet.fedoraproject.org", 
-          "id": 10, 
+          "data": {
+            "url": "http://planet.fedoraproject.org", 
+            "description": "The planet is a blog aggregator, a space accessible to you as a community member where you can express your opinion and talk about what you are doing for Fedora.\n"
+          }, 
           "name": "The Planet", 
-          "description": "The planet is a blog aggregator, a space accessible to you as a community member where you can express your opinion and talk about what you are doing for Fedora.\n"
+          "id": 10
         }
       ]
     }, 
@@ -68,28 +89,36 @@ var json = {
       "name": "For Packagers", 
       "children": [
         {
-          "url": "http://admin.fedoraproject.org/pkgdb", 
-          "id": 12, 
+          "data": {
+            "url": "http://admin.fedoraproject.org/pkgdb", 
+            "description": "Manage ACLs of your packages.\n"
+          }, 
           "name": "PkgDB", 
-          "description": "Manage ACLs of your packages.\n"
+          "id": 12
         }, 
         {
-          "url": "http://koji.fedoraproject.org/koji", 
-          "id": 13, 
+          "data": {
+            "url": "http://koji.fedoraproject.org/koji", 
+            "description": "Build your packages in a safe and trusted environment.\n"
+          }, 
           "name": "Koji", 
-          "description": "Build your packages in a safe and trusted environment.\n"
+          "id": 13
         }, 
         {
-          "url": "http://admin.fedoraproject.org/updates", 
-          "id": 14, 
+          "data": {
+            "url": "http://admin.fedoraproject.org/updates", 
+            "description": "The tool you will use to push your packages to the Fedora repositories as an update, first an update to be tested (repository: updates-testing) then a stable updates (repository: updates).\n"
+          }, 
           "name": "Bodhi", 
-          "description": "The tool you will use to push your packages to the Fedora repositories as an update, first an update to be tested (repository: updates-testing) then a stable updates (repository: updates).\n"
+          "id": 14
         }, 
         {
-          "url": "http://apps.fedoraproject.org/packages", 
-          "id": 15, 
+          "data": {
+            "url": "http://apps.fedoraproject.org/packages", 
+            "description": "The best place for someone outside the community to find out what is in the Fedora repositories. Which packages is present, in which version, who is maintaining it, what patches have been applied, what bugs have been reported against it. All this kind of questions can be answered there.\n"
+          }, 
           "name": "Packages", 
-          "description": "The best place for someone outside the community to find out what is in the Fedora repositories. Which packages is present, in which version, who is maintaining it, what patches have been applied, what bugs have been reported against it. All this kind of questions can be answered there.\n"
+          "id": 15
         }
       ]
     }, 
@@ -98,48 +127,62 @@ var json = {
       "name": "Other", 
       "children": [
         {
-          "url": "http://apps.fedoraproject.org/busmon", 
-          "id": 17, 
+          "data": {
+            "url": "http://apps.fedoraproject.org/busmon", 
+            "description": "A \"cardiogram\" for the <a href=\"http://fedmsg.com\">fedmsg</a> project.\n"
+          }, 
           "name": "Busmon", 
-          "description": "A \"cardiogram\" for the <a href=\"http://fedmsg.com\">fedmsg</a> project.\n"
+          "id": 17
         }, 
         {
-          "url": "http://mirrors.fedoraproject.org", 
-          "id": 18, 
+          "data": {
+            "url": "http://mirrors.fedoraproject.org", 
+            "description": "TODO -- I dunno what to say about this.\n"
+          }, 
           "name": "MirrorManager", 
-          "description": "TODO -- I dunno what to say about this.\n"
+          "id": 18
         }, 
         {
-          "url": "http://status.fedoraproject.org", 
-          "id": 19, 
+          "data": {
+            "url": "http://status.fedoraproject.org", 
+            "description": "Down for everyone, or just me?\n"
+          }, 
           "name": "Status", 
-          "description": "Down for everyone, or just me?\n"
+          "id": 19
         }, 
         {
-          "url": "http://fedorahosted.org", 
-          "id": 20, 
+          "data": {
+            "url": "http://fedorahosted.org", 
+            "description": "Project hosting.\n"
+          }, 
           "name": "Fedora Hosted", 
-          "description": "Project hosting.\n"
+          "id": 20
         }, 
         {
-          "url": "http://pkgs.fedoraproject.org/cgit Spec files...", 
+          "data": {
+            "url": "http://pkgs.fedoraproject.org/cgit", 
+            "description": "Spec files..."
+          }, 
           "name": "SCM", 
           "id": 21
         }, 
         {
-          "url": "http://admin.fedoraproject.org/nagios", 
-          "id": 22, 
+          "data": {
+            "url": "http://admin.fedoraproject.org/nagios", 
+            "description": "Is telia down?\n"
+          }, 
           "name": "Nagios", 
-          "description": "Is telia down?\n"
+          "id": 22
         }, 
         {
-          "url": "http://admin.fedoraproject.org/collectd", 
-          "id": 23, 
+          "data": {
+            "url": "http://admin.fedoraproject.org/collectd", 
+            "description": "What happened to that httpd root process again?\n"
+          }, 
           "name": "Collectd", 
-          "description": "What happened to that httpd root process again?\n"
+          "id": 23
         }
       ]
     }
-  ], 
-  "name": "Fedora Apps"
+  ]
 }

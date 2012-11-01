@@ -2,122 +2,145 @@
 ---
 
 name:   Fedora Apps
-description: >
-    This is a landing page for Fedora Apps.  Fedora Infrastructure is
-    <em>huge</em>; this page details only the public facing portion of
-    it all.  Explore!
+data:
+    description: >
+        This is a landing page for Fedora Apps.  Fedora Infrastructure is
+        <em>huge</em>; this page details only the public facing portion of
+        it all.  Explore!
 children:
 -   name:     For New People
-    description: >
-        No clue what's going on?  That's okay.. take a look at some of
-        these sites -- they might help you get your bearings.
+    data:
+        description: >
+            No clue what's going on?  That's okay.. take a look at some of
+            these sites -- they might help you get your bearings.
     children:
         -   name:   Ask Fedora
-            url:    http://ask.fedoraproject.org/
-            description: >
-                Any question at all about Fedora?  Ask it here.
+            data:
+                url:    http://ask.fedoraproject.org/
+                description: >
+                    Any question at all about Fedora?  Ask it here.
         -   name:   Tagger
-            url:    http://apps.fedoraproject.org/tagger
-            description: >
-                Help build a tag cloud of all our packages.. It's actually
-                really useful.  It'll help improve the search of the
-                "Packages" webapp.
+            data:
+                url:    http://apps.fedoraproject.org/tagger
+                description: >
+                    Help build a tag cloud of all our packages.. It's actually
+                    really useful.  It'll help improve the search of the
+                    "Packages" webapp.
         -   name:   Easyfix
-            url:    http://fedoraproject.org/easyfix
-            description: >
-                A list of easy-to-fix problems for the Fedora Infrastructure
-                team.  Interested in getting into helping out with sysadmin
-                work or web application development?  This should be useful
-                to you.
+            data:
+                url:    http://fedoraproject.org/easyfix
+                description: >
+                    A list of easy-to-fix problems for the Fedora Infrastructure
+                    team.  Interested in getting into helping out with sysadmin
+                    work or web application development?  This should be useful
+                    to you.
         -   name:   Docs
-            url:    http://docs.fedoraproject.org
-            description: >
-                RTFM!  Everything you could ever want to know.
-                Probably the best place to find documentation about Fedora, including the
-                changes between releases (and a big kudos to the translation teams to keep
-                this ressource up to date in the different languages!)
+            data:
+                url:    http://docs.fedoraproject.org
+                description: >
+                    RTFM!  Everything you could ever want to know.
+                    Probably the best place to find documentation about Fedora,
+                    including the changes between releases (and a big kudos to
+                    the translation teams to keep this resource up to date in
+                    the different languages!)
 
 -   name:     For the Community
     children:
         -   name:   The Wiki
-            url:    http://fedoraproject.org/wiki
-            description: >
-                Maintain your own user profile page, contribute to documents
-                about features, process, and governance.
+            data:
+                url:    http://fedoraproject.org/wiki
+                description: >
+                    Maintain your own user profile page, contribute to documents
+                    about features, process, and governance.
         -   name:   Elections
-            url:    http://admin.fedoraproject.org/voting
-            description: >
-                As a member of the community, you can now vote for the
-                different steering committees, for this you will use the
-                Election application.  Voting is a right and a duty as a member
-                of the community; it is one of the things you can do to
-                influence the development of Fedora.
+            data:
+                url:    http://admin.fedoraproject.org/voting
+                description: >
+                    As a member of the community, you can now vote for the
+                    different steering committees, for this you will use the
+                    Election application.  Voting is a right and a duty as a member
+                    of the community; it is one of the things you can do to
+                    influence the development of Fedora.
         -   name:   FedoraPeople
-            url:    http://fedorapeople.org
-            description: >
-                Being a community member you gain access to fedorapeople which
-                provides you with a space on the web where you can upload
-                files to share them with the community.
+            data:
+                url:    http://fedorapeople.org
+                description: >
+                    Being a community member you gain access to fedorapeople which
+                    provides you with a space on the web where you can upload
+                    files to share them with the community.
         -   name:   The Planet
-            url:    http://planet.fedoraproject.org
-            description: >
-                The planet is a blog aggregator, a space accessible to you
-                as a community member where you can express your opinion and
-                talk about what you are doing for Fedora.
+            data:
+                url:    http://planet.fedoraproject.org
+                description: >
+                    The planet is a blog aggregator, a space accessible to you
+                    as a community member where you can express your opinion and
+                    talk about what you are doing for Fedora.
 
 -   name:   For Packagers
     children:
         -   name:   PkgDB
-            url:    http://admin.fedoraproject.org/pkgdb
-            description: >
-                Manage ACLs of your packages.
+            data:
+                url:    http://admin.fedoraproject.org/pkgdb
+                description: >
+                    Manage ACLs of your packages.
         -   name:   Koji
-            url:    http://koji.fedoraproject.org/koji
-            description: >
-                Build your packages in a safe and trusted environment.
+            data:
+                url:    http://koji.fedoraproject.org/koji
+                description: >
+                    Build your packages in a safe and trusted environment.
         -   name:   Bodhi
-            url:    http://admin.fedoraproject.org/updates
-            description: >
-                The tool you will use to push your packages to the Fedora
-                repositories as an update, first an update to be tested
-                (repository: updates-testing) then a stable updates
-                (repository: updates).
+            data:
+                url:    http://admin.fedoraproject.org/updates
+                description: >
+                    The tool you will use to push your packages to the Fedora
+                    repositories as an update, first an update to be tested
+                    (repository: updates-testing) then a stable updates
+                    (repository: updates).
         -   name:   Packages
-            url:    http://apps.fedoraproject.org/packages
-            description: >
-                The best place for someone outside the community to find out
-                what is in the Fedora repositories. Which packages is present,
-                in which version, who is maintaining it, what patches have
-                been applied, what bugs have been reported against it. All
-                this kind of questions can be answered there.
+            data:
+                url:    http://apps.fedoraproject.org/packages
+                description: >
+                    The best place for someone outside the community to find out
+                    what is in the Fedora repositories. Which packages is present,
+                    in which version, who is maintaining it, what patches have
+                    been applied, what bugs have been reported against it. All
+                    this kind of questions can be answered there.
 
 -   name:   Other
     children:
         -   name:   Busmon
-            url:    http://apps.fedoraproject.org/busmon
-            description: >
-                A "cardiogram" for the <a href="http://fedmsg.com">fedmsg</a>
-                project.
+            data:
+                url:    http://apps.fedoraproject.org/busmon
+                description: >
+                    A "cardiogram" for the <a href="http://fedmsg.com">fedmsg</a>
+                    project.
         -   name:   MirrorManager
-            url:    http://mirrors.fedoraproject.org
-            description: >
-                TODO -- I dunno what to say about this.
+            data:
+                url:    http://mirrors.fedoraproject.org
+                description: >
+                    TODO -- I dunno what to say about this.
         -   name:   Status
-            url:    http://status.fedoraproject.org
-            description: >
-                Down for everyone, or just me?
+            data:
+                url:    http://status.fedoraproject.org
+                description: >
+                    Down for everyone, or just me?
         -   name:   Fedora Hosted
-            url:    http://fedorahosted.org
-            description: >
-                Project hosting.
+            data:
+                url:    http://fedorahosted.org
+                description: >
+                    Project hosting.
         -   name:   SCM
-            url:    http://pkgs.fedoraproject.org/cgit
-                Spec files...
+            data:
+                url:    http://pkgs.fedoraproject.org/cgit
+                description:
+                    Spec files...
         -   name:   Nagios
-            url:    http://admin.fedoraproject.org/nagios
-            description: >
-                Is telia down?
+            data:
+                url:    http://admin.fedoraproject.org/nagios
+                description: >
+                    Is telia down?
         -   name:   Collectd
-            url:    http://admin.fedoraproject.org/collectd
-            description: >
-                What happened to that httpd root process again?
+            data:
+                url:    http://admin.fedoraproject.org/collectd
+                description: >
+                    What happened to that httpd root process again?

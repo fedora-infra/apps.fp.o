@@ -26,9 +26,15 @@ function init() {
         },
 
         onBeforeCompute: function(node){
-            //Add the relation list in the right column.
-            //This list is taken from the data property of each JSON node.
-            //$jit.id('inner-details').innerHTML = node.data.relation;
+            var header = "<h4>" + node.name + "</h4>";
+            var body = "<p>" + node.data.description + "</p>";
+            var button = "";
+            if ( node.data.url != undefined ) {
+                button += "<a href='" + node.data.url + "' target='_blank' class='btn btn-primary'>";
+                button += "Peep dat!";
+                button += "</a>";
+            }
+            $jit.id('details').innerHTML = header + body + button;
         },
 
         //Add the name of the node in the correponding label
