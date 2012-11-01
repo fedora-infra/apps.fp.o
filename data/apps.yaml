@@ -30,8 +30,8 @@ children:
             data:
                 url:    http://fedoraproject.org/easyfix
                 description: >
-                    A list of easy-to-fix problems for the Fedora Infrastructure
-                    team.  Interested in getting into helping out with sysadmin
+                    A list of easy-to-fix problems for the different projects in
+                    Fedora.  Interested in getting into helping out with sysadmin
                     work or web application development?  This should be useful
                     to you.
         -   name:   Docs
