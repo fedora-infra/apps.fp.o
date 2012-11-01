@@ -8,3 +8,13 @@
     /* This is hilarious. */
     text-indent: -9999px;
 }
+
+.hero-unit {
+    height: 400px;
+    margin-top: -90px;
+    margin-bottom: -10px;
+}
+
+#mainvis {
+    margin-top: 185px;
+}
