@@ -7,14 +7,6 @@ function init() {
         //Where to append the visualization
         injectInto: 'mainvis',
 
-        //Add navigation capabilities:
-        //zooming by scrolling and panning.
-        Navigation: {
-            enable: true,
-            panning: true,
-            zooming: 10
-        },
-
         //Set Node and Edge styles.
         Node: {
             color: DARK_BLUE,
