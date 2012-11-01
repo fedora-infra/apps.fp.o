@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
+    <title>Fedora Apps</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <style type="text/css" link="bootstrap/css/bootstrap.min.css"></style>
-    <style type="text/css" link="bootstrap/css/bootstrap-responsive.min.css">
-    </style>
+    <link type="text/css" rel="stylesheet"
+    href="bootstrap/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet"
+    href="bootstrap/css/bootstrap-responsive.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/site.css" />
     <script language="javascript" type="text/javascript" src="js/jit/jit.js">
     </script>
     <script language="javascript" type="text/javascript" src="js/data.js">
@@ -12,12 +15,36 @@
     <script language="javascript" type="text/javascript" src="js/graph.js">
     </script>
   </head>
+
   <body onload="init();">
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span12">
+          <h1><span class="logo">Fedora</span>apps</h1>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well">
+            info can go here...
+          </div><!--/.well -->
+        </div><!--/span-->
 
-    <div id="container">
-      <h1>Fedora Apps</h1>
-      <div id="mainvis"></div>
-    </div>
+        <div class="span9">
+          <div class="hero-unit">
+            <div id="mainvis"></div>
+          </div>
+        </div> <!--span9-->
 
+      </div> <!-- row-fluid -->
+
+      <hr>
+
+      <footer>
+      <p>threebean made this</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
   </body>
 </html>
+

@@ -1,0 +1,10 @@
+.logo {
+    display: block;
+    width: 155px;
+    height: 45px;
+    margin: 0;
+    background: url('../img/fedora-logo.png');
+    background-repeat: no-repeat;
+    /* This is hilarious. */
+    text-indent: -9999px;
+}
