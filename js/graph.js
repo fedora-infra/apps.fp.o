@@ -65,6 +65,7 @@ function init() {
     });
     //load JSON data
     rgraph.loadJSON(json);
+
     //trigger small animation
     rgraph.graph.eachNode(function(n) {
         var pos = n.getPos();
@@ -75,4 +76,8 @@ function init() {
         modes:['polar'],
         duration: 2000
     });
+
+    // A hack to get the graph to write data to the left-most pane before it
+    // otherwise would.
+    rgraph.config.onBeforeCompute(json);
 }
