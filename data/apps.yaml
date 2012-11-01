@@ -75,6 +75,15 @@ children:
                     The planet is a blog aggregator, a space accessible to you
                     as a community member where you can express your opinion and
                     talk about what you are doing for Fedora.
+       -   name:   The Mailing lists
+            data:
+                url:    http://lists.fedoraproject.org
+                description: >
+                    Mailing lists are used for communication within the community.
+                    There are lists for generic topics and lists more dedicated
+                    to a specific topic, there is for sure one for you.
+
+
 
 -   name:   For Packagers
     children:
