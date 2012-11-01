@@ -1,16 +1,11 @@
+var DARK_BLUE = "#294172";
+var LIGHT_BLUE = "#4872c7";
+var BLACK = "#03060a";
+
 function init() {
-    console.log("HAI");
     var rgraph = new $jit.RGraph({
         //Where to append the visualization
         injectInto: 'mainvis',
-
-        //Optional: create a background canvas that plots
-        //concentric circles.
-        background: {
-            CanvasStyles: {
-                strokeStyle: '#555'
-            }
-        },
 
         //Add navigation capabilities:
         //zooming by scrolling and panning.
@@ -22,11 +17,11 @@ function init() {
 
         //Set Node and Edge styles.
         Node: {
-            color: '#ddeeff'
+            color: DARK_BLUE,
         },
 
         Edge: {
-            color: '#C17878',
+            color: LIGHT_BLUE,
             lineWidth:1.5
         },
 
@@ -34,7 +29,6 @@ function init() {
             //Add the relation list in the right column.
             //This list is taken from the data property of each JSON node.
             //$jit.id('inner-details').innerHTML = node.data.relation;
-            console.log("on before compute");
         },
 
         //Add the name of the node in the correponding label
@@ -43,10 +37,8 @@ function init() {
         onCreateLabel: function(domElement, node){
             domElement.innerHTML = node.name;
             domElement.onclick = function(){
-                console.log("on click..");
                 rgraph.onClick(node.id, {
                     onComplete: function() {
-                        console.log("on complete.. awesome");
                         // awesome
                     }
                 });
@@ -58,17 +50,14 @@ function init() {
             var style = domElement.style;
             style.display = '';
             style.cursor = 'pointer';
+            style.color = BLACK;
 
-            if (node._depth <= 1) {
+            if (node._depth == 0) {
+                style.fontSize = "1em";
+            } else if (node._depth <= 1) {
                 style.fontSize = "0.8em";
-                style.color = "#ccc";
-
-            } else if(node._depth == 2){
-                style.fontSize = "0.7em";
-                style.color = "#494949";
-
-            } else {
-                style.display = 'none';
+            } else if(node._depth >= 2){
+                style.fontSize = "0.6em";
             }
 
             var left = parseInt(style.left);
@@ -81,7 +70,7 @@ function init() {
     //trigger small animation
     rgraph.graph.eachNode(function(n) {
         var pos = n.getPos();
-        pos.setc(-200, -200);
+        pos.setc(0, 0);
     });
     rgraph.compute('end');
     rgraph.fx.animate({
