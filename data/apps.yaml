@@ -1,0 +1,47 @@
+%YAML 1.2
+---
+
+name:   Fedora Apps
+children:
+-   name:     For New People
+    children:
+        -   name:   Ask Fedora
+            url:    http://ask.fedoraproject.org/
+        -   name:   Tagger
+            url:    http://apps.fedoraproject.org/tagger
+        -   name:   Easyfix
+            url:    http://fedoraproject.org/easyfix
+        -   name:   Docs
+            url:    http://docs.fedoraproject.org
+-   name:     For the Community
+    children:
+        -   name:   The Wiki
+            url:    http://fedoraproject.org/wiki
+        -   name:   Elections
+            url:    http://admin.fedoraproject.org/voting
+        -   name:   FedoraPeople
+            url:    http://fedorapeople.org
+        -   name:   The Planet
+            url:    http://planet.fedoraproject.org
+-   name:   For Packagers
+    children:
+        -   name:   PkgDB
+            url:    http://admin.fedoraproject.org/pkgdb
+        -   name:   Koji
+            url:    http://koji.fedoraproject.org/koji
+        -   name:   Bodhi
+            url:    http://admin.fedoraproject.org/updates
+        -   name:   Packages
+            url:    http://apps.fedoraproject.org/packages
+-   name:   Other
+    children:
+        -   name:   Busmon
+            url:    http://apps.fedoraproject.org/busmon
+        -   name:   MirrorManager
+            url:    http://mirrors.fedoraproject.org
+        -   name:   Status
+            url:    http://status.fedoraproject.org
+        -   name:   Fedora Hosted
+            url:    http://fedorahosted.org
+        -   name:   SCM
+            url:    http://pkgs.fedoraproject.org/cgit
