@@ -45,6 +45,9 @@ children:
                     the different languages!)
 
 -   name:     For the Community
+    data:
+        description: >
+            TODO -- put a description here.
     children:
         -   name:   The Wiki
             icon:   mediawiki.png
@@ -89,6 +92,9 @@ children:
 
 
 -   name:   For Packagers
+    data:
+        description: >
+            TODO -- put a description here.
     children:
         -   name:   PkgDB
             data:
@@ -121,6 +127,9 @@ children:
                     this kind of questions can be answered there.
 
 -   name:   Other
+    data:
+        description: >
+            TODO -- not sure how to categorize these yet.
     children:
         -   name:   Busmon
             data:
