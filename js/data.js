@@ -126,8 +126,8 @@ var json = {
             "url": "http://lists.fedoraproject.org", 
             "description": "Mailing lists are used for communication within the community. There are lists for generic topics and lists more dedicated to a specific topic, there is for sure one for you.\n"
           }, 
-          "name": "<img class='icon' src='img/icons/gnu.png' /> The Mailing lists", 
-          "icon": "gnu.png"
+          "name": "<img class='icon' src='img/icons/mail.png' /> The Mailing lists", 
+          "icon": "mail.png"
         }, 
         {
           "data": {
