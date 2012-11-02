@@ -191,12 +191,13 @@ var json = {
       "name": "For Sysadmins", 
       "children": [
         {
+          "id": 22, 
           "data": {
             "url": "http://mirrors.fedoraproject.org", 
             "description": "Fedora is distributed to millions of systems globally. This would not be possible without the donations of time, disk space, and bandwidth by hundreds of volunteer system administrators and their companies or institutions.  Your fast download experience is made possible by these donations.  The list on the <strong>MirrorManager</strong> site is dynamically generated every hour, listing only up-to-date mirrors. \n"
           }, 
-          "name": "MirrorManager", 
-          "id": 22
+          "name": "<img class='icon' src='img/icons/downloads.png' /> MirrorManager", 
+          "icon": "downloads.png"
         }, 
         {
           "id": 23, 

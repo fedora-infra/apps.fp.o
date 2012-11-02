@@ -176,6 +176,7 @@ children:
             Fedora (and otherwise).
     children:
         -   name:   MirrorManager
+            icon:   downloads.png
             data:
                 url:    http://mirrors.fedoraproject.org
                 description: >
