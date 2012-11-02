@@ -49,6 +49,13 @@ children:
         description: >
             Things for everyone! (chances are, this includes you).
     children:
+        -   name:   Paste
+            data:
+                url:    http://paste.stg.fedoraproject.org
+                description: >
+                    Our very own pastebin server.  If you yum install the
+                    <strong>fpaste</strong> command, it will use this site
+                    automatically.
         -   name:   Status
             icon:   status-good.png
             data:
