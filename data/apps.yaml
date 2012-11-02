@@ -49,6 +49,14 @@ children:
         description: >
             Things for everyone! (chances are, this includes you).
     children:
+        -   name:   Bugzilla
+            icon:   bugzilla.png
+            data:
+                url:    http://bugzilla.redhat.com
+                description: >
+                    The Fedora Community makes use of a bugzilla instance
+                    run by Red Hat.  Notice something wrong with a Fedora
+                    package?  You can file an official bug here.
         -   name:   Paste
             data:
                 url:    http://paste.stg.fedoraproject.org
