@@ -168,7 +168,7 @@ children:
                     of all the packages in Fedora for every release of
                     Fedora (and EPEL) are kept.. forever!  A gold mine.
 
--   name:   Sysadmins
+-   name:   For Sysadmins
     data:
         description: >
             Tools for sysadmins -- the people who run the servers who run

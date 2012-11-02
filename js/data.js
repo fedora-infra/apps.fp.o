@@ -188,7 +188,7 @@ var json = {
       "data": {
         "description": "Tools for sysadmins -- the people who run the servers who run Fedora (and otherwise).\n"
       }, 
-      "name": "Sysadmins", 
+      "name": "For Sysadmins", 
       "children": [
         {
           "data": {
