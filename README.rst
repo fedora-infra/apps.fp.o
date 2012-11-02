@@ -18,6 +18,12 @@ really!) to make it more awesome and reflective of the community's desires.
 You can see a demo version up at http://threebean.org/apps.fp.o/ right now (I
 think...)
 
+Help?
+-----
+
+If you want to help, please patch and enhance the ``data/apps.yaml`` file.  You
+probably know more about :sparkles: Fedora :sparkles: than I do.
+
 Contact
 -------
 
