@@ -23,7 +23,7 @@ function init() {
             var button = "";
             if ( node.data.url != undefined ) {
                 button += "<a href='" + node.data.url + "' target='_blank' class='btn btn-primary'>";
-                button += "Peep dat!";
+                button += "Check it out!";
                 button += "</a>";
             }
             $jit.id('details').innerHTML = header + body + button;
