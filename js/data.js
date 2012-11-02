@@ -55,6 +55,9 @@ var json = {
     }, 
     {
       "id": 6, 
+      "data": {
+        "description": "TODO -- put a description here.\n"
+      }, 
       "name": "For the Community", 
       "children": [
         {
@@ -104,6 +107,9 @@ var json = {
     }, 
     {
       "id": 12, 
+      "data": {
+        "description": "TODO -- put a description here.\n"
+      }, 
       "name": "For Packagers", 
       "children": [
         {
@@ -144,6 +150,9 @@ var json = {
     }, 
     {
       "id": 17, 
+      "data": {
+        "description": "TODO -- not sure how to categorize these yet.\n"
+      }, 
       "name": "Other", 
       "children": [
         {

@@ -47,15 +47,27 @@ children:
 -   name:     For the Community
     data:
         description: >
-            TODO -- put a description here.
+            Things for everyone! (chances are, this includes you).
     children:
+        -   name:   Status
+            icon:   status-good.png
+            data:
+                url:    http://status.fedoraproject.org
+                description: >
+                    Sometimes the Fedora Infrastructure team messes up (or
+                    lightning strikes our datacenter(s)).  Sorry about that.
+                    You can use this website to check the status.  Is it
+                    "down for everyone, or just me?"<br/>Notice the favicon
+                    in your browser tab.  It changes based on the status,
+                    so if you keep this open you can check back to it at a
+                    glance.
         -   name:   The Wiki
             icon:   mediawiki.png
             data:
                 url:    http://fedoraproject.org/wiki
                 description: >
-                    Maintain your own user profile page, contribute to documents
-                    about features, process, and governance.
+                    Maintain your own user profile page, contribute to
+                    documents about features, process, and governance.
         -   name:   Elections
             data:
                 url:    http://admin.fedoraproject.org/voting
@@ -88,13 +100,31 @@ children:
                     Mailing lists are used for communication within the community.
                     There are lists for generic topics and lists more dedicated
                     to a specific topic, there is for sure one for you.
-
-
+        -   name:   Busmon
+            data:
+                url:    http://apps.fedoraproject.org/busmon
+                description: >
+                    A "cardiogram" for the <a href="http://fedmsg.com">fedmsg</a>
+                    project.  It's not really useful for anything, but it's
+                    something pretty to look at -- it can give you the 10,000
+                    foot view of "what's going on in Fedora" in real-time.
+        -   name:   Fedora Hosted
+            icon:   trac.png
+            data:
+                url:    http://fedorahosted.org
+                description: >
+                    Fedora is dedicated to open source software. This
+                    commitment can extend beyond regular Fedora offerings.<br/>
+                    <strong>Fedora Hosted</strong> is our most feature rich
+                    hosting solution. It includes an scm, trac instance,
+                    release dir, account system for access control, etc.
+                    This is our most common hosting option.  When most groups
+                    want hosting, this is what they want.  
 
 -   name:   For Packagers
     data:
         description: >
-            TODO -- put a description here.
+            Here you'll find apps useful for Packagers' workflow.
     children:
         -   name:   PkgDB
             data:
@@ -106,7 +136,10 @@ children:
             data:
                 url:    http://koji.fedoraproject.org/koji
                 description: >
-                    Build your packages in a safe and trusted environment.
+                    Koji is the software that builds RPM packages for the
+                    Fedora project.  It uses Mock to create chroot
+                    environments to perform builds that are both safe and
+                    trusted.
         -   name:   Bodhi
             icon:   bodhi.png
             data:
@@ -114,8 +147,8 @@ children:
                 description: >
                     The tool you will use to push your packages to the Fedora
                     repositories as an update, first an update to be tested
-                    (repository: updates-testing) then a stable updates
-                    (repository: updates).
+                    (repository: updates-testing) then a stable update
+                    (repository: updates).  Behold -- the Magic Cabbage.
         -   name:   Packages
             data:
                 url:    http://apps.fedoraproject.org/packages
@@ -125,50 +158,49 @@ children:
                     in which version, who is maintaining it, what patches have
                     been applied, what bugs have been reported against it. All
                     this kind of questions can be answered there.
-
--   name:   Other
-    data:
-        description: >
-            TODO -- not sure how to categorize these yet.
-    children:
-        -   name:   Busmon
-            data:
-                url:    http://apps.fedoraproject.org/busmon
-                description: >
-                    A "cardiogram" for the <a href="http://fedmsg.com">fedmsg</a>
-                    project.
-        -   name:   MirrorManager
-            data:
-                url:    http://mirrors.fedoraproject.org
-                description: >
-                    TODO -- I dunno what to say about this.
-        -   name:   Status
-            icon:   status-good.png
-            data:
-                url:    http://status.fedoraproject.org
-                description: >
-                    Down for everyone, or just me?
-        -   name:   Fedora Hosted
-            icon:   trac.png
-            data:
-                url:    http://fedorahosted.org
-                description: >
-                    Project hosting.
         -   name:   SCM
             icon:   git-logo.png
             data:
                 url:    http://pkgs.fedoraproject.org/cgit
                 description:
-                    Spec files...
+                    Ever wonder <em>Exactly</em> what is in the new release
+                    of a Fedora package?  This is where the change histories
+                    of all the packages in Fedora for every release of
+                    Fedora (and EPEL) are kept.. forever!  A gold mine.
+
+-   name:   Sysadmins
+    data:
+        description: >
+            Tools for sysadmins -- the people who run the servers who run
+            Fedora (and otherwise).
+    children:
+        -   name:   MirrorManager
+            data:
+                url:    http://mirrors.fedoraproject.org
+                description: >
+                    Fedora is distributed to millions of systems globally.
+                    This would not be possible without the donations of time,
+                    disk space, and bandwidth by hundreds of volunteer system
+                    administrators and their companies or institutions.  Your
+                    fast download experience is made possible by these
+                    donations.  The list on the <strong>MirrorManager</strong>
+                    site is dynamically generated every hour, listing only
+                    up-to-date mirrors. 
         -   name:   Nagios
             icon:   nagios-logo.png
             data:
                 url:    http://admin.fedoraproject.org/nagios
                 description: >
-                    Is telia down?
+                    "Is telia down?"  The answer can most definitively be
+                    found here (and in detail).  The Fedora Infrastructure
+                    team uses Nagios to monitor the servers that serve
+                    Fedora.  Accessing most details requires membership
+                    in the <em>sysadmin</em> group.
         -   name:   Collectd
             icon:   collectd.png
             data:
                 url:    http://admin.fedoraproject.org/collectd
                 description: >
-                    What happened to that httpd root process again?
+                    Tracks and displays statistics on the Fedora
+                    Infrastructure machines over time.  Useful for debugging
+                    ineffeciencies and problems.
