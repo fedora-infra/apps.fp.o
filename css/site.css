@@ -21,3 +21,13 @@
     height: 100%;
     overflow: hidden;
 }
+
+.icon {
+    width: 58px;
+    height: 58px;
+}
+
+#mainvis .icon {
+    width: 22px;
+    height: 22px;
+}

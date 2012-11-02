@@ -47,6 +47,7 @@ children:
 -   name:     For the Community
     children:
         -   name:   The Wiki
+            icon:   mediawiki.png
             data:
                 url:    http://fedoraproject.org/wiki
                 description: >
@@ -69,6 +70,7 @@ children:
                     provides you with a space on the web where you can upload
                     files to share them with the community.
         -   name:   The Planet
+            icon:   planet_logo.png
             data:
                 url:    http://planet.fedoraproject.org
                 description: >
@@ -76,6 +78,7 @@ children:
                     as a community member where you can express your opinion and
                     talk about what you are doing for Fedora.
         -   name:   The Mailing lists
+            icon:   gnu.png
             data:
                 url:    http://lists.fedoraproject.org
                 description: >
@@ -93,11 +96,13 @@ children:
                 description: >
                     Manage ACLs of your packages.
         -   name:   Koji
+            icon:   koji.png
             data:
                 url:    http://koji.fedoraproject.org/koji
                 description: >
                     Build your packages in a safe and trusted environment.
         -   name:   Bodhi
+            icon:   bodhi.png
             data:
                 url:    http://admin.fedoraproject.org/updates
                 description: >
@@ -129,26 +134,31 @@ children:
                 description: >
                     TODO -- I dunno what to say about this.
         -   name:   Status
+            icon:   status-good.png
             data:
                 url:    http://status.fedoraproject.org
                 description: >
                     Down for everyone, or just me?
         -   name:   Fedora Hosted
+            icon:   trac.png
             data:
                 url:    http://fedorahosted.org
                 description: >
                     Project hosting.
         -   name:   SCM
+            icon:   git-logo.png
             data:
                 url:    http://pkgs.fedoraproject.org/cgit
                 description:
                     Spec files...
         -   name:   Nagios
+            icon:   nagios-logo.png
             data:
                 url:    http://admin.fedoraproject.org/nagios
                 description: >
                     Is telia down?
         -   name:   Collectd
+            icon:   collectd.png
             data:
                 url:    http://admin.fedoraproject.org/collectd
                 description: >

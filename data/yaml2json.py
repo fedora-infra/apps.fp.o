@@ -6,18 +6,22 @@ import json
 
 next_id = 0
 
-def recursively_assign_ids(d):
+def mangle(d):
     global next_id
     d['id'] = next_id
     next_id = next_id + 1
 
+    if 'icon' in d:
+        prefix = "<img class='icon' src='img/icons/%s' />" % d['icon']
+        d['name'] = "%s %s" % (prefix, d['name'])
+
     if 'children' in d:
-        d['children'] = map(recursively_assign_ids, d['children'])
+        d['children'] = map(mangle, d['children'])
 
     return d
 
 if __name__ == '__main__':
     with open("apps.yaml", "r") as f:
         d = yaml.load(f.read())
-        d = recursively_assign_ids(d)
+        d = mangle(d)
         print "var json = " + json.dumps(d, indent=2)

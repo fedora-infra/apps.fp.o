@@ -51,12 +51,13 @@ var json = {
       "name": "For the Community", 
       "children": [
         {
+          "id": 7, 
           "data": {
             "url": "http://fedoraproject.org/wiki", 
             "description": "Maintain your own user profile page, contribute to documents about features, process, and governance.\n"
           }, 
-          "name": "The Wiki", 
-          "id": 7
+          "name": "<img class='icon' src='img/icons/mediawiki.png' /> The Wiki", 
+          "icon": "mediawiki.png"
         }, 
         {
           "data": {
@@ -75,20 +76,22 @@ var json = {
           "id": 9
         }, 
         {
+          "id": 10, 
           "data": {
             "url": "http://planet.fedoraproject.org", 
             "description": "The planet is a blog aggregator, a space accessible to you as a community member where you can express your opinion and talk about what you are doing for Fedora.\n"
           }, 
-          "name": "The Planet", 
-          "id": 10
+          "name": "<img class='icon' src='img/icons/planet_logo.png' /> The Planet", 
+          "icon": "planet_logo.png"
         }, 
         {
+          "id": 11, 
           "data": {
             "url": "http://lists.fedoraproject.org", 
             "description": "Mailing lists are used for communication within the community. There are lists for generic topics and lists more dedicated to a specific topic, there is for sure one for you.\n"
           }, 
-          "name": "The Mailing lists", 
-          "id": 11
+          "name": "<img class='icon' src='img/icons/gnu.png' /> The Mailing lists", 
+          "icon": "gnu.png"
         }
       ]
     }, 
@@ -105,20 +108,22 @@ var json = {
           "id": 13
         }, 
         {
+          "id": 14, 
           "data": {
             "url": "http://koji.fedoraproject.org/koji", 
             "description": "Build your packages in a safe and trusted environment.\n"
           }, 
-          "name": "Koji", 
-          "id": 14
+          "name": "<img class='icon' src='img/icons/koji.png' /> Koji", 
+          "icon": "koji.png"
         }, 
         {
+          "id": 15, 
           "data": {
             "url": "http://admin.fedoraproject.org/updates", 
             "description": "The tool you will use to push your packages to the Fedora repositories as an update, first an update to be tested (repository: updates-testing) then a stable updates (repository: updates).\n"
           }, 
-          "name": "Bodhi", 
-          "id": 15
+          "name": "<img class='icon' src='img/icons/bodhi.png' /> Bodhi", 
+          "icon": "bodhi.png"
         }, 
         {
           "data": {
@@ -151,44 +156,49 @@ var json = {
           "id": 19
         }, 
         {
+          "id": 20, 
           "data": {
             "url": "http://status.fedoraproject.org", 
             "description": "Down for everyone, or just me?\n"
           }, 
-          "name": "Status", 
-          "id": 20
+          "name": "<img class='icon' src='img/icons/status-good.png' /> Status", 
+          "icon": "status-good.png"
         }, 
         {
+          "id": 21, 
           "data": {
             "url": "http://fedorahosted.org", 
             "description": "Project hosting.\n"
           }, 
-          "name": "Fedora Hosted", 
-          "id": 21
+          "name": "<img class='icon' src='img/icons/trac.png' /> Fedora Hosted", 
+          "icon": "trac.png"
         }, 
         {
+          "id": 22, 
           "data": {
             "url": "http://pkgs.fedoraproject.org/cgit", 
             "description": "Spec files..."
           }, 
-          "name": "SCM", 
-          "id": 22
+          "name": "<img class='icon' src='img/icons/git-logo.png' /> SCM", 
+          "icon": "git-logo.png"
         }, 
         {
+          "id": 23, 
           "data": {
             "url": "http://admin.fedoraproject.org/nagios", 
             "description": "Is telia down?\n"
           }, 
-          "name": "Nagios", 
-          "id": 23
+          "name": "<img class='icon' src='img/icons/nagios-logo.png' /> Nagios", 
+          "icon": "nagios-logo.png"
         }, 
         {
+          "id": 24, 
           "data": {
             "url": "http://admin.fedoraproject.org/collectd", 
             "description": "What happened to that httpd root process again?\n"
           }, 
-          "name": "Collectd", 
-          "id": 24
+          "name": "<img class='icon' src='img/icons/collectd.png' /> Collectd", 
+          "icon": "collectd.png"
         }
       ]
     }
