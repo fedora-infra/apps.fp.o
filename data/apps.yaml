@@ -108,7 +108,6 @@ children:
                     as a community member where you can express your opinion and
                     talk about what you are doing for Fedora.
         -   name:   The Mailing lists
-            icon:   gnu.png
             data:
                 url:    http://lists.fedoraproject.org
                 description: >
