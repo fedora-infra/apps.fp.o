@@ -81,7 +81,7 @@ var json = {
         {
           "data": {
             "url": "http://admin.fedoraproject.org/voting", 
-            "description": "As a member of the community, you can now vote for the different steering committees, for this you will use the Election application.  Voting is a right and a duty as a member of the community; it is one of the things you can do to influence the development of Fedora.\n"
+            "description": "As a member of the community, you can now vote for the different steering committees and for this you will use the Election application.  Voting is a right and a duty as a member of the community; it is one of the things you can do to influence the development of Fedora.\n"
           }, 
           "name": "Elections", 
           "id": 9
@@ -159,7 +159,7 @@ var json = {
           "id": 18, 
           "data": {
             "url": "http://admin.fedoraproject.org/updates", 
-            "description": "The tool you will use to push your packages to the Fedora repositories as an update, first an update to be tested (repository: updates-testing) then a stable update (repository: updates).  Behold -- the Magic Cabbage.\n"
+            "description": "The tool you will use to push your packages to the Fedora repositories as an update, first an update to be tested (repository: updates-testing) then a stable update (repository: updates).  Behold -- the <em>Magic Cabbage.</em>\n"
           }, 
           "name": "<img class='icon' src='img/icons/bodhi.png' /> Bodhi", 
           "icon": "bodhi.png"
@@ -176,7 +176,7 @@ var json = {
           "id": 20, 
           "data": {
             "url": "http://pkgs.fedoraproject.org/cgit", 
-            "description": "Ever wonder <em>Exactly</em> what is in the new release of a Fedora package?  This is where the change histories of all the packages in Fedora for every release of Fedora (and EPEL) are kept.. forever!  A gold mine."
+            "description": "Ever wonder <em>exactly</em> what is in the new release of a Fedora package?  This is where the change histories of all the packages in Fedora for every release of Fedora (and EPEL) are kept.. forever!  A gold mine."
           }, 
           "name": "<img class='icon' src='img/icons/git-logo.png' /> SCM", 
           "icon": "git-logo.png"
