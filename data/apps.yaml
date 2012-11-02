@@ -221,3 +221,9 @@ children:
                     Tracks and displays statistics on the Fedora
                     Infrastructure machines over time.  Useful for debugging
                     ineffeciencies and problems.
+        -   name:   HAProxy
+            data:
+                url:    http://admin.fedoraproject.org/haproxy/proxy1
+                description: >
+                    Shows the health of our proxies.  How many bytes?
+                    Concurrent sessions?  Health checks?

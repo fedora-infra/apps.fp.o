@@ -233,6 +233,14 @@ var json = {
           }, 
           "name": "<img class='icon' src='img/icons/collectd.png' /> Collectd", 
           "icon": "collectd.png"
+        }, 
+        {
+          "data": {
+            "url": "http://admin.fedoraproject.org/haproxy/proxy1", 
+            "description": "Shows the health of our proxies.  How many bytes? Concurrent sessions?  Health checks?\n"
+          }, 
+          "name": "HAProxy", 
+          "id": 27
         }
       ]
     }
