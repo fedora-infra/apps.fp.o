@@ -7,14 +7,6 @@ function init() {
         //Where to append the visualization
         injectInto: 'mainvis',
 
-        //Add navigation capabilities:
-        //zooming by scrolling and panning.
-        Navigation: {
-            enable: true,
-            panning: true,
-            zooming: 10
-        },
-
         //Set Node and Edge styles.
         Node: {
             color: DARK_BLUE,
@@ -26,9 +18,15 @@ function init() {
         },
 
         onBeforeCompute: function(node){
-            //Add the relation list in the right column.
-            //This list is taken from the data property of each JSON node.
-            //$jit.id('inner-details').innerHTML = node.data.relation;
+            var header = "<h4>" + node.name + "</h4>";
+            var body = "<p>" + node.data.description + "</p>";
+            var button = "";
+            if ( node.data.url != undefined ) {
+                button += "<a href='" + node.data.url + "' target='_blank' class='btn btn-primary'>";
+                button += "Check it out!";
+                button += "</a>";
+            }
+            $jit.id('details').innerHTML = header + body + button;
         },
 
         //Add the name of the node in the correponding label
@@ -67,6 +65,7 @@ function init() {
     });
     //load JSON data
     rgraph.loadJSON(json);
+
     //trigger small animation
     rgraph.graph.eachNode(function(n) {
         var pos = n.getPos();
@@ -77,4 +76,8 @@ function init() {
         modes:['polar'],
         duration: 2000
     });
+
+    // A hack to get the graph to write data to the left-most pane before it
+    // otherwise would.
+    rgraph.config.onBeforeCompute(json);
 }
