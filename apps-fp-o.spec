@@ -2,7 +2,7 @@
 
 Name:           apps-fp-o
 Version:        0.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A landing page for apps.fedoraproject.org
 
 License:        MIT
@@ -12,6 +12,9 @@ URL:            http://github.com/ralphbean/apps.fp.o
 Source0:        %{name}-%{version}.tar.gz
 
 BuildArch:      noarch
+
+# Needed for getting httpd's gid
+BuildRequires:  httpd
 
 # Used for the yaml2{json,html}.py scripts.
 Requires:       PyYAML
@@ -51,8 +54,12 @@ cp -r {index.html,apps-yaml.html,bootstrap,css,img,js} %{buildroot}/%{prefix}/%{
 
 # The rest of the content goes here
 %{prefix}/%{name}/
+%attr(755, httpd, httpd) %dir %{prefix}/%{name}/
 
 %changelog
+* Mon Nov 05 2012 Ralph Bean <rbean@redhat.com> - 0.2-2
+- Make sure apache owns the static files.
+
 * Mon Nov 05 2012 Ralph Bean <rbean@redhat.com> - 0.2-1
 - Version bump for packaging.
 
