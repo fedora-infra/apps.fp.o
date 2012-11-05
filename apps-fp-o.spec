@@ -1,7 +1,7 @@
 %global prefix /srv/web
 
 Name:           apps-fp-o
-Version:        0.1
+Version:        0.2
 Release:        1%{?dist}
 Summary:        A landing page for apps.fedoraproject.org
 
@@ -10,6 +10,8 @@ URL:            http://github.com/ralphbean/apps.fp.o
 # Use "./make-release.sh" from a git snapshot
 # Please update the version number liberally.
 Source0:        %{name}-%{version}.tar.gz
+
+BuildArch:      noarch
 
 # Used for the yaml2{json,html}.py scripts.
 Requires:       PyYAML
@@ -51,5 +53,8 @@ cp -r {index.html,apps-yaml.html,bootstrap,css,img,js} %{buildroot}/%{prefix}/%{
 %{prefix}/%{name}/
 
 %changelog
+* Mon Nov 05 2012 Ralph Bean <rbean@redhat.com> - 0.2-1
+- Version bump for packaging.
+
 * Mon Nov 05 2012 Ralph Bean <rbean@redhat.com> - 0.1-1
 - Initial packaging for Fedora Infrastructure
