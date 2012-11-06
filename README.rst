@@ -15,8 +15,8 @@ That's what this page is for.  I'm kind of barging ahead with it without
 consulting anyone else yet but I fully intend to take in criticism (and patches,
 really!) to make it more awesome and reflective of the community's desires.
 
-You can see a demo version up at http://threebean.org/apps.fp.o/ right now (I
-think...)
+You can see a demo version up at https://apps.stg.fedoraproject.org/ right
+now.
 
 Help?
 -----
