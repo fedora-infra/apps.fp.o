@@ -144,6 +144,13 @@ children:
                     Reporting Tool). It makes it easy to see what problems
                     users are hitting the most, and allows you to filter them
                     by Fedora release, associate, or component.
+        -   name:   Blocker Bugs
+            data:
+                url:    http://qa.fedoraproject.org/blockerbugs
+                description: >
+                    The Fedora Blocker Bug Tracker tracks release blocking bugs
+                    and related updates in Fedora releases currently under
+                    development.
 
 -   name:   For Packagers
     data:
