@@ -21,7 +21,7 @@ Requires:       PyYAML
 
 %description
 This is static HTML, CSS, and javascript for a landing page for
-http://apps.fedoraproject.org/packages.
+http://apps.fedoraproject.org/
 
 Change the /usr/share/apps.fp.o/apps.yaml file and re-run
 apps-fp-o-yaml2json.py and apps-fp-o-yaml2html.py to update the
