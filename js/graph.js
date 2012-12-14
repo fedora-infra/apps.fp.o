@@ -14,7 +14,7 @@ function init() {
 
         Edge: {
             color: LIGHT_BLUE,
-            lineWidth:1.5
+            lineWidth:2.5
         },
 
         onBeforeCompute: function(node){
@@ -51,11 +51,11 @@ function init() {
             style.color = BLACK;
 
             if (node._depth == 0) {
-                style.fontSize = "1em";
+                style.fontSize = "1.5em";
             } else if (node._depth <= 1) {
-                style.fontSize = "0.8em";
+                style.fontSize = "1.1em";
             } else if(node._depth >= 2){
-                style.fontSize = "0.6em";
+                style.fontSize = "0.8em";
             }
 
             var left = parseInt(style.left);
