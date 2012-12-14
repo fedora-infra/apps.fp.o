@@ -1,8 +1,8 @@
 %global prefix /srv/web
 
 Name:           apps-fp-o
-Version:        0.2
-Release:        2%{?dist}
+Version:        0.3
+Release:        1%{?dist}
 Summary:        A landing page for apps.fedoraproject.org
 
 License:        MIT
@@ -21,7 +21,7 @@ Requires:       PyYAML
 
 %description
 This is static HTML, CSS, and javascript for a landing page for
-http://apps.fedoraproject.org/packages.
+http://apps.fedoraproject.org/
 
 Change the /usr/share/apps.fp.o/apps.yaml file and re-run
 apps-fp-o-yaml2json.py and apps-fp-o-yaml2html.py to update the
@@ -57,6 +57,9 @@ cp -r {index.html,apps-yaml.html,bootstrap,css,img,js} %{buildroot}/%{prefix}/%{
 %attr(755, httpd, httpd) %dir %{prefix}/%{name}/
 
 %changelog
+* Fri Dec 14 2012 Ralph Bean <rbean@redhat.com> - 0.3-1
+- Increased font and line sizes.
+
 * Mon Nov 05 2012 Ralph Bean <rbean@redhat.com> - 0.2-2
 - Make sure apache owns the static files.
 
