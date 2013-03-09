@@ -59,7 +59,7 @@ children:
                     package?  You can file an official bug here.
         -   name:   Paste
             data:
-                url:    http://paste.stg.fedoraproject.org
+                url:    http://paste.fedoraproject.org
                 description: >
                     Our very own pastebin server.  If you yum install the
                     <strong>fpaste</strong> command, it will use this site
