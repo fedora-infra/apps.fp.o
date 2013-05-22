@@ -6,7 +6,7 @@ Release:        1%{?dist}
 Summary:        A landing page for apps.fedoraproject.org
 
 License:        MIT
-URL:            http://github.com/ralphbean/apps.fp.o
+URL:            http://github.com/fedora-infra/apps.fp.o
 # Use "./make-release.sh" from a git snapshot
 # Please update the version number liberally.
 Source0:        %{name}-%{version}.tar.gz
