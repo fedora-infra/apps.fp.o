@@ -1,7 +1,7 @@
 %global prefix /srv/web
 
 Name:           apps-fp-o
-Version:        0.3
+Version:        0.4
 Release:        1%{?dist}
 Summary:        A landing page for apps.fedoraproject.org
 
@@ -57,6 +57,9 @@ cp -r {index.html,apps-yaml.html,bootstrap,css,img,js} %{buildroot}/%{prefix}/%{
 %attr(755, httpd, httpd) %dir %{prefix}/%{name}/
 
 %changelog
+* Wed Oct 02 2013 Ricky Elrod <codeblock@fedoraproject.org> - 0.4-1
+- Added Nuancier link.
+
 * Fri Dec 14 2012 Ralph Bean <rbean@redhat.com> - 0.3-1
 - Increased font and line sizes.
 

@@ -92,6 +92,12 @@ children:
                     Election application.  Voting is a right and a duty as a member
                     of the community; it is one of the things you can do to
                     influence the development of Fedora.
+        -   name:   Nuancier
+            data:
+                url:    http://apps.fedoraproject.org/nuancier
+                description: >
+                    Nuancier-lite is a simple voting application for the
+                    supplementary wallpapers included in Fedora.
         -   name:   FedoraPeople
             data:
                 url:    http://fedorapeople.org
