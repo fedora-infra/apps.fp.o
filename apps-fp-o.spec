@@ -1,12 +1,12 @@
 %global prefix /srv/web
 
 Name:           apps-fp-o
-Version:        0.3
+Version:        0.5
 Release:        1%{?dist}
 Summary:        A landing page for apps.fedoraproject.org
 
 License:        MIT
-URL:            http://github.com/ralphbean/apps.fp.o
+URL:            http://github.com/fedora-infra/apps.fp.o
 # Use "./make-release.sh" from a git snapshot
 # Please update the version number liberally.
 Source0:        %{name}-%{version}.tar.gz
@@ -57,6 +57,13 @@ cp -r {index.html,apps-yaml.html,bootstrap,css,img,js} %{buildroot}/%{prefix}/%{
 %attr(755, httpd, httpd) %dir %{prefix}/%{name}/
 
 %changelog
+* Thu Mar 27 2014 Ralph Bean <rbean@redhat.com> - 0.5-1
+- Deep-linking
+- Use comfortaa
+
+* Wed Oct 02 2013 Ricky Elrod <codeblock@fedoraproject.org> - 0.4-1
+- Added Nuancier link.
+
 * Fri Dec 14 2012 Ralph Bean <rbean@redhat.com> - 0.3-1
 - Increased font and line sizes.
 

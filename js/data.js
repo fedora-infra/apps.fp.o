@@ -71,7 +71,7 @@ var json = {
         }, 
         {
           "data": {
-            "url": "http://paste.stg.fedoraproject.org", 
+            "url": "http://paste.fedoraproject.org", 
             "description": "Our very own pastebin server.  If you yum install the <strong>fpaste</strong> command, it will use this site automatically.\n"
           }, 
           "name": "Paste", 
@@ -145,11 +145,27 @@ var json = {
           }, 
           "name": "<img class='icon' src='img/icons/trac.png' /> Fedora Hosted", 
           "icon": "trac.png"
+        }, 
+        {
+          "data": {
+            "url": "https://retrace.fedoraproject.org", 
+            "description": "The Problem Tracker is a platform for collecting and analyzing package crashes reported via ABRT (Automatic Bug Reporting Tool). It makes it easy to see what problems users are hitting the most, and allows you to filter them by Fedora release, associate, or component.\n"
+          }, 
+          "name": "Problem Tracker", 
+          "id": 17
+        }, 
+        {
+          "data": {
+            "url": "http://qa.fedoraproject.org/blockerbugs", 
+            "description": "The Fedora Blocker Bug Tracker tracks release blocking bugs and related updates in Fedora releases currently under development.\n"
+          }, 
+          "name": "Blocker Bugs", 
+          "id": 18
         }
       ]
     }, 
     {
-      "id": 17, 
+      "id": 19, 
       "data": {
         "description": "Here you'll find apps useful for Packagers' workflow.\n"
       }, 
@@ -161,10 +177,10 @@ var json = {
             "description": "Manage ACLs of your packages.\n"
           }, 
           "name": "PkgDB", 
-          "id": 18
+          "id": 20
         }, 
         {
-          "id": 19, 
+          "id": 21, 
           "data": {
             "url": "http://koji.fedoraproject.org/koji", 
             "description": "Koji is the software that builds RPM packages for the Fedora project.  It uses Mock to create chroot environments to perform builds that are both safe and trusted.\n"
@@ -173,7 +189,7 @@ var json = {
           "icon": "koji.png"
         }, 
         {
-          "id": 20, 
+          "id": 22, 
           "data": {
             "url": "http://admin.fedoraproject.org/updates", 
             "description": "The tool you will use to push your packages to the Fedora repositories as an update, first an update to be tested (repository: updates-testing) then a stable update (repository: updates).  Behold -- the <em>Magic Cabbage.</em>\n"
@@ -187,10 +203,10 @@ var json = {
             "description": "The best place for someone outside the community to find out what is in the Fedora repositories. Which packages is present, in which version, who is maintaining it, what patches have been applied, what bugs have been reported against it. All this kind of questions can be answered there.\n"
           }, 
           "name": "Packages", 
-          "id": 21
+          "id": 23
         }, 
         {
-          "id": 22, 
+          "id": 24, 
           "data": {
             "url": "http://pkgs.fedoraproject.org/cgit", 
             "description": "Ever wonder <em>exactly</em> what is in the new release of a Fedora package?  This is where the change histories of all the packages in Fedora for every release of Fedora (and EPEL) are kept.. forever!  A gold mine."
@@ -201,14 +217,14 @@ var json = {
       ]
     }, 
     {
-      "id": 23, 
+      "id": 25, 
       "data": {
         "description": "Tools for sysadmins -- the people who run the servers who run Fedora (and otherwise).\n"
       }, 
       "name": "For Sysadmins", 
       "children": [
         {
-          "id": 24, 
+          "id": 26, 
           "data": {
             "url": "http://mirrors.fedoraproject.org", 
             "description": "Fedora is distributed to millions of systems globally. This would not be possible without the donations of time, disk space, and bandwidth by hundreds of volunteer system administrators and their companies or institutions.  Your fast download experience is made possible by these donations.  The list on the <strong>MirrorManager</strong> site is dynamically generated every hour, listing only up-to-date mirrors. \n"
@@ -217,7 +233,7 @@ var json = {
           "icon": "downloads.png"
         }, 
         {
-          "id": 25, 
+          "id": 27, 
           "data": {
             "url": "http://admin.fedoraproject.org/nagios", 
             "description": "\"Is telia down?\"  The answer can most definitively be found here (and in detail).  The Fedora Infrastructure team uses Nagios to monitor the servers that serve Fedora.  Accessing most details requires membership in the <em>sysadmin</em> group.\n"
@@ -226,7 +242,7 @@ var json = {
           "icon": "nagios-logo.png"
         }, 
         {
-          "id": 26, 
+          "id": 28, 
           "data": {
             "url": "http://admin.fedoraproject.org/collectd", 
             "description": "Tracks and displays statistics on the Fedora Infrastructure machines over time.  Useful for debugging ineffeciencies and problems.\n"
@@ -240,7 +256,7 @@ var json = {
             "description": "Shows the health of our proxies.  How many bytes? Concurrent sessions?  Health checks?\n"
           }, 
           "name": "HAProxy", 
-          "id": 27
+          "id": 29
         }
       ]
     }

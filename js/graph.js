@@ -3,6 +3,10 @@ var LIGHT_BLUE = "#4872c7";
 var BLACK = "#03060a";
 
 function init() {
+    var name2hash = function(name) {
+        return $("<p>" + name + "</p>").text().replace(/\s+/g, '');
+    }
+
     var rgraph = new $jit.RGraph({
         //Where to append the visualization
         injectInto: 'mainvis',
@@ -27,6 +31,14 @@ function init() {
                 button += "</a>";
             }
             $jit.id('details').innerHTML = header + body + button;
+        },
+
+        Events: {
+            enable: true,
+            // Put the name of the node in the #hash of the url when clicking
+            onClick: function(node, eventInfo, e) {
+                window.location.hash = name2hash(node.name);
+            },
         },
 
         //Add the name of the node in the correponding label
@@ -80,4 +92,16 @@ function init() {
     // A hack to get the graph to write data to the left-most pane before it
     // otherwise would.
     rgraph.config.onBeforeCompute(json);
+
+    $(document).ready(function() {
+        // Last thing, click on a node if the user is deep-linking
+        var name = window.location.hash.replace('#', '');
+
+        // Find the node with this name:
+        $.each(rgraph.graph.nodes, function(i, node) {
+            if (name2hash(node.name) == name) {
+                rgraph.onClick(node.id);
+            }
+        });
+    });
 }
