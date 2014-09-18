@@ -15,11 +15,13 @@ children:
             these sites -- they might help you get your bearings.
     children:
         -   name:   Ask Fedora
+            icon:   ask_fedora.png
             data:
                 url:    http://ask.fedoraproject.org/
                 description: >
                     Any question at all about Fedora?  Ask it here.
         -   name:   Tagger
+            icon:   tagger.png
             data:
                 url:    http://apps.fedoraproject.org/tagger
                 description: >
@@ -55,7 +57,36 @@ children:
         description: >
             Things for everyone! (chances are, this includes you).
     children:
+        -   name:   Fedora Magazine
+            icon:   magazine.png
+            data:
+                url:    http://fedoramagazine.org
+                description: >
+                    Fedora Magazine is a WordPress-based site which delivers all
+                    the news of the Fedora Community. (It replaces the previous
+                    Fedora Weekly News.)
+        -   name:   Kerneltest
+            icon:   tux.png
+            data:
+                url:    https://apps.fedoraproject.org/kerneltest
+                description: >
+                    As part of the <a
+                    href="https://fedoraproject.org/wiki/KernelTestingInitiative">kernel
+                    testing initiative</a> we provide a webapp where users and
+                    automated systems can upload test results.  If you have
+                    access to hardware where we could catch tricky driver
+                    issues, your assistance here would be much appreciated.
+        -   name:   Meetbot
+            icon:   meetbot.png
+            data:
+                url:    https://meetbot.fedoraproject.org
+                description: >
+                    Fedora Infrastructure runs a friendly IRC bot that you may
+                    know named <a href="https://fedoraproject.org/wiki/Zodbot">zodbot</a>.
+                    Among its many and varied functions is logging IRC meetings,
+                    the archives of which you can find here.
         -   name:   Notifications
+            icon:   fedmsg.png
             data:
                 url:    https://apps.fedoraproject.org/notifications
                 description: >
@@ -127,15 +158,16 @@ children:
                     Election application.  Voting is a right and a duty as a member
                     of the community; it is one of the things you can do to
                     influence the development of Fedora.
-        -   name:   Nuancier
-            data:
-                url:    http://apps.fedoraproject.org/nuancier
-                description: >
-                    Nuancier-lite is a simple voting application for the
-                    supplementary wallpapers included in Fedora.
+        -   name:   Nuancier 
+            icon:   nuancier.png
+            data: 
+                url: http://apps.fedoraproject.org/nuancier 
+                description: > 
+                    Nuancier is a simple voting application for the 
+                    supplementary wallpapers included in Fedora. 
         -   name:   FedoraPeople
             data:
-                url:    http://fedorapeople.org
+                url:    https://fedorapeople.org
                 description: >
                     Being a community member you gain access to fedorapeople which
                     provides you with a space on the web where you can upload
@@ -156,14 +188,6 @@ children:
                     Mailing lists are used for communication within the community.
                     There are lists for generic topics and lists more dedicated
                     to a specific topic, there is for sure one for you.
-        -   name:   Busmon
-            data:
-                url:    http://apps.fedoraproject.org/busmon
-                description: >
-                    A "cardiogram" for the <a href="http://fedmsg.com">fedmsg</a>
-                    project.  It's not really useful for anything, but it's
-                    something pretty to look at -- it can give you the 10,000
-                    foot view of "what's going on in Fedora" in real-time.
         -   name:   Fedora Hosted
             icon:   trac.png
             data:
@@ -208,6 +232,13 @@ children:
         description: >
             Here you'll find apps useful for Packagers' workflow.
     children:
+        -   name:   COPR
+            icon:   copr.png
+            data:
+                url:    https://copr.fedoraproject.org
+                description: >
+                    Copr is an easy-to-use automatic build system providing a
+                    package repository as its output.  You can make your **own** repositories!
         -   name:   PkgDB
             data:
                 url:    http://admin.fedoraproject.org/pkgdb
@@ -254,6 +285,17 @@ children:
                     You can read more about <a
                     href="https://fedoraproject.org/wiki/Darkserver">why you
                     might want to use it</a> or you can just click below to...
+        -   name:   github2fedmsg
+            icon:   github.png
+            data:
+                url:    https://apps.fedoraproject.org/github2fedmsg
+                description: >
+                    github2fedmsg is a web service that bridges upstream
+                    development activity from <a
+                    href="https://github.com">GitHub</a> into the <a
+                    href="http://fedmsg.com">Fedora Infrastructure message
+                    bus</a>.  Visit the self-service dashboard to toggle the
+                    status of your repositories.
 
 -   name:   For Sysadmins
     data:
@@ -307,6 +349,7 @@ children:
                     secondary arches?  This read-only dashboard can help you
                     make a quick check.
         -   name:   DataGrepper
+            icon:   fedmsg.png
             data:
                 url:    https://apps.fedoraproject.org/datagrepper
                 description: >
