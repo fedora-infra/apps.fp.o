@@ -21,6 +21,16 @@ children:
             url:    http://release-monitoring.org
             description: >
                 TODO description goes here.
+    -   name:   Taskotron
+        data:
+            url:    https://taskotron.stg.fedoraproject.org
+            description: >
+                TODO description goes here.
+    -   name:   Jenkins
+        data:
+            url:    http://jenkins.cloud.fedoraproject.org
+            description: >
+                TODO description goes here.
 
 -   name:   Infrastructure
     data:
