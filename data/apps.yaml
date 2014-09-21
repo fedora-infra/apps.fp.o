@@ -50,6 +50,7 @@ children:
         icon:   fedmsg.png
         data:
             url:    https://apps.fedoraproject.org/datagrepper
+            status_mappings: ['fedmsg']
             description: >
                 DataGrepper is an HTTP API for querying the datanommer
                 database.  You can use it to dig into the history of the
@@ -73,6 +74,7 @@ children:
         icon:   downloads.png
         data:
             url:    http://mirrors.fedoraproject.org
+            status_mappings: ['mirrormanager', 'mirrorlist']
             description: >
                 Fedora is distributed to millions of systems globally.
                 This would not be possible without the donations of time,
@@ -131,6 +133,7 @@ children:
     -   name:   Blocker Bugs
         data:
             url:    http://qa.fedoraproject.org/blockerbugs
+            status_mappings: ['blockerbugs']
             description: >
                 The Fedora Blocker Bug Tracker tracks release blocking bugs
                 and related updates in Fedora releases currently under
@@ -162,6 +165,7 @@ children:
     -   name:   Paste
         data:
             url:    http://paste.fedoraproject.org
+            status_mappings: ['fedorapaste']
             description: >
                 Our very own pastebin server.  If you yum install the
                 <strong>fpaste</strong> command, it will use this site
@@ -169,6 +173,7 @@ children:
     -   name:   Elections
         data:
             url:    http://admin.fedoraproject.org/voting
+            status_mappings: ['elections']
             description: >
                 As a member of the community, you can now vote for the
                 different steering committees and for this you will use the
@@ -186,6 +191,7 @@ children:
         icon:   mail.png
         data:
             url:    http://lists.fedoraproject.org
+            status_mappings: ['mailinglists']
             description: >
                 Mailing lists are used for communication within the community.
                 There are lists for generic topics and lists more dedicated
@@ -194,6 +200,7 @@ children:
         icon:   fedocal.png
         data:
             url:    http://apps.fedoraproject.org/calendar
+            status_mappings: ['fedocal']
             description: >
                 The Fedora Calendar (or <strong>fedocal</strong>), you might
                 have already guessed, is a public calendar service.  You can
@@ -204,6 +211,7 @@ children:
         icon:   meetbot.png
         data:
             url:    https://meetbot.fedoraproject.org
+            status_mappings: ['zodbot']
             description: >
                 Fedora Infrastructure runs a friendly IRC bot that you may
                 know named <a href="https://fedoraproject.org/wiki/Zodbot">zodbot</a>.
@@ -219,6 +227,7 @@ children:
         icon:   github.png
         data:
             url:    https://apps.fedoraproject.org/github2fedmsg
+            status_mappings: ['fedmsg']
             description: >
                 github2fedmsg is a web service that bridges upstream
                 development activity from <a
@@ -230,6 +239,7 @@ children:
         icon:   trac.png
         data:
             url:    http://fedorahosted.org
+            status_mappings: ['fedorahosted']
             description: >
                 Fedora is dedicated to open source software. This
                 commitment can extend beyond regular Fedora offerings.<br/>
@@ -247,6 +257,7 @@ children:
     -   name:   FedoraPeople
         data:
             url:    https://fedorapeople.org
+            status_mappings: ['people']
             description: >
                 Being a community member you gain access to fedorapeople which
                 provides you with a space on the web where you can upload
@@ -254,6 +265,7 @@ children:
     -   name:   FAS
         data:
             url:    http://admin.fedoraproject.org/accounts
+            status_mappings: ['fas']
             description: >
                 The Fedora Account System.  Update your profile
                 information and apply for membership in groups.
@@ -261,11 +273,13 @@ children:
         icon:   fedmsg.png
         data:
             url:    https://apps.fedoraproject.org/notifications
+            status_mappings: ['fedmsg']
             description: >
                 Centrally managed preferences for Fedora Infrastructure
                 notifications to your inbox, irc client, and mobile device.
     -   name:   Badges
         icon:   badges.png
+        status_mappings: ['badges']
         data:
             url:    https://badges.fedoraproject.org
             description: >
@@ -286,12 +300,14 @@ children:
         icon:   ask_fedora.png
         data:
             url:    http://ask.fedoraproject.org/
+            status_mappings: ['ask']
             description: >
                 Any question at all about Fedora?  Ask it here.
     -   name:   The Wiki
         icon:   mediawiki.png
         data:
             url:    http://fedoraproject.org/wiki
+            status_mappings: ['wiki']
             description: >
                 Maintain your own user profile page, contribute to
                 documents about features, process, and governance.
@@ -314,6 +330,7 @@ children:
     -   name:   Docs
         data:
             url:    http://docs.fedoraproject.org
+            status_mappings: ['docs']
             description: >
                 RTFM!  Everything you could ever want to know.
                 Probably the best place to find documentation about Fedora,
@@ -328,6 +345,7 @@ children:
         -   name:   Packages
             data:
                 url:    http://apps.fedoraproject.org/packages
+                status_mappings: ['packages']
                 description: >
                     A meta-app over the other packaging apps; the best place to
                     find out what is in the Fedora repositories.  Which
@@ -341,6 +359,7 @@ children:
             icon:   tagger.png
             data:
                 url:    http://apps.fedoraproject.org/tagger
+                status_mappings: ['tagger']
                 description: >
                     Help build a tag cloud of all our packages.. It's actually
                     really useful.  It'll help improve the search of the
@@ -349,18 +368,21 @@ children:
             icon:   copr.png
             data:
                 url:    https://copr.fedoraproject.org
+                status_mappings: ['copr']
                 description: >
                     Copr is an easy-to-use automatic build system providing a
                     package repository as its output.  You can make your **own** repositories!
         -   name:   PkgDB
             data:
                 url:    http://admin.fedoraproject.org/pkgdb
+                status_mappings: ['pkgdb']
                 description: >
                     Manage ACLs of your packages.
         -   name:   Koji
             icon:   koji.png
             data:
                 url:    http://koji.fedoraproject.org/koji
+                status_mappings: ['koji']
                 description: >
                     Koji is the software that builds RPM packages for the
                     Fedora project.  It uses Mock to create chroot
@@ -370,6 +392,7 @@ children:
             icon:   bodhi.png
             data:
                 url:    http://admin.fedoraproject.org/updates
+                status_mappings: ['bodhi']
                 description: >
                     The tool you will use to push your packages to the Fedora
                     repositories as an update, first an update to be tested
@@ -380,6 +403,7 @@ children:
             icon:   git-logo.png
             data:
                 url:    http://pkgs.fedoraproject.org/cgit
+                status_mappings: ['pkgs']
                 description: >
                     Ever wonder <em>exactly</em> what is in the new release
                     of a Fedora package?  This is where the change histories
@@ -388,6 +412,7 @@ children:
         -   name:   Darkserver
             data:
                 url:    https://darkserver.fedoraproject.org
+                status_mappings: ['darkserver']
                 description: >
                     A set of tools and JSON service to help userspace developers
                     to debug their applications and libraries. People are be
