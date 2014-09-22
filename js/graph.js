@@ -2,6 +2,15 @@ var DARK_BLUE = "#294172";
 var LIGHT_BLUE = "#4872c7";
 var BLACK = "#03060a";
 
+// A mapping of status.fp.o status states to bootstrap css classes.
+var status_classes = {
+    good: "success",
+    scheduled: "info",
+    minor: "warning",
+    major: "danger",
+};
+
+
 function init() {
 
     // First thing to do is to query status.fedoraproject.org.
@@ -48,27 +57,32 @@ function init() {
         },
 
         onBeforeCompute: function(node){
-            var header = "<h4>" + node.name + "</h4>";
+            var header = "<h3>" + node.name + "</h3>";
             var body = "<p>" + node.data.description + "</p>";
-
-            if (node.data.status_mappings != undefined && statuses != null) {
-                body = body + "<table class='table'>"
-                body = body + "<tr><th></th><th>Current Status</th></tr>";
-                $.each(node.data.status_mappings, function(i, status_mapping) {
-                    var status = statuses[status_mapping];
-                    body = body +
-                        "<tr><td>" + status.name + "</td><td>" + status.message + "</td></tr>";
-                });
-                body = body + "</table>"
-            }
 
             var button = "";
             if ( node.data.url != undefined ) {
-                button += "<a href='" + node.data.url + "' target='_blank' class='btn btn-primary'>";
+                button += "<a href='" + node.data.url + "' target='_blank' class='btn btn-default'>";
                 button += "Check it out!";
                 button += "</a>";
             }
-            $jit.id('details').innerHTML = header + body + button;
+
+            var stats = "";
+            if (node.data.status_mappings != undefined && statuses != null) {
+                stats += "<hr style='margin-top: 32px;'/>";
+                stats += "<p class='text-muted'>status from <a href='http://status.fedoraproject.org'>status.fp.o</a></p>";
+                stats += "<table class='table'>";
+                $.each(node.data.status_mappings, function(i, status_mapping) {
+                    var status = statuses[status_mapping];
+                    var cls = status_classes[status.status]
+                    stats += "<tr class='" + cls + "'>" +
+                        "<td>" + status.name + "</td>" +
+                        "<td>" + status.message + "</td></tr>";
+                });
+                stats += "</table>";
+            }
+
+            $jit.id('details').innerHTML = header + body + button + stats;
         },
 
         Events: {
