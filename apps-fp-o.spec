@@ -1,8 +1,8 @@
 %global prefix /srv/web
 
 Name:           apps-fp-o
-Version:        1.0
-Release:        2%{?dist}
+Version:        1.1
+Release:        1%{?dist}
 Summary:        A landing page for apps.fedoraproject.org
 
 License:        MIT
@@ -57,6 +57,9 @@ cp -r {index.html,apps-yaml.html,bootstrap,bootstrap-3.1.1-fedora,css,img,js} %{
 %attr(755, httpd, httpd) %dir %{prefix}/%{name}/
 
 %changelog
+* Thu Sep 25 2014 Ralph Bean <rbean@redhat.com> - 1.1-1
+- Always use jsonp when querying status.fp.o.
+
 * Thu Sep 25 2014 Ralph Bean <rbean@redhat.com> - 1.0-2
 - Copy in the bootstrap fedora content.
 
