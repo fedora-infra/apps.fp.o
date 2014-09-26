@@ -1,7 +1,7 @@
 %global prefix /srv/web
 
 Name:           apps-fp-o
-Version:        0.5
+Version:        1.0
 Release:        1%{?dist}
 Summary:        A landing page for apps.fedoraproject.org
 
@@ -57,6 +57,11 @@ cp -r {index.html,apps-yaml.html,bootstrap,css,img,js} %{buildroot}/%{prefix}/%{
 %attr(755, httpd, httpd) %dir %{prefix}/%{name}/
 
 %changelog
+* Thu Sep 25 2014 Ralph Bean <rbean@redhat.com> - 1.0-1
+- Reorganized.
+- Use modern bootstrap-fedora (3.1)
+- Integrate with status.fp.o.
+
 * Thu Mar 27 2014 Ralph Bean <rbean@redhat.com> - 0.5-1
 - Deep-linking
 - Use comfortaa
