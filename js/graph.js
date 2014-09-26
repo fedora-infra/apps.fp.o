@@ -16,20 +16,11 @@ function init() {
     // First thing to do is to query status.fedoraproject.org.
     // We'll integrate that data into our presentation.
     var statuses = null;
-    var url;
-    var re = new RegExp('fedoraproject.org');
-    if (re.test(window.location.href)) {
-        // This is the real URL we want to use normally, but it doesn't work in
-        // development due to cross-origin issues.
-        url = 'https://status.fedoraproject.org/statuses.json';
-    } else {
-        // So, when developing, use this URL instead.  It is just a copy we
-        // keep around for testing -- not the genuine article.
-        url = 'js/statuses.json';
-    }
+    var url = 'https://status.fedoraproject.org/static/statuses.js';
     $.ajax(url,
         {
-            dataType: 'json',
+            dataType: 'jsonp',
+            jsonpCallback: 'callback',
             async: false,
             success: function(data) { statuses = data.services; },
         }
