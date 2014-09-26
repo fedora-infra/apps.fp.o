@@ -20,17 +20,31 @@ children:
         data:
             url:    http://release-monitoring.org
             description: >
-                TODO description goes here.
+                Code named <a
+                href="https://github.com/fedora-infra/anitya">anitya</a>, this
+                project is slated to replace <a
+                href="https://fedoraproject.org/wiki/Upstream_Release_Monitoring">the
+                old wiki page</a> for Upstream Release Monitoring.  It will
+                track upstream tarball locations and publish notifications to
+                the fedmsg bus when new ones are found.  Other daemons will
+                then be responsible for filing bugs, attempting to
+                automatically build packages, perform some preliminary QA
+                checks, etc..
     -   name:   Taskotron
         data:
-            url:    https://taskotron.stg.fedoraproject.org
+            url:    https://taskotron.fedoraproject.org
             description: >
-                TODO description goes here.
+                Taskotron is a framework for automated task execution and is in
+                the very early stages of development with the objective to
+                replace AutoQA for automating selected QA tasks in Fedora.
     -   name:   Jenkins
         data:
             url:    http://jenkins.cloud.fedoraproject.org
             description: >
-                TODO description goes here.
+                Our own continuous integration (CI) service!  It works now and
+                you can use it.. we just don't yet give it the same kind of
+                guarantees that we give our other apps.  Look forwards to us
+                promoting it soon..
 
 -   name:   Infrastructure
     data:
@@ -111,7 +125,8 @@ children:
 -   name:   QA
     data:
         description: >
-            QA stuff.
+            Tools for testers -- the people who tell us its broken so we can
+            fix it.
     children:
     -   name:   Releng-Dash
         data:
@@ -160,7 +175,8 @@ children:
 -   name:   Coordination
     data:
         description: >
-            Apps for coordinating people.
+            Tools for people -- so we can talk to each other and share content
+            and ideas.
     children:
     -   name:   Paste
         data:
@@ -221,7 +237,10 @@ children:
 -   name:   Upstream
     data:
         description: >
-            Here you'll find the apps for dealing with upstream stuff.
+            Tools for <a
+            href="https://fedoraproject.org/wiki/Staying_close_to_upstream_projects">upstream</a>
+            developers -- because we love you.
+
     children:
     -   name:   github2fedmsg
         icon:   github.png
@@ -251,8 +270,8 @@ children:
 -   name:   Accounts
     data:
         description: >
-            Here you'll find the apps for updating your Fedora
-            accounts.
+            Tools for everybody -- use these things to manage your Fedora
+            Account.
     children:
     -   name:   FedoraPeople
         data:
@@ -292,9 +311,9 @@ children:
 -   name:   Content
     data:
         description: >
-            Here you'll find the apps that store and archive the
-            troves of content Fedora authors produce.  Blog posts,
-            the wiki, and more..
+            Tools for wordsmiths -- the apps that store and archive the troves
+            of content that Fedora authors produce.  Blog posts, the wiki, and
+            more..
     children:
     -   name:   Ask Fedora
         icon:   ask_fedora.png
@@ -340,7 +359,9 @@ children:
 -   name:   Packaging
     data:
         description: >
-            Here you'll find apps useful for Packagers' workflow.
+            Tools for packagers -- where the pieces of the distribution get
+            built.
+
     children:
         -   name:   Packages
             data:
