@@ -2,7 +2,7 @@
 
 Name:           apps-fp-o
 Version:        1.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A landing page for apps.fedoraproject.org
 
 License:        MIT
@@ -42,7 +42,7 @@ mkdir -p %{buildroot}/%{_datadir}/%{name}
 install -m 0644 data/* %{buildroot}/%{_datadir}/%{name}
 
 mkdir -p %{buildroot}/%{prefix}/%{name}
-cp -r {index.html,apps-yaml.html,bootstrap,css,img,js} %{buildroot}/%{prefix}/%{name}/.
+cp -r {index.html,apps-yaml.html,bootstrap,bootstrap-3.1.1-fedora,css,img,js} %{buildroot}/%{prefix}/%{name}/.
 
 %files
 %doc README.rst LICENSE CONTRIBUTING.rst
@@ -57,6 +57,9 @@ cp -r {index.html,apps-yaml.html,bootstrap,css,img,js} %{buildroot}/%{prefix}/%{
 %attr(755, httpd, httpd) %dir %{prefix}/%{name}/
 
 %changelog
+* Thu Sep 25 2014 Ralph Bean <rbean@redhat.com> - 1.0-2
+- Copy in the bootstrap fedora content.
+
 * Thu Sep 25 2014 Ralph Bean <rbean@redhat.com> - 1.0-1
 - Reorganized.
 - Use modern bootstrap-fedora (3.1)
