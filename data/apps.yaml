@@ -83,7 +83,7 @@ children:
                 fast download experience is made possible by these
                 donations.  The list on the <strong>MirrorManager</strong>
                 site is dynamically generated every hour, listing only
-                up-to-date mirrors. 
+                up-to-date mirrors.
     -   name:   Nagios
         icon:   nagios-logo.png
         data:
@@ -180,13 +180,13 @@ children:
                 Election application.  Voting is a right and a duty as a member
                 of the community; it is one of the things you can do to
                 influence the development of Fedora.
-    -   name:   Nuancier 
+    -   name:   Nuancier
         icon:   nuancier.png
-        data: 
-            url: http://apps.fedoraproject.org/nuancier 
-            description: > 
-                Nuancier is a simple voting application for the 
-                supplementary wallpapers included in Fedora. 
+        data:
+            url: http://apps.fedoraproject.org/nuancier
+            description: >
+                Nuancier is a simple voting application for the
+                supplementary wallpapers included in Fedora.
     -   name:   The Mailing lists
         icon:   mail.png
         data:
