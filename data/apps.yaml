@@ -16,6 +16,15 @@ children:
             they're broken -- it's a big help!.
             Check back here from time to time, as this section will change.
     children:
+    -   name:   Koschei
+        data:
+            url:    http://koschei.cloud.fedoraproject.org
+            description: >
+                Koschei is a continuous integration system for RPM packages. It
+                tracks dependency changes done in Koji repositories and rebuilds
+                packages whose dependencies change. It can help packagers to
+                detect failures early and provide relevant information to narrow
+                down the cause.
     -   name:   Release Monitoring
         data:
             url:    http://release-monitoring.org
