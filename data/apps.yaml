@@ -61,6 +61,13 @@ children:
             Tools for sysadmins -- the people who run the servers that run
             Fedora (and otherwise).
     children:
+    -   name:   GeoIP
+        data:
+            url:    https://geoip.fedoraproject.org
+            description: >
+                A simple web service running <a
+                href="https://github.com/fedora-infra/geoip-city-wsgi">geoip-city-wsgi</a>
+                that will return geoip information to you.
     -   name:   Easyfix
         data:
             url:    http://fedoraproject.org/easyfix
