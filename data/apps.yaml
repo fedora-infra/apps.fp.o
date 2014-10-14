@@ -39,13 +39,6 @@ children:
                 then be responsible for filing bugs, attempting to
                 automatically build packages, perform some preliminary QA
                 checks, etc..
-    -   name:   Taskotron
-        data:
-            url:    https://taskotron.fedoraproject.org
-            description: >
-                Taskotron is a framework for automated task execution and is in
-                the very early stages of development with the objective to
-                replace AutoQA for automating selected QA tasks in Fedora.
     -   name:   Jenkins
         data:
             url:    http://jenkins.cloud.fedoraproject.org
@@ -144,6 +137,13 @@ children:
             Tools for testers -- the people who tell us its broken so we can
             fix it.
     children:
+    -   name:   Taskotron
+        data:
+            url:    https://taskotron.fedoraproject.org
+            description: >
+                Taskotron is a framework for automated task execution and is in
+                the very early stages of development with the objective to
+                replace AutoQA for automating selected QA tasks in Fedora.
     -   name:   Releng-Dash
         data:
             url:    https://apps.fedoraproject.org/releng-dash/
