@@ -120,7 +120,7 @@ children:
     -   name:   Collectd
         icon:   collectd.png
         data:
-            url:    http://admin.fedoraproject.org/collectd
+            url:    http://admin.fedoraproject.org/collectd/
             description: >
                 Tracks and displays statistics on the Fedora
                 Infrastructure machines over time.  Useful for debugging
