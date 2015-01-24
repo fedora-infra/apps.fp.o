@@ -177,6 +177,13 @@ children:
                 The Fedora Community makes use of a bugzilla instance
                 run by Red Hat.  Notice something wrong with a Fedora
                 package?  You can file an official bug here.
+    -   name:   Review Status
+        data:
+            url:    http://fedoraproject.org/PackageReviewStatus/
+            description: >
+                These pages contain periodically generated reports with
+                information on the current state of all Fedora <strong>package review
+                tickets</strong> -- a super useful window on bugzilla.
     -   name:   Kerneltest
         icon:   tux.png
         data:
@@ -289,6 +296,22 @@ children:
             Tools for everybody -- use these things to manage your Fedora
             Account.
     children:
+    -   name:   Ambassadors Map
+        data:
+            url:    http://fedoraproject.org/membership-map/ambassadors.html
+            description: >
+                Ambassadors are the representatives of Fedora. Ambassadors
+                ensure the public understand Fedora's principles and the work
+                that Fedora is doing. Additionally Ambassadors are responsible
+                for helping to grow the contributor base, and to act as a
+                liaison between other FLOSS projects and the Fedora community.
+
+                This thing is a map of where all the <a
+                href="https://fedoraproject.org/wiki/Ambassadors">Fedora
+                Ambassadors</a> live showing just how vibrant the Fedora
+                Community really is.  (It's easy to <a
+                href="https://fedoraproject.org/wiki/Fedora_ambassadors_map">add
+                yourself</a> to the map too, if you can't find yourself on it.)
     -   name:   FedoraPeople
         data:
             url:    https://fedorapeople.org
