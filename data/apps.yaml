@@ -19,6 +19,7 @@ children:
     -   name:   Koschei
         data:
             url:    http://koschei.cloud.fedoraproject.org
+            ipv6_only: false
             description: >
                 Koschei is a continuous integration system for RPM packages. It
                 tracks dependency changes done in Koji repositories and rebuilds
@@ -28,6 +29,7 @@ children:
     -   name:   Release Monitoring
         data:
             url:    http://release-monitoring.org
+            ipv6_only: false
             description: >
                 Code named <a
                 href="https://github.com/fedora-infra/anitya">anitya</a>, this
@@ -42,6 +44,7 @@ children:
     -   name:   Jenkins
         data:
             url:    http://jenkins.cloud.fedoraproject.org
+            ipv6_only: false
             description: >
                 Our own continuous integration (CI) service!  It works now and
                 you can use it.. we just don't yet give it the same kind of
@@ -57,6 +60,7 @@ children:
     -   name:   GeoIP
         data:
             url:    https://geoip.fedoraproject.org
+            ipv6_only: false
             description: >
                 A simple web service running <a
                 href="https://github.com/fedora-infra/geoip-city-wsgi">geoip-city-wsgi</a>
@@ -64,6 +68,7 @@ children:
     -   name:   Easyfix
         data:
             url:    http://fedoraproject.org/easyfix
+            ipv6_only: false
             description: >
                 A list of easy-to-fix problems for the different projects in
                 Fedora.  Interested in getting into helping out with sysadmin
@@ -73,6 +78,7 @@ children:
         icon:   fedmsg.png
         data:
             url:    https://apps.fedoraproject.org/datagrepper
+            ipv6_only: false
             status_mappings: ['fedmsg']
             description: >
                 DataGrepper is an HTTP API for querying the datanommer
@@ -85,6 +91,7 @@ children:
         icon:   status-good.png
         data:
             url:    http://status.fedoraproject.org
+            ipv6_only: false
             description: >
                 Sometimes the Fedora Infrastructure team messes up (or
                 lightning strikes our datacenter(s)).  Sorry about that.
@@ -97,6 +104,7 @@ children:
         icon:   downloads.png
         data:
             url:    http://mirrors.fedoraproject.org
+            ipv6_only: false
             status_mappings: ['mirrormanager', 'mirrorlist']
             description: >
                 Fedora is distributed to millions of systems globally.
@@ -111,6 +119,7 @@ children:
         icon:   nagios-logo.png
         data:
             url:    http://admin.fedoraproject.org/nagios
+            ipv6_only: false
             description: >
                 "Is telia down?"  The answer can most definitively be
                 found here (and in detail).  The Fedora Infrastructure
@@ -121,6 +130,7 @@ children:
         icon:   collectd.png
         data:
             url:    http://admin.fedoraproject.org/collectd/
+            ipv6_only: false
             description: >
                 Tracks and displays statistics on the Fedora
                 Infrastructure machines over time.  Useful for debugging
@@ -128,6 +138,7 @@ children:
     -   name:   HAProxy
         data:
             url:    http://admin.fedoraproject.org/haproxy/proxy1
+            ipv6_only: false
             description: >
                 Shows the health of our proxies.  How many bytes?
                 Concurrent sessions?  Health checks?
@@ -140,6 +151,7 @@ children:
     -   name:   Taskotron
         data:
             url:    https://taskotron.fedoraproject.org
+            ipv6_only: false
             description: >
                 Taskotron is a framework for automated task execution and is in
                 the very early stages of development with the objective to
@@ -147,6 +159,7 @@ children:
     -   name:   Releng-Dash
         data:
             url:    https://apps.fedoraproject.org/releng-dash/
+            ipv6_only: false
             description: >
                 Track the status of the Fedora Release Engineering process.
                 Did the latest rawhide get rsynced out?  How about for the
@@ -155,6 +168,7 @@ children:
     -   name:   Problem Tracker
         data:
             url:    https://retrace.fedoraproject.org
+            ipv6_only: false
             description: >
                 The Problem Tracker is a platform for collecting and
                 analyzing package crashes reported via ABRT (Automatic Bug
@@ -164,6 +178,7 @@ children:
     -   name:   Blocker Bugs
         data:
             url:    http://qa.fedoraproject.org/blockerbugs
+            ipv6_only: false
             status_mappings: ['blockerbugs']
             description: >
                 The Fedora Blocker Bug Tracker tracks release blocking bugs
@@ -173,6 +188,7 @@ children:
         icon:   bugzilla.png
         data:
             url:    http://bugzilla.redhat.com
+            ipv6_only: false
             description: >
                 The Fedora Community makes use of a bugzilla instance
                 run by Red Hat.  Notice something wrong with a Fedora
@@ -180,6 +196,7 @@ children:
     -   name:   Review Status
         data:
             url:    http://fedoraproject.org/PackageReviewStatus/
+            ipv6_only: false
             description: >
                 These pages contain periodically generated reports with
                 information on the current state of all Fedora <strong>package review
@@ -188,6 +205,7 @@ children:
         icon:   tux.png
         data:
             url:    https://apps.fedoraproject.org/kerneltest
+            ipv6_only: false
             description: >
                 As part of the <a
                 href="https://fedoraproject.org/wiki/KernelTestingInitiative">kernel
@@ -204,6 +222,7 @@ children:
     -   name:   Paste
         data:
             url:    http://paste.fedoraproject.org
+            ipv6_only: false
             status_mappings: ['fedorapaste']
             description: >
                 Our very own pastebin server.  If you yum install the
@@ -212,6 +231,7 @@ children:
     -   name:   Elections
         data:
             url:    http://admin.fedoraproject.org/voting
+            ipv6_only: false
             status_mappings: ['elections']
             description: >
                 As a member of the community, you can now vote for the
@@ -223,6 +243,7 @@ children:
         icon:   nuancier.png
         data:
             url: http://apps.fedoraproject.org/nuancier
+            ipv6_only: false
             description: >
                 Nuancier is a simple voting application for the
                 supplementary wallpapers included in Fedora.
@@ -230,6 +251,7 @@ children:
         icon:   mail.png
         data:
             url:    http://lists.fedoraproject.org
+            ipv6_only: false
             status_mappings: ['mailinglists']
             description: >
                 Mailing lists are used for communication within the community.
@@ -239,6 +261,7 @@ children:
         icon:   fedocal.png
         data:
             url:    http://apps.fedoraproject.org/calendar
+            ipv6_only: false
             status_mappings: ['fedocal']
             description: >
                 The Fedora Calendar (or <strong>fedocal</strong>), you might
@@ -250,6 +273,7 @@ children:
         icon:   meetbot.png
         data:
             url:    https://meetbot.fedoraproject.org
+            ipv6_only: false
             status_mappings: ['zodbot']
             description: >
                 Fedora Infrastructure runs a friendly IRC bot that you may
@@ -269,6 +293,7 @@ children:
         icon:   github.png
         data:
             url:    https://apps.fedoraproject.org/github2fedmsg
+            ipv6_only: false
             status_mappings: ['fedmsg']
             description: >
                 github2fedmsg is a web service that bridges upstream
@@ -281,6 +306,7 @@ children:
         icon:   trac.png
         data:
             url:    http://fedorahosted.org
+            ipv6_only: false
             status_mappings: ['fedorahosted']
             description: >
                 Fedora is dedicated to open source software. This
@@ -299,6 +325,7 @@ children:
     -   name:   Ambassadors Map
         data:
             url:    http://fedoraproject.org/membership-map/ambassadors.html
+            ipv6_only: false
             description: >
                 Ambassadors are the representatives of Fedora. Ambassadors
                 ensure the public understand Fedora's principles and the work
@@ -315,6 +342,7 @@ children:
     -   name:   FedoraPeople
         data:
             url:    https://fedorapeople.org
+            ipv6_only: false
             status_mappings: ['people']
             description: >
                 Being a community member you gain access to fedorapeople which
@@ -323,6 +351,7 @@ children:
     -   name:   FAS
         data:
             url:    http://admin.fedoraproject.org/accounts
+            ipv6_only: false
             status_mappings: ['fas']
             description: >
                 The Fedora Account System.  Update your profile
@@ -331,6 +360,7 @@ children:
         icon:   fedmsg.png
         data:
             url:    https://apps.fedoraproject.org/notifications
+            ipv6_only: false
             status_mappings: ['fedmsg']
             description: >
                 Centrally managed preferences for Fedora Infrastructure
@@ -340,6 +370,7 @@ children:
         status_mappings: ['badges']
         data:
             url:    https://badges.fedoraproject.org
+            ipv6_only: false
             description: >
                 An achievements system for Fedora Contributors!  "Badges"
                 are awarded based on activity in the community.  Can you
@@ -358,6 +389,7 @@ children:
         icon:   ask_fedora.png
         data:
             url:    http://ask.fedoraproject.org/
+            ipv6_only: false
             status_mappings: ['ask']
             description: >
                 Any question at all about Fedora?  Ask it here.
@@ -365,6 +397,7 @@ children:
         icon:   mediawiki.png
         data:
             url:    http://fedoraproject.org/wiki
+            ipv6_only: false
             status_mappings: ['wiki']
             description: >
                 Maintain your own user profile page, contribute to
@@ -373,6 +406,7 @@ children:
         icon:   magazine.png
         data:
             url:    http://fedoramagazine.org
+            ipv6_only: false
             description: >
                 Fedora Magazine is a WordPress-based site which delivers all
                 the news of the Fedora Community. (It replaces the previous
@@ -381,6 +415,7 @@ children:
         icon:   planet_logo.png
         data:
             url:    http://planet.fedoraproject.org
+            ipv6_only: false
             description: >
                 The planet is a blog aggregator, a space accessible to you
                 as a community member where you can express your opinion and
@@ -388,6 +423,7 @@ children:
     -   name:   Docs
         data:
             url:    http://docs.fedoraproject.org
+            ipv6_only: false
             status_mappings: ['docs']
             description: >
                 RTFM!  Everything you could ever want to know.
@@ -405,6 +441,7 @@ children:
         -   name:   Packages
             data:
                 url:    http://apps.fedoraproject.org/packages
+                ipv6_only: false
                 status_mappings: ['packages']
                 description: >
                     A meta-app over the other packaging apps; the best place to
@@ -419,6 +456,7 @@ children:
             icon:   tagger.png
             data:
                 url:    http://apps.fedoraproject.org/tagger
+                ipv6_only: false
                 status_mappings: ['tagger']
                 description: >
                     Help build a tag cloud of all our packages.. It's actually
@@ -428,6 +466,7 @@ children:
             icon:   copr.png
             data:
                 url:    https://copr.fedoraproject.org
+                ipv6_only: false
                 status_mappings: ['copr']
                 description: >
                     Copr is an easy-to-use automatic build system providing a
@@ -435,6 +474,7 @@ children:
         -   name:   PkgDB
             data:
                 url:    http://admin.fedoraproject.org/pkgdb
+                ipv6_only: false
                 status_mappings: ['pkgdb']
                 description: >
                     Manage ACLs of your packages.
@@ -442,6 +482,7 @@ children:
             icon:   koji.png
             data:
                 url:    http://koji.fedoraproject.org/koji
+                ipv6_only: false
                 status_mappings: ['koji']
                 description: >
                     Koji is the software that builds RPM packages for the
@@ -452,6 +493,7 @@ children:
             icon:   bodhi.png
             data:
                 url:    http://admin.fedoraproject.org/updates
+                ipv6_only: false
                 status_mappings: ['bodhi']
                 description: >
                     The tool you will use to push your packages to the Fedora
@@ -463,6 +505,7 @@ children:
             icon:   git-logo.png
             data:
                 url:    http://pkgs.fedoraproject.org/cgit
+                ipv6_only: false
                 status_mappings: ['pkgs']
                 description: >
                     Ever wonder <em>exactly</em> what is in the new release
@@ -472,6 +515,7 @@ children:
         -   name:   Darkserver
             data:
                 url:    https://darkserver.fedoraproject.org
+                ipv6_only: false
                 status_mappings: ['darkserver']
                 description: >
                     A set of tools and JSON service to help userspace developers
