@@ -69,56 +69,56 @@ var json = {
           "id": 7
         }, 
         {
-          "id": 8, 
           "data": {
             "url": "https://apps.fedoraproject.org/datagrepper", 
+            "icon": "fedmsg.png", 
             "description": "DataGrepper is an HTTP API for querying the datanommer database.  You can use it to dig into the history of the <a href=\"http://fedmsg.com\">fedmsg</a> message bus.  You can grab events by username, by package, by message source, by topic... you name it.\n", 
             "status_mappings": [
               "fedmsg"
             ]
           }, 
-          "name": "<img class='icon' src='img/icons/fedmsg.png' /> DataGrepper", 
-          "icon": "fedmsg.png"
+          "name": "DataGrepper", 
+          "id": 8
         }, 
         {
-          "id": 9, 
           "data": {
             "url": "http://status.fedoraproject.org", 
-            "description": "Sometimes the Fedora Infrastructure team messes up (or lightning strikes our datacenter(s)).  Sorry about that. You can use this website to check the status.  Is it \"down for everyone, or just me?\"<br/>Notice the favicon in your browser tab.  It changes based on the status, so if you keep this open you can check back to it at a glance.\n"
+            "description": "Sometimes the Fedora Infrastructure team messes up (or lightning strikes our datacenter(s)).  Sorry about that. You can use this website to check the status.  Is it \"down for everyone, or just me?\"<br/>Notice the favicon in your browser tab.  It changes based on the status, so if you keep this open you can check back to it at a glance.\n", 
+            "icon": "status-good.png"
           }, 
-          "name": "<img class='icon' src='img/icons/status-good.png' /> Status", 
-          "icon": "status-good.png"
+          "name": "Status", 
+          "id": 9
         }, 
         {
-          "id": 10, 
           "data": {
             "url": "http://mirrors.fedoraproject.org", 
+            "icon": "downloads.png", 
             "description": "Fedora is distributed to millions of systems globally. This would not be possible without the donations of time, disk space, and bandwidth by hundreds of volunteer system administrators and their companies or institutions.  Your fast download experience is made possible by these donations.  The list on the <strong>MirrorManager</strong> site is dynamically generated every hour, listing only up-to-date mirrors.\n", 
             "status_mappings": [
               "mirrormanager", 
               "mirrorlist"
             ]
           }, 
-          "name": "<img class='icon' src='img/icons/downloads.png' /> MirrorManager", 
-          "icon": "downloads.png"
+          "name": "MirrorManager", 
+          "id": 10
         }, 
         {
-          "id": 11, 
           "data": {
             "url": "http://admin.fedoraproject.org/nagios", 
-            "description": "\"Is telia down?\"  The answer can most definitively be found here (and in detail).  The Fedora Infrastructure team uses Nagios to monitor the servers that serve Fedora.  Accessing most details requires membership in the <em>sysadmin</em> group.\n"
+            "description": "\"Is telia down?\"  The answer can most definitively be found here (and in detail).  The Fedora Infrastructure team uses Nagios to monitor the servers that serve Fedora.  Accessing most details requires membership in the <em>sysadmin</em> group.\n", 
+            "icon": "nagios-logo.png"
           }, 
-          "name": "<img class='icon' src='img/icons/nagios-logo.png' /> Nagios", 
-          "icon": "nagios-logo.png"
+          "name": "Nagios", 
+          "id": 11
         }, 
         {
-          "id": 12, 
           "data": {
             "url": "http://admin.fedoraproject.org/collectd/", 
-            "description": "Tracks and displays statistics on the Fedora Infrastructure machines over time.  Useful for debugging ineffeciencies and problems.\n"
+            "description": "Tracks and displays statistics on the Fedora Infrastructure machines over time.  Useful for debugging ineffeciencies and problems.\n", 
+            "icon": "collectd.png"
           }, 
-          "name": "<img class='icon' src='img/icons/collectd.png' /> Collectd", 
-          "icon": "collectd.png"
+          "name": "Collectd", 
+          "id": 12
         }, 
         {
           "data": {
@@ -173,13 +173,13 @@ var json = {
           "id": 18
         }, 
         {
-          "id": 19, 
           "data": {
             "url": "http://bugzilla.redhat.com", 
-            "description": "The Fedora Community makes use of a bugzilla instance run by Red Hat.  Notice something wrong with a Fedora package?  You can file an official bug here.\n"
+            "description": "The Fedora Community makes use of a bugzilla instance run by Red Hat.  Notice something wrong with a Fedora package?  You can file an official bug here.\n", 
+            "icon": "bugzilla.png"
           }, 
-          "name": "<img class='icon' src='img/icons/bugzilla.png' /> Bugzilla", 
-          "icon": "bugzilla.png"
+          "name": "Bugzilla", 
+          "id": 19
         }, 
         {
           "data": {
@@ -190,13 +190,13 @@ var json = {
           "id": 20
         }, 
         {
-          "id": 21, 
           "data": {
             "url": "https://apps.fedoraproject.org/kerneltest", 
-            "description": "As part of the <a href=\"https://fedoraproject.org/wiki/KernelTestingInitiative\">kernel testing initiative</a> we provide a webapp where users and automated systems can upload test results.  If you have access to hardware where we could catch tricky driver issues, your assistance here would be much appreciated.\n"
+            "description": "As part of the <a href=\"https://fedoraproject.org/wiki/KernelTestingInitiative\">kernel testing initiative</a> we provide a webapp where users and automated systems can upload test results.  If you have access to hardware where we could catch tricky driver issues, your assistance here would be much appreciated.\n", 
+            "icon": "tux.png"
           }, 
-          "name": "<img class='icon' src='img/icons/tux.png' /> Kerneltest", 
-          "icon": "tux.png"
+          "name": "Kerneltest", 
+          "id": 21
         }
       ]
     }, 
@@ -230,49 +230,49 @@ var json = {
           "id": 24
         }, 
         {
-          "id": 25, 
           "data": {
             "url": "http://apps.fedoraproject.org/nuancier", 
-            "description": "Nuancier is a simple voting application for the supplementary wallpapers included in Fedora.\n"
+            "description": "Nuancier is a simple voting application for the supplementary wallpapers included in Fedora.\n", 
+            "icon": "nuancier.png"
           }, 
-          "name": "<img class='icon' src='img/icons/nuancier.png' /> Nuancier", 
-          "icon": "nuancier.png"
+          "name": "Nuancier", 
+          "id": 25
         }, 
         {
-          "id": 26, 
           "data": {
             "url": "http://lists.fedoraproject.org", 
+            "icon": "mail.png", 
             "description": "Mailing lists are used for communication within the community. There are lists for generic topics and lists more dedicated to a specific topic, there is for sure one for you.\n", 
             "status_mappings": [
               "mailinglists"
             ]
           }, 
-          "name": "<img class='icon' src='img/icons/mail.png' /> The Mailing lists", 
-          "icon": "mail.png"
+          "name": "The Mailing lists", 
+          "id": 26
         }, 
         {
-          "id": 27, 
           "data": {
             "url": "http://apps.fedoraproject.org/calendar", 
+            "icon": "fedocal.png", 
             "description": "The Fedora Calendar (or <strong>fedocal</strong>), you might have already guessed, is a public calendar service.  You can create your own calendar, or subscribe to others.  Want to be kept abrest of releases, freezes, and events?  This is the tool for you.\n", 
             "status_mappings": [
               "fedocal"
             ]
           }, 
-          "name": "<img class='icon' src='img/icons/fedocal.png' /> FedoCal", 
-          "icon": "fedocal.png"
+          "name": "FedoCal", 
+          "id": 27
         }, 
         {
-          "id": 28, 
           "data": {
             "url": "https://meetbot.fedoraproject.org", 
+            "icon": "meetbot.png", 
             "description": "Fedora Infrastructure runs a friendly IRC bot that you may know named <a href=\"https://fedoraproject.org/wiki/Zodbot\">zodbot</a>. Among its many and varied functions is logging IRC meetings, the archives of which you can find here.\n", 
             "status_mappings": [
               "zodbot"
             ]
           }, 
-          "name": "<img class='icon' src='img/icons/meetbot.png' /> Meetbot", 
-          "icon": "meetbot.png"
+          "name": "Meetbot", 
+          "id": 28
         }
       ]
     }, 
@@ -284,28 +284,28 @@ var json = {
       "name": "Upstream", 
       "children": [
         {
-          "id": 30, 
           "data": {
             "url": "https://apps.fedoraproject.org/github2fedmsg", 
+            "icon": "github.png", 
             "description": "github2fedmsg is a web service that bridges upstream development activity from <a href=\"https://github.com\">GitHub</a> into the <a href=\"http://fedmsg.com\">Fedora Infrastructure message bus</a>.  Visit the self-service dashboard to toggle the status of your repositories.\n", 
             "status_mappings": [
               "fedmsg"
             ]
           }, 
-          "name": "<img class='icon' src='img/icons/github.png' /> github2fedmsg", 
-          "icon": "github.png"
+          "name": "github2fedmsg", 
+          "id": 30
         }, 
         {
-          "id": 31, 
           "data": {
             "url": "http://fedorahosted.org", 
+            "icon": "trac.png", 
             "description": "Fedora is dedicated to open source software. This commitment can extend beyond regular Fedora offerings.<br/> <strong>Fedora Hosted</strong> is our most feature rich hosting solution. It includes an scm, trac instance, release dir, account system for access control, etc. This is our most common hosting option.  When most groups want hosting, this is what they want.\n", 
             "status_mappings": [
               "fedorahosted"
             ]
           }, 
-          "name": "<img class='icon' src='img/icons/trac.png' /> Fedora Hosted", 
-          "icon": "trac.png"
+          "name": "Fedora Hosted", 
+          "id": 31
         }
       ]
     }, 
@@ -347,25 +347,25 @@ var json = {
           "id": 35
         }, 
         {
-          "id": 36, 
           "data": {
             "url": "https://apps.fedoraproject.org/notifications", 
+            "icon": "fedmsg.png", 
             "description": "Centrally managed preferences for Fedora Infrastructure notifications to your inbox, irc client, and mobile device.\n", 
             "status_mappings": [
               "fedmsg"
             ]
           }, 
-          "name": "<img class='icon' src='img/icons/fedmsg.png' /> Notifications", 
-          "icon": "fedmsg.png"
+          "name": "Notifications", 
+          "id": 36
         }, 
         {
           "id": 37, 
-          "icon": "badges.png", 
           "data": {
             "url": "https://badges.fedoraproject.org", 
-            "description": "An achievements system for Fedora Contributors!  \"Badges\" are awarded based on activity in the community.  Can you unlock them all? You can export your badges to Mozilla's <a href=\"http://openbadges.org\">Open Badges Infrastructure</a>\n"
+            "description": "An achievements system for Fedora Contributors!  \"Badges\" are awarded based on activity in the community.  Can you unlock them all? You can export your badges to Mozilla's <a href=\"http://openbadges.org\">Open Badges Infrastructure</a>\n", 
+            "icon": "badges.png"
           }, 
-          "name": "<img class='icon' src='img/icons/badges.png' /> Badges", 
+          "name": "Badges", 
           "status_mappings": [
             "badges"
           ]
@@ -380,46 +380,46 @@ var json = {
       "name": "Content", 
       "children": [
         {
-          "id": 39, 
           "data": {
             "url": "http://ask.fedoraproject.org/", 
+            "icon": "ask_fedora.png", 
             "description": "Any question at all about Fedora?  Ask it here.\n", 
             "status_mappings": [
               "ask"
             ]
           }, 
-          "name": "<img class='icon' src='img/icons/ask_fedora.png' /> Ask Fedora", 
-          "icon": "ask_fedora.png"
+          "name": "Ask Fedora", 
+          "id": 39
         }, 
         {
-          "id": 40, 
           "data": {
             "url": "http://fedoraproject.org/wiki", 
+            "icon": "mediawiki.png", 
             "description": "Maintain your own user profile page, contribute to documents about features, process, and governance.\n", 
             "status_mappings": [
               "wiki"
             ]
           }, 
-          "name": "<img class='icon' src='img/icons/mediawiki.png' /> The Wiki", 
-          "icon": "mediawiki.png"
+          "name": "The Wiki", 
+          "id": 40
         }, 
         {
-          "id": 41, 
           "data": {
             "url": "http://fedoramagazine.org", 
-            "description": "Fedora Magazine is a WordPress-based site which delivers all the news of the Fedora Community. (It replaces the previous Fedora Weekly News.)\n"
+            "description": "Fedora Magazine is a WordPress-based site which delivers all the news of the Fedora Community. (It replaces the previous Fedora Weekly News.)\n", 
+            "icon": "magazine.png"
           }, 
-          "name": "<img class='icon' src='img/icons/magazine.png' /> Fedora Magazine", 
-          "icon": "magazine.png"
+          "name": "Fedora Magazine", 
+          "id": 41
         }, 
         {
-          "id": 42, 
           "data": {
             "url": "http://planet.fedoraproject.org", 
-            "description": "The planet is a blog aggregator, a space accessible to you as a community member where you can express your opinion and talk about what you are doing for Fedora.\n"
+            "description": "The planet is a blog aggregator, a space accessible to you as a community member where you can express your opinion and talk about what you are doing for Fedora.\n", 
+            "icon": "planet_logo.png"
           }, 
-          "name": "<img class='icon' src='img/icons/planet_logo.png' /> The Planet", 
-          "icon": "planet_logo.png"
+          "name": "The Planet", 
+          "id": 42
         }, 
         {
           "data": {
@@ -453,28 +453,28 @@ var json = {
           "id": 45
         }, 
         {
-          "id": 46, 
           "data": {
             "url": "http://apps.fedoraproject.org/tagger", 
+            "icon": "tagger.png", 
             "description": "Help build a tag cloud of all our packages.. It's actually really useful.  It'll help improve the search of the \"Packages\" webapp.\n", 
             "status_mappings": [
               "tagger"
             ]
           }, 
-          "name": "<img class='icon' src='img/icons/tagger.png' /> Tagger", 
-          "icon": "tagger.png"
+          "name": "Tagger", 
+          "id": 46
         }, 
         {
-          "id": 47, 
           "data": {
             "url": "https://copr.fedoraproject.org", 
+            "icon": "copr.png", 
             "description": "Copr is an easy-to-use automatic build system providing a package repository as its output.  You can make your **own** repositories!\n", 
             "status_mappings": [
               "copr"
             ]
           }, 
-          "name": "<img class='icon' src='img/icons/copr.png' /> COPR", 
-          "icon": "copr.png"
+          "name": "COPR", 
+          "id": 47
         }, 
         {
           "data": {
@@ -488,40 +488,40 @@ var json = {
           "id": 48
         }, 
         {
-          "id": 49, 
           "data": {
             "url": "http://koji.fedoraproject.org/koji", 
+            "icon": "koji.png", 
             "description": "Koji is the software that builds RPM packages for the Fedora project.  It uses Mock to create chroot environments to perform builds that are both safe and trusted.\n", 
             "status_mappings": [
               "koji"
             ]
           }, 
-          "name": "<img class='icon' src='img/icons/koji.png' /> Koji", 
-          "icon": "koji.png"
+          "name": "Koji", 
+          "id": 49
         }, 
         {
-          "id": 50, 
           "data": {
             "url": "http://admin.fedoraproject.org/updates", 
+            "icon": "bodhi.png", 
             "description": "The tool you will use to push your packages to the Fedora repositories as an update, first an update to be tested (repository: updates-testing) then a stable update (repository: updates).  Behold -- the <em>Magic Cabbage.</em>\n", 
             "status_mappings": [
               "bodhi"
             ]
           }, 
-          "name": "<img class='icon' src='img/icons/bodhi.png' /> Bodhi", 
-          "icon": "bodhi.png"
+          "name": "Bodhi", 
+          "id": 50
         }, 
         {
-          "id": 51, 
           "data": {
             "url": "http://pkgs.fedoraproject.org/cgit", 
+            "icon": "git-logo.png", 
             "description": "Ever wonder <em>exactly</em> what is in the new release of a Fedora package?  This is where the change histories of all the packages in Fedora for every release of Fedora (and EPEL) are kept.. forever!  A gold mine.\n", 
             "status_mappings": [
               "pkgs"
             ]
           }, 
-          "name": "<img class='icon' src='img/icons/git-logo.png' /> SCM", 
-          "icon": "git-logo.png"
+          "name": "SCM", 
+          "id": 51
         }, 
         {
           "data": {
