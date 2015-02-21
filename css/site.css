@@ -33,7 +33,7 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    height: 100%;
+    height: calc(100% - 40px);  // Leave room for the footer.
     width: 100%;
     padding: 0px;
 }
