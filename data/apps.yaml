@@ -47,6 +47,13 @@ children:
                 you can use it.. we just don't yet give it the same kind of
                 guarantees that we give our other apps.  Look forwards to us
                 promoting it soon..
+    -   name:   faitout
+        data:
+            url: http://209.132.184.152/faitout/
+            description: >
+                 Provides access to temporary postgresql databases. This
+                 database can be used for unit-test thus reducing the
+                 differences between testing and production environment.
 
 -   name:   Infrastructure
     data:
@@ -222,7 +229,7 @@ children:
     -   name:   Nuancier
         data:
             icon:   nuancier.png
-            url: http://apps.fedoraproject.org/nuancier
+            url: https://apps.fedoraproject.org/nuancier
             description: >
                 Nuancier is a simple voting application for the
                 supplementary wallpapers included in Fedora.
@@ -238,7 +245,7 @@ children:
     -   name:   FedoCal
         data:
             icon:   fedocal.png
-            url:    http://apps.fedoraproject.org/calendar
+            url:    https://apps.fedoraproject.org/calendar
             status_mappings: ['fedocal']
             description: >
                 The Fedora Calendar (or <strong>fedocal</strong>), you might
@@ -357,7 +364,7 @@ children:
     -   name:   Ask Fedora
         data:
             icon:   ask_fedora.png
-            url:    http://ask.fedoraproject.org/
+            url:    https://ask.fedoraproject.org/
             status_mappings: ['ask']
             description: >
                 Any question at all about Fedora?  Ask it here.
@@ -387,7 +394,7 @@ children:
                 talk about what you are doing for Fedora.
     -   name:   Docs
         data:
-            url:    http://docs.fedoraproject.org
+            url:    https://docs.fedoraproject.org
             status_mappings: ['docs']
             description: >
                 RTFM!  Everything you could ever want to know.
@@ -404,7 +411,7 @@ children:
     children:
         -   name:   Packages
             data:
-                url:    http://apps.fedoraproject.org/packages
+                url:    https://apps.fedoraproject.org/packages
                 status_mappings: ['packages']
                 description: >
                     A meta-app over the other packaging apps; the best place to
@@ -414,11 +421,11 @@ children:
                     reported against them. All these kind of questions can be
                     answered here.
                     It is sometimes called "Fedora Community v2" after the old
-                    <a href="http://admin.fedoraproject.org/community">Fedora Community</a> site.
+                    <a href="https://admin.fedoraproject.org/community">Fedora Community</a> site.
         -   name:   Tagger
             data:
                 icon:   tagger.png
-                url:    http://apps.fedoraproject.org/tagger
+                url:    https://apps.fedoraproject.org/tagger
                 status_mappings: ['tagger']
                 description: >
                     Help build a tag cloud of all our packages.. It's actually
@@ -434,7 +441,7 @@ children:
                     package repository as its output.  You can make your **own** repositories!
         -   name:   PkgDB
             data:
-                url:    http://admin.fedoraproject.org/pkgdb
+                url:    https://admin.fedoraproject.org/pkgdb
                 status_mappings: ['pkgdb']
                 description: >
                     Manage ACLs of your packages.
@@ -451,7 +458,7 @@ children:
         -   name:   Bodhi
             data:
                 icon:   bodhi.png
-                url:    http://admin.fedoraproject.org/updates
+                url:    https://admin.fedoraproject.org/updates
                 status_mappings: ['bodhi']
                 description: >
                     The tool you will use to push your packages to the Fedora
