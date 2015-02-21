@@ -46,6 +46,8 @@ function init() {
         //Where to append the visualization
         injectInto: 'mainvis',
 
+        levelDistance: 175,  // Default is 100
+
         //Set Node and Edge styles.
         Node: {
             color: DARK_BLUE,
@@ -53,7 +55,7 @@ function init() {
 
         Edge: {
             color: LIGHT_BLUE,
-            lineWidth:2.5
+            lineWidth: 2.5
         },
 
         onBeforeCompute: function(node){
@@ -115,11 +117,11 @@ function init() {
             style.color = BLACK;
 
             if (node._depth == 0) {
-                style.fontSize = "1.5em";
+                style.fontSize = "2.5em";
             } else if (node._depth <= 1) {
-                style.fontSize = "1.1em";
+                style.fontSize = "1.7em";
             } else if(node._depth >= 2){
-                style.fontSize = "0.8em";
+                style.fontSize = "1.2em";
             }
 
             var left = parseInt(style.left);
