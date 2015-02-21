@@ -1,7 +1,7 @@
 %global prefix /srv/web
 
 Name:           apps-fp-o
-Version:        1.1
+Version:        1.2
 Release:        1%{?dist}
 Summary:        A landing page for apps.fedoraproject.org
 
@@ -57,6 +57,10 @@ cp -r {index.html,apps-yaml.html,bootstrap,bootstrap-3.1.1-fedora,css,img,js} %{
 %attr(755, httpd, httpd) %dir %{prefix}/%{name}/
 
 %changelog
+* Sat Feb 21 2015 Ralph Bean <rbean@redhat.com> - 1.2-1
+- Make the graph bigger.
+- Change JSON structure w.r.t. icons.
+
 * Thu Sep 25 2014 Ralph Bean <rbean@redhat.com> - 1.1-1
 - Always use jsonp when querying status.fp.o.
 
