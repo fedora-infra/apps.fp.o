@@ -32,10 +32,21 @@ function init() {
         return $("<p>" + name + "</p>").text().replace(/\s+/g, '');
     }
 
+    var node2html = function(node) {
+        var html = node.name;
+        if (node.data.icon != undefined) {
+            html = "<img class='icon' src='img/icons/" +
+                node.data.icon + "'/> " + html;
+        }
+        return html
+    }
+
     // Now, set up our radial graph visualization
     var rgraph = new $jit.RGraph({
         //Where to append the visualization
         injectInto: 'mainvis',
+
+        levelDistance: 175,  // Default is 100
 
         //Set Node and Edge styles.
         Node: {
@@ -44,11 +55,11 @@ function init() {
 
         Edge: {
             color: LIGHT_BLUE,
-            lineWidth:2.5
+            lineWidth: 2.5
         },
 
         onBeforeCompute: function(node){
-            var header = "<h3>" + node.name + "</h3>";
+            var header = "<h3>" + node2html(node) + "</h3>";
             var body = "<p>" + node.data.description + "</p>";
 
             var button = "";
@@ -88,7 +99,7 @@ function init() {
         //and a click handler to move the graph.
         //This method is called once, on label creation.
         onCreateLabel: function(domElement, node){
-            domElement.innerHTML = node.name;
+            domElement.innerHTML = node2html(node);
             domElement.onclick = function(){
                 rgraph.onClick(node.id, {
                     onComplete: function() {
@@ -106,11 +117,11 @@ function init() {
             style.color = BLACK;
 
             if (node._depth == 0) {
-                style.fontSize = "1.5em";
+                style.fontSize = "2.5em";
             } else if (node._depth <= 1) {
-                style.fontSize = "1.1em";
+                style.fontSize = "1.7em";
             } else if(node._depth >= 2){
-                style.fontSize = "0.8em";
+                style.fontSize = "1.2em";
             }
 
             var left = parseInt(style.left);

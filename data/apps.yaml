@@ -16,6 +16,15 @@ children:
             they're broken -- it's a big help!.
             Check back here from time to time, as this section will change.
     children:
+    -   name:   Koschei
+        data:
+            url:    http://koschei.cloud.fedoraproject.org
+            description: >
+                Koschei is a continuous integration system for RPM packages. It
+                tracks dependency changes done in Koji repositories and rebuilds
+                packages whose dependencies change. It can help packagers to
+                detect failures early and provide relevant information to narrow
+                down the cause.
     -   name:   Release Monitoring
         data:
             url:    http://release-monitoring.org
@@ -30,13 +39,6 @@ children:
                 then be responsible for filing bugs, attempting to
                 automatically build packages, perform some preliminary QA
                 checks, etc..
-    -   name:   Taskotron
-        data:
-            url:    https://taskotron.fedoraproject.org
-            description: >
-                Taskotron is a framework for automated task execution and is in
-                the very early stages of development with the objective to
-                replace AutoQA for automating selected QA tasks in Fedora.
     -   name:   Jenkins
         data:
             url:    http://jenkins.cloud.fedoraproject.org
@@ -45,6 +47,13 @@ children:
                 you can use it.. we just don't yet give it the same kind of
                 guarantees that we give our other apps.  Look forwards to us
                 promoting it soon..
+    -   name:   faitout
+        data:
+            url: http://209.132.184.152/faitout/
+            description: >
+                 Provides access to temporary postgresql databases. This
+                 database can be used for unit-test thus reducing the
+                 differences between testing and production environment.
 
 -   name:   Infrastructure
     data:
@@ -52,6 +61,13 @@ children:
             Tools for sysadmins -- the people who run the servers that run
             Fedora (and otherwise).
     children:
+    -   name:   GeoIP
+        data:
+            url:    https://geoip.fedoraproject.org
+            description: >
+                A simple web service running <a
+                href="https://github.com/fedora-infra/geoip-city-wsgi">geoip-city-wsgi</a>
+                that will return geoip information to you.
     -   name:   Easyfix
         data:
             url:    http://fedoraproject.org/easyfix
@@ -61,8 +77,8 @@ children:
                 work or web application development?  This should be useful
                 to you.
     -   name:   DataGrepper
-        icon:   fedmsg.png
         data:
+            icon:   fedmsg.png
             url:    https://apps.fedoraproject.org/datagrepper
             status_mappings: ['fedmsg']
             description: >
@@ -73,8 +89,8 @@ children:
                 source, by topic... you name it.
 
     -   name:   Status
-        icon:   status-good.png
         data:
+            icon:   status-good.png
             url:    http://status.fedoraproject.org
             description: >
                 Sometimes the Fedora Infrastructure team messes up (or
@@ -85,8 +101,8 @@ children:
                 so if you keep this open you can check back to it at a
                 glance.
     -   name:   MirrorManager
-        icon:   downloads.png
         data:
+            icon:   downloads.png
             url:    http://mirrors.fedoraproject.org
             status_mappings: ['mirrormanager', 'mirrorlist']
             description: >
@@ -99,8 +115,8 @@ children:
                 site is dynamically generated every hour, listing only
                 up-to-date mirrors.
     -   name:   Nagios
-        icon:   nagios-logo.png
         data:
+            icon:   nagios-logo.png
             url:    http://admin.fedoraproject.org/nagios
             description: >
                 "Is telia down?"  The answer can most definitively be
@@ -109,9 +125,9 @@ children:
                 Fedora.  Accessing most details requires membership
                 in the <em>sysadmin</em> group.
     -   name:   Collectd
-        icon:   collectd.png
         data:
-            url:    http://admin.fedoraproject.org/collectd
+            icon:   collectd.png
+            url:    http://admin.fedoraproject.org/collectd/
             description: >
                 Tracks and displays statistics on the Fedora
                 Infrastructure machines over time.  Useful for debugging
@@ -128,6 +144,13 @@ children:
             Tools for testers -- the people who tell us its broken so we can
             fix it.
     children:
+    -   name:   Taskotron
+        data:
+            url:    https://taskotron.fedoraproject.org
+            description: >
+                Taskotron is a framework for automated task execution and is in
+                the very early stages of development with the objective to
+                replace AutoQA for automating selected QA tasks in Fedora.
     -   name:   Releng-Dash
         data:
             url:    https://apps.fedoraproject.org/releng-dash/
@@ -154,16 +177,23 @@ children:
                 and related updates in Fedora releases currently under
                 development.
     -   name:   Bugzilla
-        icon:   bugzilla.png
         data:
+            icon:   bugzilla.png
             url:    http://bugzilla.redhat.com
             description: >
                 The Fedora Community makes use of a bugzilla instance
                 run by Red Hat.  Notice something wrong with a Fedora
                 package?  You can file an official bug here.
-    -   name:   Kerneltest
-        icon:   tux.png
+    -   name:   Review Status
         data:
+            url:    http://fedoraproject.org/PackageReviewStatus/
+            description: >
+                These pages contain periodically generated reports with
+                information on the current state of all Fedora <strong>package review
+                tickets</strong> -- a super useful window on bugzilla.
+    -   name:   Kerneltest
+        data:
+            icon:   tux.png
             url:    https://apps.fedoraproject.org/kerneltest
             description: >
                 As part of the <a
@@ -197,15 +227,15 @@ children:
                 of the community; it is one of the things you can do to
                 influence the development of Fedora.
     -   name:   Nuancier
-        icon:   nuancier.png
         data:
-            url: http://apps.fedoraproject.org/nuancier
+            icon:   nuancier.png
+            url: https://apps.fedoraproject.org/nuancier
             description: >
                 Nuancier is a simple voting application for the
                 supplementary wallpapers included in Fedora.
     -   name:   The Mailing lists
-        icon:   mail.png
         data:
+            icon:   mail.png
             url:    http://lists.fedoraproject.org
             status_mappings: ['mailinglists']
             description: >
@@ -213,9 +243,9 @@ children:
                 There are lists for generic topics and lists more dedicated
                 to a specific topic, there is for sure one for you.
     -   name:   FedoCal
-        icon:   fedocal.png
         data:
-            url:    http://apps.fedoraproject.org/calendar
+            icon:   fedocal.png
+            url:    https://apps.fedoraproject.org/calendar
             status_mappings: ['fedocal']
             description: >
                 The Fedora Calendar (or <strong>fedocal</strong>), you might
@@ -224,8 +254,8 @@ children:
                 be kept abrest of releases, freezes, and events?  This is
                 the tool for you.
     -   name:   Meetbot
-        icon:   meetbot.png
         data:
+            icon:   meetbot.png
             url:    https://meetbot.fedoraproject.org
             status_mappings: ['zodbot']
             description: >
@@ -243,8 +273,8 @@ children:
 
     children:
     -   name:   github2fedmsg
-        icon:   github.png
         data:
+            icon:   github.png
             url:    https://apps.fedoraproject.org/github2fedmsg
             status_mappings: ['fedmsg']
             description: >
@@ -255,8 +285,8 @@ children:
                 bus</a>.  Visit the self-service dashboard to toggle the
                 status of your repositories.
     -   name:   Fedora Hosted
-        icon:   trac.png
         data:
+            icon:   trac.png
             url:    http://fedorahosted.org
             status_mappings: ['fedorahosted']
             description: >
@@ -273,6 +303,22 @@ children:
             Tools for everybody -- use these things to manage your Fedora
             Account.
     children:
+    -   name:   Ambassadors Map
+        data:
+            url:    http://fedoraproject.org/membership-map/ambassadors.html
+            description: >
+                Ambassadors are the representatives of Fedora. Ambassadors
+                ensure the public understand Fedora's principles and the work
+                that Fedora is doing. Additionally Ambassadors are responsible
+                for helping to grow the contributor base, and to act as a
+                liaison between other FLOSS projects and the Fedora community.
+
+                This thing is a map of where all the <a
+                href="https://fedoraproject.org/wiki/Ambassadors">Fedora
+                Ambassadors</a> live showing just how vibrant the Fedora
+                Community really is.  (It's easy to <a
+                href="https://fedoraproject.org/wiki/Fedora_ambassadors_map">add
+                yourself</a> to the map too, if you can't find yourself on it.)
     -   name:   FedoraPeople
         data:
             url:    https://fedorapeople.org
@@ -289,17 +335,17 @@ children:
                 The Fedora Account System.  Update your profile
                 information and apply for membership in groups.
     -   name:   Notifications
-        icon:   fedmsg.png
         data:
+            icon:   fedmsg.png
             url:    https://apps.fedoraproject.org/notifications
             status_mappings: ['fedmsg']
             description: >
                 Centrally managed preferences for Fedora Infrastructure
                 notifications to your inbox, irc client, and mobile device.
     -   name:   Badges
-        icon:   badges.png
         status_mappings: ['badges']
         data:
+            icon:   badges.png
             url:    https://badges.fedoraproject.org
             description: >
                 An achievements system for Fedora Contributors!  "Badges"
@@ -316,31 +362,31 @@ children:
             more..
     children:
     -   name:   Ask Fedora
-        icon:   ask_fedora.png
         data:
-            url:    http://ask.fedoraproject.org/
+            icon:   ask_fedora.png
+            url:    https://ask.fedoraproject.org/
             status_mappings: ['ask']
             description: >
                 Any question at all about Fedora?  Ask it here.
     -   name:   The Wiki
-        icon:   mediawiki.png
         data:
+            icon:   mediawiki.png
             url:    http://fedoraproject.org/wiki
             status_mappings: ['wiki']
             description: >
                 Maintain your own user profile page, contribute to
                 documents about features, process, and governance.
     -   name:   Fedora Magazine
-        icon:   magazine.png
         data:
+            icon:   magazine.png
             url:    http://fedoramagazine.org
             description: >
                 Fedora Magazine is a WordPress-based site which delivers all
                 the news of the Fedora Community. (It replaces the previous
                 Fedora Weekly News.)
     -   name:   The Planet
-        icon:   planet_logo.png
         data:
+            icon:   planet_logo.png
             url:    http://planet.fedoraproject.org
             description: >
                 The planet is a blog aggregator, a space accessible to you
@@ -348,7 +394,7 @@ children:
                 talk about what you are doing for Fedora.
     -   name:   Docs
         data:
-            url:    http://docs.fedoraproject.org
+            url:    https://docs.fedoraproject.org
             status_mappings: ['docs']
             description: >
                 RTFM!  Everything you could ever want to know.
@@ -365,7 +411,7 @@ children:
     children:
         -   name:   Packages
             data:
-                url:    http://apps.fedoraproject.org/packages
+                url:    https://apps.fedoraproject.org/packages
                 status_mappings: ['packages']
                 description: >
                     A meta-app over the other packaging apps; the best place to
@@ -375,19 +421,19 @@ children:
                     reported against them. All these kind of questions can be
                     answered here.
                     It is sometimes called "Fedora Community v2" after the old
-                    <a href="http://admin.fedoraproject.org/community">Fedora Community</a> site.
+                    <a href="https://admin.fedoraproject.org/community">Fedora Community</a> site.
         -   name:   Tagger
-            icon:   tagger.png
             data:
-                url:    http://apps.fedoraproject.org/tagger
+                icon:   tagger.png
+                url:    https://apps.fedoraproject.org/tagger
                 status_mappings: ['tagger']
                 description: >
                     Help build a tag cloud of all our packages.. It's actually
                     really useful.  It'll help improve the search of the
                     "Packages" webapp.
         -   name:   COPR
-            icon:   copr.png
             data:
+                icon:   copr.png
                 url:    https://copr.fedoraproject.org
                 status_mappings: ['copr']
                 description: >
@@ -395,13 +441,13 @@ children:
                     package repository as its output.  You can make your **own** repositories!
         -   name:   PkgDB
             data:
-                url:    http://admin.fedoraproject.org/pkgdb
+                url:    https://admin.fedoraproject.org/pkgdb
                 status_mappings: ['pkgdb']
                 description: >
                     Manage ACLs of your packages.
         -   name:   Koji
-            icon:   koji.png
             data:
+                icon:   koji.png
                 url:    http://koji.fedoraproject.org/koji
                 status_mappings: ['koji']
                 description: >
@@ -410,9 +456,9 @@ children:
                     environments to perform builds that are both safe and
                     trusted.
         -   name:   Bodhi
-            icon:   bodhi.png
             data:
-                url:    http://admin.fedoraproject.org/updates
+                icon:   bodhi.png
+                url:    https://admin.fedoraproject.org/updates
                 status_mappings: ['bodhi']
                 description: >
                     The tool you will use to push your packages to the Fedora
@@ -421,8 +467,8 @@ children:
                     (repository: updates).  Behold -- the <em>Magic
                     Cabbage.</em>
         -   name:   SCM
-            icon:   git-logo.png
             data:
+                icon:   git-logo.png
                 url:    http://pkgs.fedoraproject.org/cgit
                 status_mappings: ['pkgs']
                 description: >
