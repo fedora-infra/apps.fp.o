@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-""" Convert our apps.yaml file to JSON, to stdout. """
+""" Parses the apps.yaml file to a python dict. """
 
 import os
 import yaml
