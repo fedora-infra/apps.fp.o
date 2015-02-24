@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <title>Fedora Apps</title>
+    <title>{{ NAME }}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link type="text/css" rel="stylesheet"
     href="bootstrap/css/bootstrap.min.css" />
@@ -23,7 +23,7 @@
   <body onload="init();">
     <div id="wrap" class="container-fluid">
       <div id="details-container">
-        <h1 class="logo-wrapper"><span class="logo">Fedora</span>apps</h1>
+        <h1 class="logo-wrapper">{{ LOGO }}</h1>
         <div id="details">
         </div><!--/.well -->
       </div>

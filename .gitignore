@@ -1,4 +1,5 @@
 *.swp
 *.pyc
+/index.html
 build
 dist
