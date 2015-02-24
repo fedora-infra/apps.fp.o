@@ -11,6 +11,7 @@ next_id = 0
 def find_data_file():
     name = "apps.yaml"
     locations = [
+        os.path.abspath('./localdata'),
         os.path.abspath('./data'),
         '/usr/share/apps-fp-o',
     ]
