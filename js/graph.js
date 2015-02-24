@@ -64,9 +64,15 @@ function init() {
 
             var button = "";
             if ( node.data.url != undefined ) {
-                button += "<a href='" + node.data.url + "' target='_blank' class='btn btn-default'>";
-                button += "Check it out!";
-                button += "</a>";
+                if ( node.data.ipv6_only && (!ipv6) ) {
+                    button += "<p class='btn btn-primary disabled'>";
+                    button += "IPv6 Only!";
+                    button += "</p>";
+                } else {
+                    button += "<a href='" + node.data.url + "' target='_blank' class='btn btn-default'>";
+                    button += "Check it out!";
+                    button += "</a>";
+                }
             }
 
             var stats = "";
