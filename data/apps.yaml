@@ -151,8 +151,7 @@ children:
     -   name:   Taskotron
         data:
             url:    https://taskotron.fedoraproject.org
-            # This seems like an obvious candidate for package_url, but I don't
-            # see how to view results for a package in the UI presently.
+            package_url: https://taskotron.fedoraproject.org/resultsdb/results?item={package}
             description: >
                 Taskotron is a framework for automated task execution and is in
                 the very early stages of development with the objective to
