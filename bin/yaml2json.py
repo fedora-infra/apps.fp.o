@@ -26,6 +26,8 @@ def mangle(d):
     global next_id
     d['id'] = next_id
     next_id = next_id + 1
+    if not 'ipv6_only' in d:
+        d['ipv6_only'] = False
 
     if 'children' in d:
         d['children'] = map(mangle, d['children'])

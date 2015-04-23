@@ -19,6 +19,7 @@ children:
     -   name:   Koschei
         data:
             url:    http://koschei.cloud.fedoraproject.org
+            package_url: http://koschei.cloud.fedoraproject.org/package/{package}
             description: >
                 Koschei is a continuous integration system for RPM packages. It
                 tracks dependency changes done in Koji repositories and rebuilds
@@ -28,6 +29,7 @@ children:
     -   name:   Release Monitoring
         data:
             url:    http://release-monitoring.org
+            package_url: https://release-monitoring.org/projects/search/?pattern={package}
             description: >
                 Code named <a
                 href="https://github.com/fedora-infra/anitya">anitya</a>, this
@@ -80,6 +82,8 @@ children:
         data:
             icon:   fedmsg.png
             url:    https://apps.fedoraproject.org/datagrepper
+            package_url: https://apps.fedoraproject.org/datagrepper/raw?package={package}
+            user_url: https://apps.fedoraproject.org/datagrepper/raw?user={user}
             status_mappings: ['fedmsg']
             description: >
                 DataGrepper is an HTTP API for querying the datanommer
@@ -147,6 +151,7 @@ children:
     -   name:   Taskotron
         data:
             url:    https://taskotron.fedoraproject.org
+            package_url: https://taskotron.fedoraproject.org/resultsdb/results?item={package}
             description: >
                 Taskotron is a framework for automated task execution and is in
                 the very early stages of development with the objective to
@@ -162,6 +167,7 @@ children:
     -   name:   Problem Tracker
         data:
             url:    https://retrace.fedoraproject.org
+            package_url: https://retrace.fedoraproject.org/faf/reports/?component_names={package}
             description: >
                 The Problem Tracker is a platform for collecting and
                 analyzing package crashes reported via ABRT (Automatic Bug
@@ -180,6 +186,7 @@ children:
         data:
             icon:   bugzilla.png
             url:    http://bugzilla.redhat.com
+            package_url: https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&product=Fedora&product=Fedora%20EPEL&query_format=advanced&component={package}
             description: >
                 The Fedora Community makes use of a bugzilla instance
                 run by Red Hat.  Notice something wrong with a Fedora
@@ -187,6 +194,7 @@ children:
     -   name:   Review Status
         data:
             url:    http://fedoraproject.org/PackageReviewStatus/
+            package_url: https://bugzilla.redhat.com/buglist.cgi?component=Package%20Review&query_format=advanced&short_desc_type=allwordssubstr&short_desc={package}
             description: >
                 These pages contain periodically generated reports with
                 information on the current state of all Fedora <strong>package review
@@ -322,6 +330,7 @@ children:
     -   name:   FedoraPeople
         data:
             url:    https://fedorapeople.org
+            user_url: https://{user}.fedorapeople.org
             status_mappings: ['people']
             description: >
                 Being a community member you gain access to fedorapeople which
@@ -330,6 +339,7 @@ children:
     -   name:   FAS
         data:
             url:    http://admin.fedoraproject.org/accounts
+            user_url: https://admin.fedoraproject.org/accounts/view/{user}
             status_mappings: ['fas']
             description: >
                 The Fedora Account System.  Update your profile
@@ -347,6 +357,7 @@ children:
         data:
             icon:   badges.png
             url:    https://badges.fedoraproject.org
+            user_url: https://badges.fedoraproject.org/user/{user}
             description: >
                 An achievements system for Fedora Contributors!  "Badges"
                 are awarded based on activity in the community.  Can you
@@ -372,6 +383,7 @@ children:
         data:
             icon:   mediawiki.png
             url:    http://fedoraproject.org/wiki
+            user_url: https://fedoraproject.org/wiki/User:{user}
             status_mappings: ['wiki']
             description: >
                 Maintain your own user profile page, contribute to
@@ -412,6 +424,7 @@ children:
         -   name:   Packages
             data:
                 url:    https://apps.fedoraproject.org/packages
+                package_url: https://apps.fedoraproject.org/packages/{package}
                 status_mappings: ['packages']
                 description: >
                     A meta-app over the other packaging apps; the best place to
@@ -426,6 +439,7 @@ children:
             data:
                 icon:   tagger.png
                 url:    https://apps.fedoraproject.org/tagger
+                package_url: https://apps.fedoraproject.org/tagger/{package}
                 status_mappings: ['tagger']
                 description: >
                     Help build a tag cloud of all our packages.. It's actually
@@ -435,6 +449,7 @@ children:
             data:
                 icon:   copr.png
                 url:    https://copr.fedoraproject.org
+                user_url: https://copr.fedoraproject.org/coprs/{user}/
                 status_mappings: ['copr']
                 description: >
                     Copr is an easy-to-use automatic build system providing a
@@ -442,6 +457,8 @@ children:
         -   name:   PkgDB
             data:
                 url:    https://admin.fedoraproject.org/pkgdb
+                user_url: https://admin.fedoraproject.org/pkgdb/packager/{user}/
+                package_url: https://admin.fedoraproject.org/pkgdb/package/{package}/
                 status_mappings: ['pkgdb']
                 description: >
                     Manage ACLs of your packages.
@@ -449,6 +466,8 @@ children:
             data:
                 icon:   koji.png
                 url:    http://koji.fedoraproject.org/koji
+                package_url: http://koji.fedoraproject.org/koji/search?match=glob&type=package&terms={package}
+                user_url: http://koji.fedoraproject.org/koji/userinfo?userID={user}
                 status_mappings: ['koji']
                 description: >
                     Koji is the software that builds RPM packages for the
@@ -459,6 +478,8 @@ children:
             data:
                 icon:   bodhi.png
                 url:    https://admin.fedoraproject.org/updates
+                package_url: https://admin.fedoraproject.org/updates/{package}
+                user_url: https://admin.fedoraproject.org/updates/user/{user}
                 status_mappings: ['bodhi']
                 description: >
                     The tool you will use to push your packages to the Fedora
@@ -470,6 +491,7 @@ children:
             data:
                 icon:   git-logo.png
                 url:    http://pkgs.fedoraproject.org/cgit
+                package_url: http://pkgs.fedoraproject.org/cgit/{package}.git
                 status_mappings: ['pkgs']
                 description: >
                     Ever wonder <em>exactly</em> what is in the new release

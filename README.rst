@@ -18,6 +18,18 @@ really!) to make it more awesome and reflective of the community's desires.
 You can see a demo version up at https://apps.stg.fedoraproject.org/ right
 now.
 
+IPv6-only
+---------
+
+Sometimes you may have services that are only available over IPv6.
+In such situations, you can mark those as ipv6_only: true in the yaml
+and making your webserver serve a different version of is_ipv6.js for IPv6
+and IPv4.
+
+One way to do this is by redirecting the requests to this file to another vhost,
+and have that vhost serve a different root directory for IPv4 vs IPv6.
+
+
 Help?
 -----
 
