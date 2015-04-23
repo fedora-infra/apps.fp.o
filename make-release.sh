@@ -3,7 +3,7 @@
 # Enable negative glob
 shopt -s extglob
 
-VERSION=1.2
+VERSION=2.0
 
 rm -rf build
 mkdir -p build/apps-fp-o-$VERSION
