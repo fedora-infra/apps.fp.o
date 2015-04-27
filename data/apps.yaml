@@ -2,6 +2,7 @@
 ---
 
 name:   Fedora Apps
+logo:   <span class="logo">Fedora</span>apps
 data:
     description: >
         This is a landing page for Fedora Apps.  Fedora Infrastructure is

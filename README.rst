@@ -18,6 +18,12 @@ really!) to make it more awesome and reflective of the community's desires.
 You can see a demo version up at https://apps.stg.fedoraproject.org/ right
 now.
 
+Setup
+-----
+
+To deploy, configure in data/apps.yaml, and run bin/compile-templates.py
+and redirect the output from bin/yaml2json.js to js/data.js
+
 IPv6-only
 ---------
 
