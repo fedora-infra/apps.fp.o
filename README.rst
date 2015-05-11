@@ -23,7 +23,7 @@ IPv6-only
 
 Sometimes you may have services that are only available over IPv6.
 In such situations, you can mark those as ipv6_only: true in the yaml
-and making your webserver serve a different version of is_ipv6.js for IPv6
+and making your webserver serve a different version of ``js/config.js`` for IPv6
 and IPv4.
 
 One way to do this is by redirecting the requests to this file to another vhost,

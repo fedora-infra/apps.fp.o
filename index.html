@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <title>Fedora Apps</title>
+    <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link type="text/css" rel="stylesheet"
     href="bootstrap/css/bootstrap.min.css" />
@@ -13,7 +13,7 @@
   <body onload="init();">
     <div id="wrap" class="container-fluid">
       <div id="details-container">
-        <h1 class="logo-wrapper"><span class="logo">Fedora</span>apps</h1>
+        <h1 class="logo-wrapper"></h1>
         <div id="details">
         </div><!--/.well -->
       </div>
@@ -39,10 +39,40 @@
 
   </body>
 
-  <script language="javascript" type="text/javascript" src="is_ipv6.js">
-  </script>
   <script language="javascript" type="text/javascript" src="js/jquery-2.1.0.min.js">
   </script>
+  <script language="javascript" type="text/javascript" src="js/handlebars-v3.0.3.js">
+  </script>
+  <script language="javascript" type="text/javascript" src="js/config.js">
+  </script>
+
+  <!-- Some super simple handlebars templates -->
+  <!-- double curly braces indicates that title is a value -->
+  <script id="title" target='title' type="text/x-handlebars-template">{{name}}</script>
+  <!-- triple curly braces indicates signals "no-escape" -->
+  <script id="logo" target='.logo-wrapper' type="text/x-handlebars-template">{{{logo}}}</script>
+
+  <script>
+    // Make handlebars aware of the templates we defined
+    $('[type="text/x-handlebars-template"]').each(function (index, elem) {
+        Handlebars.registerPartial(elem.id, elem.innerHTML);
+    });
+
+    // Compile, render, and insert all templates.
+    var source = $('#logo').html();
+    var template = Handlebars.compile(source);
+    var html = template(config);
+    $('.logo-wrapper').html(html);
+
+    source = $('#title').html();
+    template = Handlebars.compile(source);
+    html = template(config);
+    console.log(html);
+    $('title').html(html);
+
+  </script>
+
+  <!-- Load our graphing library, data, and the code to kick that all off. -->
   <script language="javascript" type="text/javascript" src="js/jit/jit.js">
   </script>
   <script language="javascript" type="text/javascript" src="js/data.js">
