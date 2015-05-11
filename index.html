@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <title></title>
+    <title>{{name}}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link type="text/css" rel="stylesheet"
     href="bootstrap/css/bootstrap.min.css" />
@@ -13,7 +13,7 @@
   <body onload="init();">
     <div id="wrap" class="container-fluid">
       <div id="details-container">
-        <h1 class="logo-wrapper"></h1>
+        <h1 class="logo-wrapper">{{{logo}}}</h1>
         <div id="details">
         </div><!--/.well -->
       </div>
@@ -46,30 +46,19 @@
   <script language="javascript" type="text/javascript" src="js/config.js">
   </script>
 
-  <!-- Some super simple handlebars templates -->
-  <!-- double curly braces indicates that title is a value -->
-  <script id="title" target='title' type="text/x-handlebars-template">{{name}}</script>
-  <!-- triple curly braces indicates signals "no-escape" -->
-  <script id="logo" target='.logo-wrapper' type="text/x-handlebars-template">{{{logo}}}</script>
-
   <script>
+    var templates = ['title', '.logo-wrapper'];
     // Make handlebars aware of the templates we defined
-    $('[type="text/x-handlebars-template"]').each(function (index, elem) {
-        Handlebars.registerPartial(elem.id, elem.innerHTML);
+    $.each(templates, function(i, selector) {
+      Handlebars.registerPartial(selector, $(selector).html());
     });
-
-    // Compile, render, and insert all templates.
-    var source = $('#logo').html();
-    var template = Handlebars.compile(source);
-    var html = template(config);
-    $('.logo-wrapper').html(html);
-
-    source = $('#title').html();
-    template = Handlebars.compile(source);
-    html = template(config);
-    console.log(html);
-    $('title').html(html);
-
+    // Compile, render, and insert..
+    $.each(templates, function(i, selector) {
+      var source = $(selector).html();
+      var template = Handlebars.compile(source);
+      var html = template(config);
+      $(selector).html(html);
+    });
   </script>
 
   <!-- Load our graphing library, data, and the code to kick that all off. -->
