@@ -1,6 +1,5 @@
 %YAML 1.2
 ---
-
 name:   Fedora Apps
 data:
     description: >
@@ -8,140 +7,115 @@ data:
         <em>huge</em>; this page details only the public facing portion of
         it all.  Explore!
 children:
--   name:   In Development
+-   name:   Accounts
     data:
         description: >
-            These are the apps that we're working on, but that aren't quite
-            ready for prime-time yet.  Try and use them, and report bugs when
-            they're broken -- it's a big help!.
-            Check back here from time to time, as this section will change.
+            Tools for everybody -- use these things to manage your Fedora
+            Account.
     children:
-    -   name:   Koschei
+    -   name:   Ambassadors Map
         data:
-            url:    http://koschei.cloud.fedoraproject.org
-            package_url: http://koschei.cloud.fedoraproject.org/package/{package}
+            url:    http://fedoraproject.org/membership-map/ambassadors.html
             description: >
-                Koschei is a continuous integration system for RPM packages. It
-                tracks dependency changes done in Koji repositories and rebuilds
-                packages whose dependencies change. It can help packagers to
-                detect failures early and provide relevant information to narrow
-                down the cause.
-    -   name:   Release Monitoring
-        data:
-            url:    http://release-monitoring.org
-            package_url: https://release-monitoring.org/projects/search/?pattern={package}
-            description: >
-                Code named <a
-                href="https://github.com/fedora-infra/anitya">anitya</a>, this
-                project is slated to replace <a
-                href="https://fedoraproject.org/wiki/Upstream_Release_Monitoring">the
-                old wiki page</a> for Upstream Release Monitoring.  It will
-                track upstream tarball locations and publish notifications to
-                the fedmsg bus when new ones are found.  Other daemons will
-                then be responsible for filing bugs, attempting to
-                automatically build packages, perform some preliminary QA
-                checks, etc..
-    -   name:   Jenkins
-        data:
-            url:    http://jenkins.cloud.fedoraproject.org
-            description: >
-                Our own continuous integration (CI) service!  It works now and
-                you can use it.. we just don't yet give it the same kind of
-                guarantees that we give our other apps.  Look forwards to us
-                promoting it soon..
-    -   name:   faitout
-        data:
-            url: http://209.132.184.152/faitout/
-            description: >
-                 Provides access to temporary postgresql databases. This
-                 database can be used for unit-test thus reducing the
-                 differences between testing and production environment.
+                Ambassadors are the representatives of Fedora. Ambassadors
+                ensure the public understand Fedora's principles and the work
+                that Fedora is doing. Additionally Ambassadors are responsible
+                for helping to grow the contributor base, and to act as a
+                liaison between other FLOSS projects and the Fedora community.
 
--   name:   Infrastructure
-    data:
-        description: >
-            Tools for sysadmins -- the people who run the servers that run
-            Fedora (and otherwise).
-    children:
-    -   name:   GeoIP
+                This thing is a map of where all the <a
+                href="https://fedoraproject.org/wiki/Ambassadors">Fedora
+                Ambassadors</a> live showing just how vibrant the Fedora
+                Community really is.  (It's easy to <a
+                href="https://fedoraproject.org/wiki/Fedora_ambassadors_map">add
+                yourself</a> to the map too, if you can't find yourself on it.)
+    -   name:   FedoraPeople
         data:
-            url:    https://geoip.fedoraproject.org
+            url:    https://fedorapeople.org
+            user_url: https://{user}.fedorapeople.org
+            status_mappings: ['people']
             description: >
-                A simple web service running <a
-                href="https://github.com/fedora-infra/geoip-city-wsgi">geoip-city-wsgi</a>
-                that will return geoip information to you.
-    -   name:   Easyfix
+                Being a community member you gain access to fedorapeople which
+                provides you with a space on the web where you can upload
+                files to share them with the community.
+    -   name:   FAS
         data:
-            url:    http://fedoraproject.org/easyfix
+            url:    http://admin.fedoraproject.org/accounts
+            user_url: https://admin.fedoraproject.org/accounts/view/{user}
+            status_mappings: ['fas']
             description: >
-                A list of easy-to-fix problems for the different projects in
-                Fedora.  Interested in getting into helping out with sysadmin
-                work or web application development?  This should be useful
-                to you.
-    -   name:   DataGrepper
+                The Fedora Account System.  Update your profile
+                information and apply for membership in groups.
+    -   name:   Notifications
         data:
             icon:   fedmsg.png
-            url:    https://apps.fedoraproject.org/datagrepper
-            package_url: https://apps.fedoraproject.org/datagrepper/raw?package={package}
-            user_url: https://apps.fedoraproject.org/datagrepper/raw?user={user}
+            url:    https://apps.fedoraproject.org/notifications
             status_mappings: ['fedmsg']
             description: >
-                DataGrepper is an HTTP API for querying the datanommer
-                database.  You can use it to dig into the history of the
-                <a href="http://fedmsg.com">fedmsg</a> message bus.  You
-                can grab events by username, by package, by message
-                source, by topic... you name it.
-
-    -   name:   Status
+                Centrally managed preferences for Fedora Infrastructure
+                notifications to your inbox, irc client, and mobile device.
+    -   name:   Badges
+        status_mappings: ['badges']
         data:
-            icon:   status-good.png
-            url:    http://status.fedoraproject.org
+            icon:   badges.png
+            url:    https://badges.fedoraproject.org
+            user_url: https://badges.fedoraproject.org/user/{user}
             description: >
-                Sometimes the Fedora Infrastructure team messes up (or
-                lightning strikes our datacenter(s)).  Sorry about that.
-                You can use this website to check the status.  Is it
-                "down for everyone, or just me?"<br/>Notice the favicon
-                in your browser tab.  It changes based on the status,
-                so if you keep this open you can check back to it at a
-                glance.
-    -   name:   MirrorManager
+                An achievements system for Fedora Contributors!  "Badges"
+                are awarded based on activity in the community.  Can you
+                unlock them all?
+                You can export your badges to Mozilla's
+                <a href="http://openbadges.org">Open Badges
+                Infrastructure</a>
+-   name:   Content
+    data:
+        description: >
+            Tools for wordsmiths -- the apps that store and archive the troves
+            of content that Fedora authors produce.  Blog posts, the wiki, and
+            more..
+    children:
+    -   name:   Ask Fedora
         data:
-            icon:   downloads.png
-            url:    http://mirrors.fedoraproject.org
-            status_mappings: ['mirrormanager', 'mirrorlist']
+            icon:   ask_fedora.png
+            url:    https://ask.fedoraproject.org/
+            status_mappings: ['ask']
             description: >
-                Fedora is distributed to millions of systems globally.
-                This would not be possible without the donations of time,
-                disk space, and bandwidth by hundreds of volunteer system
-                administrators and their companies or institutions.  Your
-                fast download experience is made possible by these
-                donations.  The list on the <strong>MirrorManager</strong>
-                site is dynamically generated every hour, listing only
-                up-to-date mirrors.
-    -   name:   Nagios
+                Any question at all about Fedora?  Ask it here.
+    -   name:   The Wiki
         data:
-            icon:   nagios-logo.png
-            url:    http://admin.fedoraproject.org/nagios
+            icon:   mediawiki.png
+            url:    http://fedoraproject.org/wiki
+            user_url: https://fedoraproject.org/wiki/User:{user}
+            status_mappings: ['wiki']
             description: >
-                "Is telia down?"  The answer can most definitively be
-                found here (and in detail).  The Fedora Infrastructure
-                team uses Nagios to monitor the servers that serve
-                Fedora.  Accessing most details requires membership
-                in the <em>sysadmin</em> group.
-    -   name:   Collectd
+                Maintain your own user profile page, contribute to
+                documents about features, process, and governance.
+    -   name:   Fedora Magazine
         data:
-            icon:   collectd.png
-            url:    http://admin.fedoraproject.org/collectd/
+            icon:   magazine.png
+            url:    http://fedoramagazine.org
             description: >
-                Tracks and displays statistics on the Fedora
-                Infrastructure machines over time.  Useful for debugging
-                ineffeciencies and problems.
-    -   name:   HAProxy
+                Fedora Magazine is a WordPress-based site which delivers all
+                the news of the Fedora Community. (It replaces the previous
+                Fedora Weekly News.)
+    -   name:   The Planet
         data:
-            url:    http://admin.fedoraproject.org/haproxy/proxy1
+            icon:   planet_logo.png
+            url:    http://planet.fedoraproject.org
             description: >
-                Shows the health of our proxies.  How many bytes?
-                Concurrent sessions?  Health checks?
+                The planet is a blog aggregator, a space accessible to you
+                as a community member where you can express your opinion and
+                talk about what you are doing for Fedora.
+    -   name:   Docs
+        data:
+            url:    https://docs.fedoraproject.org
+            status_mappings: ['docs']
+            description: >
+                RTFM!  Everything you could ever want to know.
+                Probably the best place to find documentation about Fedora,
+                including the changes between releases (and a big kudos to
+                the translation teams to keep this resource up to date in
+                the different languages!)
 -   name:   QA
     data:
         description: >
@@ -272,148 +246,6 @@ children:
                 Among its many and varied functions is logging IRC meetings,
                 the archives of which you can find here.
 
--   name:   Upstream
-    data:
-        description: >
-            Tools for <a
-            href="https://fedoraproject.org/wiki/Staying_close_to_upstream_projects">upstream</a>
-            developers -- because we love you.
-
-    children:
-    -   name:   github2fedmsg
-        data:
-            icon:   github.png
-            url:    https://apps.fedoraproject.org/github2fedmsg
-            status_mappings: ['fedmsg']
-            description: >
-                github2fedmsg is a web service that bridges upstream
-                development activity from <a
-                href="https://github.com">GitHub</a> into the <a
-                href="http://fedmsg.com">Fedora Infrastructure message
-                bus</a>.  Visit the self-service dashboard to toggle the
-                status of your repositories.
-    -   name:   Fedora Hosted
-        data:
-            icon:   trac.png
-            url:    http://fedorahosted.org
-            status_mappings: ['fedorahosted']
-            description: >
-                Fedora is dedicated to open source software. This
-                commitment can extend beyond regular Fedora offerings.<br/>
-                <strong>Fedora Hosted</strong> is our most feature rich
-                hosting solution. It includes an scm, trac instance,
-                release dir, account system for access control, etc.
-                This is our most common hosting option.  When most groups
-                want hosting, this is what they want.
--   name:   Accounts
-    data:
-        description: >
-            Tools for everybody -- use these things to manage your Fedora
-            Account.
-    children:
-    -   name:   Ambassadors Map
-        data:
-            url:    http://fedoraproject.org/membership-map/ambassadors.html
-            description: >
-                Ambassadors are the representatives of Fedora. Ambassadors
-                ensure the public understand Fedora's principles and the work
-                that Fedora is doing. Additionally Ambassadors are responsible
-                for helping to grow the contributor base, and to act as a
-                liaison between other FLOSS projects and the Fedora community.
-
-                This thing is a map of where all the <a
-                href="https://fedoraproject.org/wiki/Ambassadors">Fedora
-                Ambassadors</a> live showing just how vibrant the Fedora
-                Community really is.  (It's easy to <a
-                href="https://fedoraproject.org/wiki/Fedora_ambassadors_map">add
-                yourself</a> to the map too, if you can't find yourself on it.)
-    -   name:   FedoraPeople
-        data:
-            url:    https://fedorapeople.org
-            user_url: https://{user}.fedorapeople.org
-            status_mappings: ['people']
-            description: >
-                Being a community member you gain access to fedorapeople which
-                provides you with a space on the web where you can upload
-                files to share them with the community.
-    -   name:   FAS
-        data:
-            url:    http://admin.fedoraproject.org/accounts
-            user_url: https://admin.fedoraproject.org/accounts/view/{user}
-            status_mappings: ['fas']
-            description: >
-                The Fedora Account System.  Update your profile
-                information and apply for membership in groups.
-    -   name:   Notifications
-        data:
-            icon:   fedmsg.png
-            url:    https://apps.fedoraproject.org/notifications
-            status_mappings: ['fedmsg']
-            description: >
-                Centrally managed preferences for Fedora Infrastructure
-                notifications to your inbox, irc client, and mobile device.
-    -   name:   Badges
-        status_mappings: ['badges']
-        data:
-            icon:   badges.png
-            url:    https://badges.fedoraproject.org
-            user_url: https://badges.fedoraproject.org/user/{user}
-            description: >
-                An achievements system for Fedora Contributors!  "Badges"
-                are awarded based on activity in the community.  Can you
-                unlock them all?
-                You can export your badges to Mozilla's
-                <a href="http://openbadges.org">Open Badges
-                Infrastructure</a>
--   name:   Content
-    data:
-        description: >
-            Tools for wordsmiths -- the apps that store and archive the troves
-            of content that Fedora authors produce.  Blog posts, the wiki, and
-            more..
-    children:
-    -   name:   Ask Fedora
-        data:
-            icon:   ask_fedora.png
-            url:    https://ask.fedoraproject.org/
-            status_mappings: ['ask']
-            description: >
-                Any question at all about Fedora?  Ask it here.
-    -   name:   The Wiki
-        data:
-            icon:   mediawiki.png
-            url:    http://fedoraproject.org/wiki
-            user_url: https://fedoraproject.org/wiki/User:{user}
-            status_mappings: ['wiki']
-            description: >
-                Maintain your own user profile page, contribute to
-                documents about features, process, and governance.
-    -   name:   Fedora Magazine
-        data:
-            icon:   magazine.png
-            url:    http://fedoramagazine.org
-            description: >
-                Fedora Magazine is a WordPress-based site which delivers all
-                the news of the Fedora Community. (It replaces the previous
-                Fedora Weekly News.)
-    -   name:   The Planet
-        data:
-            icon:   planet_logo.png
-            url:    http://planet.fedoraproject.org
-            description: >
-                The planet is a blog aggregator, a space accessible to you
-                as a community member where you can express your opinion and
-                talk about what you are doing for Fedora.
-    -   name:   Docs
-        data:
-            url:    https://docs.fedoraproject.org
-            status_mappings: ['docs']
-            description: >
-                RTFM!  Everything you could ever want to know.
-                Probably the best place to find documentation about Fedora,
-                including the changes between releases (and a big kudos to
-                the translation teams to keep this resource up to date in
-                the different languages!)
 -   name:   Packaging
     data:
         description: >
@@ -512,3 +344,169 @@ children:
                     You can read more about <a
                     href="https://fedoraproject.org/wiki/Darkserver">why you
                     might want to use it</a> or you can just click below to...
+-   name:   Upstream
+    data:
+        description: >
+            Tools for <a
+            href="https://fedoraproject.org/wiki/Staying_close_to_upstream_projects">upstream</a>
+            developers -- because we love you.
+
+    children:
+    -   name:   Release Monitoring
+        data:
+            url:    http://release-monitoring.org
+            package_url: https://release-monitoring.org/projects/search/?pattern={package}
+            description: >
+                Code named <a
+                href="https://github.com/fedora-infra/anitya">anitya</a>, this
+                project is slated to replace <a
+                href="https://fedoraproject.org/wiki/Upstream_Release_Monitoring">the
+                old wiki page</a> for Upstream Release Monitoring.  It will
+                track upstream tarball locations and publish notifications to
+                the fedmsg bus when new ones are found.  Other daemons will
+                then be responsible for filing bugs, attempting to
+                automatically build packages, perform some preliminary QA
+                checks, etc..
+    -   name:   github2fedmsg
+        data:
+            icon:   github.png
+            url:    https://apps.fedoraproject.org/github2fedmsg
+            status_mappings: ['fedmsg']
+            description: >
+                github2fedmsg is a web service that bridges upstream
+                development activity from <a
+                href="https://github.com">GitHub</a> into the <a
+                href="http://fedmsg.com">Fedora Infrastructure message
+                bus</a>.  Visit the self-service dashboard to toggle the
+                status of your repositories.
+    -   name:   Fedora Hosted
+        data:
+            icon:   trac.png
+            url:    http://fedorahosted.org
+            status_mappings: ['fedorahosted']
+            description: >
+                Fedora is dedicated to open source software. This
+                commitment can extend beyond regular Fedora offerings.<br/>
+                <strong>Fedora Hosted</strong> is our most feature rich
+                hosting solution. It includes an scm, trac instance,
+                release dir, account system for access control, etc.
+                This is our most common hosting option.  When most groups
+                want hosting, this is what they want.
+-   name:   Infrastructure
+    data:
+        description: >
+            Tools for sysadmins -- the people who run the servers that run
+            Fedora (and otherwise).
+    children:
+    -   name:   GeoIP
+        data:
+            url:    https://geoip.fedoraproject.org
+            description: >
+                A simple web service running <a
+                href="https://github.com/fedora-infra/geoip-city-wsgi">geoip-city-wsgi</a>
+                that will return geoip information to you.
+    -   name:   Easyfix
+        data:
+            url:    http://fedoraproject.org/easyfix
+            description: >
+                A list of easy-to-fix problems for the different projects in
+                Fedora.  Interested in getting into helping out with sysadmin
+                work or web application development?  This should be useful
+                to you.
+    -   name:   DataGrepper
+        data:
+            icon:   fedmsg.png
+            url:    https://apps.fedoraproject.org/datagrepper
+            package_url: https://apps.fedoraproject.org/datagrepper/raw?package={package}
+            user_url: https://apps.fedoraproject.org/datagrepper/raw?user={user}
+            status_mappings: ['fedmsg']
+            description: >
+                DataGrepper is an HTTP API for querying the datanommer
+                database.  You can use it to dig into the history of the
+                <a href="http://fedmsg.com">fedmsg</a> message bus.  You
+                can grab events by username, by package, by message
+                source, by topic... you name it.
+
+    -   name:   Status
+        data:
+            icon:   status-good.png
+            url:    http://status.fedoraproject.org
+            description: >
+                Sometimes the Fedora Infrastructure team messes up (or
+                lightning strikes our datacenter(s)).  Sorry about that.
+                You can use this website to check the status.  Is it
+                "down for everyone, or just me?"<br/>Notice the favicon
+                in your browser tab.  It changes based on the status,
+                so if you keep this open you can check back to it at a
+                glance.
+    -   name:   MirrorManager
+        data:
+            icon:   downloads.png
+            url:    http://mirrors.fedoraproject.org
+            status_mappings: ['mirrormanager', 'mirrorlist']
+            description: >
+                Fedora is distributed to millions of systems globally.
+                This would not be possible without the donations of time,
+                disk space, and bandwidth by hundreds of volunteer system
+                administrators and their companies or institutions.  Your
+                fast download experience is made possible by these
+                donations.  The list on the <strong>MirrorManager</strong>
+                site is dynamically generated every hour, listing only
+                up-to-date mirrors.
+    -   name:   Nagios
+        data:
+            icon:   nagios-logo.png
+            url:    http://admin.fedoraproject.org/nagios
+            description: >
+                "Is telia down?"  The answer can most definitively be
+                found here (and in detail).  The Fedora Infrastructure
+                team uses Nagios to monitor the servers that serve
+                Fedora.  Accessing most details requires membership
+                in the <em>sysadmin</em> group.
+    -   name:   Collectd
+        data:
+            icon:   collectd.png
+            url:    http://admin.fedoraproject.org/collectd/
+            description: >
+                Tracks and displays statistics on the Fedora
+                Infrastructure machines over time.  Useful for debugging
+                ineffeciencies and problems.
+    -   name:   HAProxy
+        data:
+            url:    http://admin.fedoraproject.org/haproxy/proxy1
+            description: >
+                Shows the health of our proxies.  How many bytes?
+                Concurrent sessions?  Health checks?
+-   name:   In Development
+    data:
+        description: >
+            These are the apps that we're working on, but that aren't quite
+            ready for prime-time yet.  Try and use them, and report bugs when
+            they're broken -- it's a big help!.
+            Check back here from time to time, as this section will change.
+    children:
+    -   name:   Koschei
+        data:
+            url:    http://koschei.cloud.fedoraproject.org
+            package_url: http://koschei.cloud.fedoraproject.org/package/{package}
+            description: >
+                Koschei is a continuous integration system for RPM packages. It
+                tracks dependency changes done in Koji repositories and rebuilds
+                packages whose dependencies change. It can help packagers to
+                detect failures early and provide relevant information to narrow
+                down the cause.
+    -   name:   Jenkins
+        data:
+            url:    http://jenkins.cloud.fedoraproject.org
+            description: >
+                Our own continuous integration (CI) service!  It works now and
+                you can use it.. we just don't yet give it the same kind of
+                guarantees that we give our other apps.  Look forwards to us
+                promoting it soon..
+    -   name:   faitout
+        data:
+            url: http://209.132.184.152/faitout/
+            description: >
+                 Provides access to temporary postgresql databases. This
+                 database can be used for unit-test thus reducing the
+                 differences between testing and production environment.
