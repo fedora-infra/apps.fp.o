@@ -190,6 +190,16 @@ children:
             Tools for people -- so we can talk to each other and share content
             and ideas.
     children:
+    -   name:   Asknot
+        data:
+            url:    http://whatcanidoforfedora.org
+            status_mappings: []
+            description: >
+                Ask not what Fedora can do for you, but <a
+                href="http://whatcanidoforfedora.org">what you can do for
+                Fedora?</a>  This site is a starting place for brand new
+                contributors to help them figure out where they can
+                get situated.
     -   name:   Paste
         data:
             url:    http://paste.fedoraproject.org
