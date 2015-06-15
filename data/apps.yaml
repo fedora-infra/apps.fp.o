@@ -41,7 +41,7 @@ children:
     -   name:   FAS
         data:
             url:    http://admin.fedoraproject.org/accounts
-            user_url: https://admin.fedoraproject.org/accounts/view/{user}
+            user_url: https://admin.fedoraproject.org/accounts/user/view/{user}
             status_mappings: ['fas']
             description: >
                 The Fedora Account System.  Update your profile
