@@ -184,6 +184,18 @@ children:
                 automated systems can upload test results.  If you have
                 access to hardware where we could catch tricky driver
                 issues, your assistance here would be much appreciated.
+    -   name:   Koschei
+        data:
+            url:    https://apps.fedoraproject.org/koschei/
+            user_url: https://apps.fedoraproject.org/koschei/user/{user}
+            package_url: https://apps.fedoraproject.org/koschei/package/{package}
+            status_mappings: ['koschei']
+            description: >
+                Koschei is a continuous integration system for RPM packages. It
+                tracks dependency changes done in Koji repositories and rebuilds
+                packages whose dependencies change. It can help packagers to
+                detect failures early and provide relevant information to narrow
+                down the cause.
 -   name:   Coordination
     data:
         description: >
@@ -495,16 +507,6 @@ children:
             they're broken -- it's a big help!.
             Check back here from time to time, as this section will change.
     children:
-    -   name:   Koschei
-        data:
-            url:    http://koschei.cloud.fedoraproject.org
-            package_url: http://koschei.cloud.fedoraproject.org/package/{package}
-            description: >
-                Koschei is a continuous integration system for RPM packages. It
-                tracks dependency changes done in Koji repositories and rebuilds
-                packages whose dependencies change. It can help packagers to
-                detect failures early and provide relevant information to narrow
-                down the cause.
     -   name:   Jenkins
         data:
             url:    http://jenkins.cloud.fedoraproject.org
