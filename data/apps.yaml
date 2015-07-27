@@ -15,7 +15,8 @@ children:
     children:
     -   name:   Ambassadors Map
         data:
-            url:    http://fedoraproject.org/membership-map/ambassadors.html
+            url:    https://fedoraproject.org/membership-map/ambassadors.html
+            # TODO -- add source and bugs urls for this.
             description: >
                 Ambassadors are the representatives of Fedora. Ambassadors
                 ensure the public understand Fedora's principles and the work
@@ -40,8 +41,10 @@ children:
                 files to share them with the community.
     -   name:   FAS
         data:
-            url:    http://admin.fedoraproject.org/accounts
+            url:    https://admin.fedoraproject.org/accounts
             user_url: https://admin.fedoraproject.org/accounts/user/view/{user}
+            source_url: https://github.com/fedora-infra/fas/
+            bugs_url:   https://github.com/fedora-infra/fas/issues/
             status_mappings: ['fas']
             description: >
                 The Fedora Account System.  Update your profile
@@ -50,6 +53,8 @@ children:
         data:
             icon:   fedmsg.png
             url:    https://apps.fedoraproject.org/notifications
+            source_url: https://github.com/fedora-infra/fmn/
+            bugs_url:   https://github.com/fedora-infra/fmn/issues/
             status_mappings: ['fedmsg']
             description: >
                 Centrally managed preferences for Fedora Infrastructure
@@ -60,6 +65,8 @@ children:
             icon:   badges.png
             url:    https://badges.fedoraproject.org
             user_url: https://badges.fedoraproject.org/user/{user}
+            source_url: https://github.com/fedora-infra/tahrir/
+            bugs_url:   https://github.com/fedora-infra/tahrir/issues/
             description: >
                 An achievements system for Fedora Contributors!  "Badges"
                 are awarded based on activity in the community.  Can you
@@ -78,14 +85,18 @@ children:
         data:
             icon:   ask_fedora.png
             url:    https://ask.fedoraproject.org/
+            source_url: https://github.com/askbot/askbot-devel
+            bugs_url:   https://github.com/askbot/askbot-devel/issues/
             status_mappings: ['ask']
             description: >
                 Any question at all about Fedora?  Ask it here.
     -   name:   The Wiki
         data:
             icon:   mediawiki.png
-            url:    http://fedoraproject.org/wiki
+            url:    https://fedoraproject.org/wiki
             user_url: https://fedoraproject.org/wiki/User:{user}
+            source_url: https://www.mediawiki.org/
+            bugs_url:   https://www.mediawiki.org/wiki/Phabricator#Get_started
             status_mappings: ['wiki']
             description: >
                 Maintain your own user profile page, contribute to
@@ -150,7 +161,7 @@ children:
                 by Fedora release, associate, or component.
     -   name:   Blocker Bugs
         data:
-            url:    http://qa.fedoraproject.org/blockerbugs
+            url:    https://qa.fedoraproject.org/blockerbugs
             status_mappings: ['blockerbugs']
             description: >
                 The Fedora Blocker Bug Tracker tracks release blocking bugs
@@ -159,7 +170,7 @@ children:
     -   name:   Bugzilla
         data:
             icon:   bugzilla.png
-            url:    http://bugzilla.redhat.com
+            url:    https://bugzilla.redhat.com
             package_url: https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&product=Fedora&product=Fedora%20EPEL&query_format=advanced&component={package}
             description: >
                 The Fedora Community makes use of a bugzilla instance
@@ -167,7 +178,7 @@ children:
                 package?  You can file an official bug here.
     -   name:   Review Status
         data:
-            url:    http://fedoraproject.org/PackageReviewStatus/
+            url:    https://fedoraproject.org/PackageReviewStatus/
             package_url: https://bugzilla.redhat.com/buglist.cgi?component=Package%20Review&query_format=advanced&short_desc_type=allwordssubstr&short_desc={package}
             description: >
                 These pages contain periodically generated reports with
@@ -214,7 +225,7 @@ children:
                 hop on board!
     -   name:   Paste
         data:
-            url:    http://paste.fedoraproject.org
+            url:    https://paste.fedoraproject.org
             status_mappings: ['fedorapaste']
             description: >
                 Our very own pastebin server.  If you yum install the
@@ -222,7 +233,7 @@ children:
                 automatically.
     -   name:   Elections
         data:
-            url:    http://admin.fedoraproject.org/voting
+            url:    https://admin.fedoraproject.org/voting
             status_mappings: ['elections']
             description: >
                 As a member of the community, you can now vote for the
@@ -240,7 +251,7 @@ children:
     -   name:   The Mailing lists
         data:
             icon:   mail.png
-            url:    http://lists.fedoraproject.org
+            url:    https://lists.fedoraproject.org
             status_mappings: ['mailinglists']
             description: >
                 Mailing lists are used for communication within the community.
@@ -376,7 +387,7 @@ children:
     children:
     -   name:   Release Monitoring
         data:
-            url:    http://release-monitoring.org
+            url:    https://release-monitoring.org
             package_url: https://release-monitoring.org/projects/search/?pattern={package}
             description: >
                 Code named <a
@@ -404,7 +415,7 @@ children:
     -   name:   Fedora Hosted
         data:
             icon:   trac.png
-            url:    http://fedorahosted.org
+            url:    https://fedorahosted.org
             status_mappings: ['fedorahosted']
             description: >
                 Fedora is dedicated to open source software. This
@@ -429,7 +440,7 @@ children:
                 that will return geoip information to you.
     -   name:   Easyfix
         data:
-            url:    http://fedoraproject.org/easyfix
+            url:    https://fedoraproject.org/easyfix
             description: >
                 A list of easy-to-fix problems for the different projects in
                 Fedora.  Interested in getting into helping out with sysadmin
@@ -464,7 +475,7 @@ children:
     -   name:   MirrorManager
         data:
             icon:   downloads.png
-            url:    http://mirrors.fedoraproject.org
+            url:    https://mirrors.fedoraproject.org
             status_mappings: ['mirrormanager', 'mirrorlist']
             description: >
                 Fedora is distributed to millions of systems globally.
@@ -478,7 +489,7 @@ children:
     -   name:   Nagios
         data:
             icon:   nagios-logo.png
-            url:    http://admin.fedoraproject.org/nagios
+            url:    https://admin.fedoraproject.org/nagios
             description: >
                 "Is telia down?"  The answer can most definitively be
                 found here (and in detail).  The Fedora Infrastructure
@@ -488,14 +499,14 @@ children:
     -   name:   Collectd
         data:
             icon:   collectd.png
-            url:    http://admin.fedoraproject.org/collectd/
+            url:    https://admin.fedoraproject.org/collectd/
             description: >
                 Tracks and displays statistics on the Fedora
                 Infrastructure machines over time.  Useful for debugging
                 ineffeciencies and problems.
     -   name:   HAProxy
         data:
-            url:    http://admin.fedoraproject.org/haproxy/proxy1
+            url:    https://admin.fedoraproject.org/haproxy/proxy1
             description: >
                 Shows the health of our proxies.  How many bytes?
                 Concurrent sessions?  Health checks?
