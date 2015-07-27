@@ -1,4 +1,7 @@
 %YAML 1.2
+# This file is managed in two places, please keep them synchronised:
+# - https://infrastructure.fedoraproject.org/cgit/ansible.git/tree/roles/apps-fp-o/files/apps.yaml
+# - https://github.com/fedora-infra/apps.fp.o/blob/develop/data/apps.yaml
 ---
 name:   Fedora Apps
 data:
