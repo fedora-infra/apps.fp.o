@@ -200,6 +200,7 @@ children:
                 issues, your assistance here would be much appreciated.
     -   name:   Koschei
         data:
+            icon:   koschei.png
             url:    https://apps.fedoraproject.org/koschei/
             user_url: https://apps.fedoraproject.org/koschei/user/{user}
             package_url: https://apps.fedoraproject.org/koschei/package/{package}
