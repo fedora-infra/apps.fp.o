@@ -115,7 +115,7 @@ children:
     -   name:   The Planet
         data:
             icon:   planet_logo.png
-            url:    http://planet.fedoraproject.org
+            url:    http://fedoraplanet.org
             description: >
                 The planet is a blog aggregator, a space accessible to you
                 as a community member where you can express your opinion and
