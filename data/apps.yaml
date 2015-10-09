@@ -537,3 +537,13 @@ children:
                  Provides access to temporary postgresql databases. This
                  database can be used for unit-test thus reducing the
                  differences between testing and production environment.
+    -   name:   Taiga
+        data:
+            icon:   taiga.png
+            url:    http://taiga.cloud.fedoraproject.org/
+            description: >
+                 Taiga is a very pretty project management platform that we've
+                 been messing around with.  Feel free to use it.  We backup the
+                 database, but we don't necessarily support it yet with the same
+                 kind of focus that we dedicate to our other services.  If you
+                 run into problems with it, let us know!
