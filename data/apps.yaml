@@ -540,7 +540,7 @@ children:
     -   name:   Taiga
         data:
             icon:   taiga.png
-            url:    http://taiga.cloud.fedoraproject.org/
+            url:    http://taiga.fedorainfracloud.org/
             description: >
                  Taiga is a very pretty project management platform that we've
                  been messing around with.  Feel free to use it.  We backup the
