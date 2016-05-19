@@ -346,9 +346,9 @@ children:
         -   name:   Bodhi
             data:
                 icon:   bodhi.png
-                url:    https://admin.fedoraproject.org/updates
-                package_url: https://admin.fedoraproject.org/updates/{package}
-                user_url: https://admin.fedoraproject.org/updates/user/{user}
+                url:    https://bodhi.fedoraproject.org
+                package_url: https://bodhi.fedoraproject.org/updates/{package}
+                user_url: https://bodhi.fedoraproject.org/users/{user}
                 status_mappings: ['bodhi']
                 description: >
                     The tool you will use to push your packages to the Fedora
