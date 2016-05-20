@@ -436,6 +436,19 @@ children:
                 release dir, account system for access control, etc.
                 This is our most common hosting option.  When most groups
                 want hosting, this is what they want.
+    -   name:   Pagure
+        data:
+            icon:   pagure.png
+            url:    https://pagure.io/
+            status_mappings: ['pagure']
+            description: >
+                Pagure is a git-centered forge, python based using pygit2.
+                With pagure you can host your project with its documentation,
+                let your users report issues or request enhancements using
+                the ticketing system and build your community of contributors
+                by allowing them to fork your projects and contribute to it
+                via the now-popular pull-request mechanism.
+
 -   name:   Infrastructure
     data:
         description: >
