@@ -381,6 +381,12 @@ children:
                     You can read more about <a
                     href="https://fedoraproject.org/wiki/Darkserver">why you
                     might want to use it</a> or you can just click below to...
+        -   name:   Mdapi
+            data:
+                url: https://apps.fedoraproject.org/mdapi
+                description: >
+                     mdapi is a small API exposing the metadata contained in
+                     different RPM repositories.
 
 -   name:   Upstream
     data:
