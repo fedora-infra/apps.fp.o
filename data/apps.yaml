@@ -144,14 +144,14 @@ children:
                 Taskotron is a framework for automated task execution and is in
                 the very early stages of development with the objective to
                 replace AutoQA for automating selected QA tasks in Fedora.
-    -   name:   Releng-Dash
+    -   name:   Product Definition Center
         data:
-            url:    https://apps.fedoraproject.org/releng-dash/
+            url:    https://pdc.fedoraproject.org/
             description: >
-                Track the status of the Fedora Release Engineering process.
-                Did the latest rawhide get rsynced out?  How about for the
-                secondary arches?  This read-only dashboard can help you
-                make a quick check.
+                The Product Definition Center is repository and API for
+                storing and querying metadata related to packages, product
+                releases, engineering processes and artifacts which are
+                required to support automation of productization processes.
     -   name:   Problem Tracker
         data:
             url:    https://retrace.fedoraproject.org
@@ -346,9 +346,9 @@ children:
         -   name:   Bodhi
             data:
                 icon:   bodhi.png
-                url:    https://admin.fedoraproject.org/updates
-                package_url: https://admin.fedoraproject.org/updates/{package}
-                user_url: https://admin.fedoraproject.org/updates/user/{user}
+                url:    https://bodhi.fedoraproject.org
+                package_url: https://bodhi.fedoraproject.org/updates/{package}
+                user_url: https://bodhi.fedoraproject.org/users/{user}
                 status_mappings: ['bodhi']
                 description: >
                     The tool you will use to push your packages to the Fedora
@@ -381,6 +381,13 @@ children:
                     You can read more about <a
                     href="https://fedoraproject.org/wiki/Darkserver">why you
                     might want to use it</a> or you can just click below to...
+        -   name:   Mdapi
+            data:
+                url: https://apps.fedoraproject.org/mdapi
+                description: >
+                     mdapi is a small API exposing the metadata contained in
+                     different RPM repositories.
+
 -   name:   Upstream
     data:
         description: >
@@ -429,6 +436,19 @@ children:
                 release dir, account system for access control, etc.
                 This is our most common hosting option.  When most groups
                 want hosting, this is what they want.
+    -   name:   Pagure
+        data:
+            icon:   pagure.png
+            url:    https://pagure.io/
+            status_mappings: ['pagure']
+            description: >
+                Pagure is a git-centered forge, python based using pygit2.
+                With pagure you can host your project with its documentation,
+                let your users report issues or request enhancements using
+                the ticketing system and build your community of contributors
+                by allowing them to fork your projects and contribute to it
+                via the now-popular pull-request mechanism.
+
 -   name:   Infrastructure
     data:
         description: >
