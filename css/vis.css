@@ -1,0 +1,21 @@
+circle {
+  fill: #424242;
+  fill-opacity: .25;
+  stroke: black;
+  stroke-width: 3px;
+}
+
+.leaf circle {
+  fill: #ff7f0e;
+  fill: #db3279;
+  fill-opacity: 1;
+  stroke: black;
+  stroke-width: 10px;
+}
+
+text {
+  font-size: 12px;
+  font-family: 'lato',sans-serif;
+  font-style: italic;
+  text-anchor: middle;
+}

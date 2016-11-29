@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>{{name}}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link type="text/css" rel="stylesheet"
+    href="bootstrap/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet"
+    href="bootstrap/css/bootstrap-responsive.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/site.css" />
+  </head>
+
+  <body onload="init();">
+    <div id="wrap" class="container-fluid">
+      <div id="details-container">
+        <h1 class="logo-wrapper">{{{logo}}}</h1>
+        <div id="details">
+        </div><!--/.well -->
+      </div>
+
+      <div class="hero-unit">
+        <div id="mainvis"></div>
+        <noscript>
+          <iframe name="noscript-fallback" width="100%" height="100%"
+            src="apps-yaml.html"></iframe>
+        </noscript>
+      </div>
+
+    </div><!--/.fluid-container-->
+
+    <div id="footer">
+        <p class="text-muted credit">
+            ©2012 - 2015 Red Hat, Inc.,
+            <a href="http://threebean.org">Ralph Bean</a>.
+            You can get the source <a href="http://github.com/fedora-infra/apps.fp.o">
+              from the github repo</a>.
+        </p>
+    </div>
+
+  </body>
+
+  <script language="javascript" type="text/javascript" src="js/jquery-2.1.0.min.js">
+  </script>
+  <script language="javascript" type="text/javascript" src="js/handlebars-v3.0.3.min.js">
+  </script>
+  <script language="javascript" type="text/javascript" src="js/config.js">
+  </script>
+
+  <script>
+    var templates = ['title', '.logo-wrapper'];
+    // Make handlebars aware of the templates we defined
+    $.each(templates, function(i, selector) {
+      Handlebars.registerPartial(selector, $(selector).html());
+    });
+    // Compile, render, and insert..
+    $.each(templates, function(i, selector) {
+      var source = $(selector).html();
+      var template = Handlebars.compile(source);
+      var html = template(config);
+      $(selector).html(html);
+    });
+  </script>
+
+  <!-- Load our graphing library, data, and the code to kick that all off. -->
+  <script language="javascript" type="text/javascript" src="js/jit/jit.js">
+  </script>
+  <script language="javascript" type="text/javascript" src="js/data.js">
+  </script>
+  <script language="javascript" type="text/javascript" src="js/graph.js">
+  </script>
+
+</html>
