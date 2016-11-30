@@ -1,6 +1,6 @@
 /*Fonts:*/
 
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,900');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
 
 body{
 	font-family: 'Lato', sans-serif;
@@ -8,11 +8,6 @@ body{
 
 #new-graph{
 	padding: 0px;
-}
-
-.menu{
-	height: 30px;
-	background: black;
 }
 
 .info-box{
