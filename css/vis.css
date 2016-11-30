@@ -1,23 +1,25 @@
 circle {
-  fill: #3C6EB4;
-  fill-opacity: .5;
+  fill: #9269B0;
+  fill-opacity: 1;
   stroke: #000;
   stroke-width: 0px;
   cursor: pointer;
 }
 
 .leaf circle {
-  fill: rgba(255,255,255,0.6);
+  fill: rgba(255,255,255,1);
   fill-opacity: 1;
 }
 
 circle:hover {
   stroke-width: 1.5px;
+  stroke: #000;
 }
 
 text {
   font-size: 18px;
-  font-family: 'lato',sans-serif;
-  font-weight: 900;
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 400;
   text-anchor: middle;
+  pointer-events: none;
 }

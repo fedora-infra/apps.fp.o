@@ -14,7 +14,8 @@ fg.viz.appgraph = function(options){
             .attr("id", "appgraph")
             .attr("width", self.width)
             .attr("height", self.width)
-            .style("border","1px solid black");
+            .style("background","white")
+            .style("border","5px solid #232E42");
         self.margin = 10;
         self.g = self.svg.append("g").attr("transform","translate("+self.width/2+","+self.width/2+")");
 
@@ -30,24 +31,27 @@ fg.viz.appgraph = function(options){
 			.sum(function(d) { return 2; }) // any value is fine
 			.sort(function(a, b) { return b.value - a.value; });
 
-		var node = self.g.selectAll(".node")
+		var out = d3.select("#out");
+		var thename = d3.select("#the-section");
+
+		self.node = self.g.selectAll(".node")
 			.data(pack(root).descendants())
 			.enter().append("g")
 			.attr("class", function(d) { return d.children ? "node" : "leaf node"; })
 			.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 
-		var circle=node.append("circle")
+		var circle = self.node.append("circle")
 			.attr("r", function(d) { return d.r; });
 
-		var leafs = node.filter(function(d) { return !d.children; })
-			.style("opacity",0.05)
+		self.leafs = self.node.filter(function(d) { return !d.children; })
+			.style("opacity",0.15)
 			.style("pointer-events",'none');
 
-		node.filter(function(d) { return d.data.id==0; })
+		self.node.filter(function(d) { return d.data.id==0; })
 			.style("opacity",0.2)
 			.style("pointer-events",'none');
 
-		var text = node.filter(function(d) {
+		var text = self.node.filter(function(d) {
 			return d.data.id != 0})
 			.append("text")
 			.attr("dy", "0.3em")
@@ -57,26 +61,41 @@ fg.viz.appgraph = function(options){
 			.style("text-transform",function(d){
 				return (d.children?"uppercase":"none");
 			})
+			.style("fill",function(d){
+				return (d.children?"white":"black");
+			})
+			.style("letter-spacing",function(d){
+				return (d.children?"1px":"0");
+			})
 			.text(function(d) { return d.data.name; });
 
 		var events = function(d,i){
 			if( d.children && d.data.id != 0 ){
 				
+
+				out.style("display","block");
+				thename.style("display","block")
+				.html(d.data.name);
+
 				zoom(d);
 				
-				text.style("opacity",function(d0){
+				text
+				.style("opacity",function(d0){
 					return (d0.children?0:1);
 				});
 				
-				leafs.transition()
-				.duration(1500)
+				self.leafs.transition()
+				.duration(500)
 				.style("opacity",1)
 				.style("pointer-events","auto");
-				
-				circle.style("stroke-width",function(d0,j) {
-					if( i == j ) return "1.5px";
-				});
 			}
+
+			var variable = d3.select("#info");
+			variable.style("opacity",0).html(
+				"<h2>"+d.data.name+"</h2>"+
+				"<p>"+d.data.data.description+"</p>"+
+				(d.data.data.url?"<a class='a-buttom' href="+d.data.data.url+">Check this app</a>":"")
+				).transition().duration(500).style("opacity",1);
 		};
 
 		function zoom(d) {
@@ -101,15 +120,34 @@ fg.viz.appgraph = function(options){
 
 		function zoomTo(v) {
 			var k = diameter / v[2]; view = v;
-			node.attr("transform", function(d) { return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
+			self.node.attr("transform", function(d) { return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
 			circle.attr("r", function(d) { return d.r * k; });
   		}
 
-		node.on('click',events);
+		self.node.on('click',events);
+		out.on("click",function(){
+			zoom(root);
+			self.leafs.transition()
+				.duration(500)
+				.style("opacity",0.15)
+				.style("pointer-events","none");
 
+			text.style("opacity",function(d0){
+					return (d0.children?1:0);
+				});
+
+			out.style("display","none");
+			thename.style("display","none");
+
+			var variable = d3.select("#info");
+			variable.style("opacity",0).html("Explore the visualization to get information about the fedora apps.")
+				.transition().duration(500).style("opacity",1);
+
+		});
 	};
 
-	self.render = function(){};
+	self.render = function(){
+	};
 
 	self.init();
 	return self;
@@ -122,3 +160,4 @@ var fedoraviz = fg.viz.appgraph({
 });
 
 fedoraviz.prerender();
+fedoraviz.render();

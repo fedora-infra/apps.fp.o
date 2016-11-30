@@ -1,13 +1,91 @@
 /*Fonts:*/
 
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 body{
 	font-family: 'Lato', sans-serif;
+	background: #232E42;
 }
 
 #new-graph{
 	padding: 0px;
+}
+
+#info{
+	font-weight: 300;
+	font-size: 20px;
+	background: white;
+	padding: 20px;
+	color: black;
+	font-size: 16px;
+}
+
+.homebuttom{
+	display: inline-block;
+	background: #7BCF3E;
+	color: white;
+	border-radius: 5px;
+	padding: 30px;
+	padding-bottom: 8px;
+	padding-top: 8px;
+	margin-bottom: 20px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	text-shadow: 1px 2px 5px rgba(0,0,0,0.3);
+}
+
+.homebuttom:hover{
+	color: white;
+	text-decoration: none;
+}
+
+#info h2{
+	font-weight: 300;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.a-buttom{
+	border: 1px solid black;
+	display: inline-block;
+	padding: 10px;
+	text-transform: uppercase;
+	font-family: 'Montserrat';
+	font-size: 12px;
+	color: black;
+	margin-top: 15px;
+}
+
+.a-buttom:hover{
+	text-decoration: none;
+	color: blue;
+	border: 1px solid blue;
+}
+
+#out{
+	position: fixed;
+	margin-left: 10px;
+	margin-top: 10px;
+	width: 40px;
+	cursor: pointer;
+	display: none;
+}
+
+#the-section{
+	position: fixed;
+	background: white;
+	color: black;
+	margin-left: 60px;
+	margin-top: 10px;
+	padding: 20px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	font-family: 'Montserrat';
+	border: 2px solid rgba(0,0,0,0.6);
+	text-transform: uppercase;
+	pointer-events: none;
+	display: none;
 }
 
 .info-box{
@@ -29,12 +107,13 @@ body{
 	width: 40px;
 	height: 1px;
 	background: white;
-	margin-bottom: 20px;
-	margin-top: 20px;
+	margin-bottom: 25px;
+	margin-top: 25px;
 }
 
 .p-info{
 	font-family: 'Lato', sans-serif;
 	font-size: 16px;
 	font-weight: 300;
+	padding-bottom: 40px;
 }
