@@ -19,7 +19,7 @@ children:
     -   name:   Ambassadors Map
         data:
             url:    https://fedoraproject.org/membership-map/ambassadors.html
-            # TODO -- add source and bugs urls for this.
+            # TODO -- add source, bugs, and docs urls for this.
             description: >
                 Ambassadors are the representatives of Fedora. Ambassadors
                 ensure the public understand Fedora's principles and the work
@@ -48,6 +48,12 @@ children:
             user_url: https://admin.fedoraproject.org/accounts/user/view/{user}
             source_url: https://github.com/fedora-infra/fas/
             bugs_url:   https://github.com/fedora-infra/fas/issues/
+            docs_url:   https://github.com/fedora-infra/fas/blob/develop/README.rst
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/fas-notes.rst
+                - https://infrastructure.fedoraproject.org/infra/docs/fas-openid.rst
+                - https://infrastructure.fedoraproject.org/infra/docs/accountdeletion.rst
+                - https://infrastructure.fedoraproject.org/infra/docs/nonhumanaccounts.rst
             status_mappings: ['fas']
             description: >
                 The Fedora Account System.  Update your profile
@@ -58,6 +64,9 @@ children:
             url:    https://apps.fedoraproject.org/notifications
             source_url: https://github.com/fedora-infra/fmn/
             bugs_url:   https://github.com/fedora-infra/fmn/issues/
+            docs_url:   https://github.com/fedora-infra/fmn/blob/develop/README.rst
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/fmn.rst
             status_mappings: ['fedmsg']
             description: >
                 Centrally managed preferences for Fedora Infrastructure
@@ -70,6 +79,9 @@ children:
             user_url: https://badges.fedoraproject.org/user/{user}
             source_url: https://github.com/fedora-infra/tahrir/
             bugs_url:   https://github.com/fedora-infra/tahrir/issues/
+            docs_url:   https://tahrir.readthedocs.org/en/latest/
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/badges.rst
             description: >
                 An achievements system for Fedora Contributors!  "Badges"
                 are awarded based on activity in the community.  Can you
@@ -90,6 +102,9 @@ children:
             url:    https://ask.fedoraproject.org/
             source_url: https://github.com/askbot/askbot-devel
             bugs_url:   https://github.com/askbot/askbot-devel/issues/
+            docs_url:   http://askbot.org/doc/index.html
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/askbot.rst
             status_mappings: ['ask']
             description: >
                 Any question at all about Fedora?  Ask it here.
@@ -100,6 +115,9 @@ children:
             user_url: https://fedoraproject.org/wiki/User:{user}
             source_url: https://www.mediawiki.org/
             bugs_url:   https://www.mediawiki.org/wiki/Phabricator#Get_started
+            docs_url:   https://www.mediawiki.org/wiki/Sysadmin_hub
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/wiki.rst
             status_mappings: ['wiki']
             description: >
                 Maintain your own user profile page, contribute to
@@ -108,6 +126,11 @@ children:
         data:
             icon:   magazine.png
             url:    http://fedoramagazine.org
+            docs_url:   https://codex.wordpress.org/
+            # We don't have a SOP for the magazine yet.
+            # https://fedorahosted.org/fedora-infrastructure/ticket/5149
+            #sops:
+            #    - put the url here
             description: >
                 Fedora Magazine is a WordPress-based site which delivers all
                 the news of the Fedora Community. (It replaces the previous
@@ -116,6 +139,9 @@ children:
         data:
             icon:   planet_logo.png
             url:    http://fedoraplanet.org
+            docs_url:   http://www.intertwingly.net/code/venus/
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/planetsubgroup.rst
             description: >
                 The planet is a blog aggregator, a space accessible to you
                 as a community member where you can express your opinion and
@@ -124,6 +150,12 @@ children:
         data:
             url:    https://docs.fedoraproject.org
             status_mappings: ['docs']
+            # TODO - add the docs_url.  I asked pete travis for info on this
+            #docs_url:   put the url here
+            # TODO - add a sop.
+            # https://fedorahosted.org/fedora-infrastructure/ticket/5150
+            #sops:
+            #    - add the sop url here.
             description: >
                 RTFM!  Everything you could ever want to know.
                 Probably the best place to find documentation about Fedora,
@@ -138,24 +170,31 @@ children:
     children:
     -   name:   Taskotron
         data:
+            icon:   taskotron.png
             url:    https://taskotron.fedoraproject.org
             package_url: https://taskotron.fedoraproject.org/resultsdb/results?item={package}
+            source_url: https://bitbucket.org/fedoraqa/
+            bugs_url:   https://phab.qadevel.cloud.fedoraproject.org/
+            docs_url:   https://libtaskotron.readthedocs.org/en/latest/
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/taskotron.rst
+                - https://infrastructure.fedoraproject.org/infra/docs/resultsdb.rst
             description: >
                 Taskotron is a framework for automated task execution and is in
                 the very early stages of development with the objective to
                 replace AutoQA for automating selected QA tasks in Fedora.
-    -   name:   Product Definition Center
-        data:
-            url:    https://pdc.fedoraproject.org/
-            description: >
-                The Product Definition Center is repository and API for
-                storing and querying metadata related to packages, product
-                releases, engineering processes and artifacts which are
-                required to support automation of productization processes.
     -   name:   Problem Tracker
         data:
             url:    https://retrace.fedoraproject.org
             package_url: https://retrace.fedoraproject.org/faf/reports/?component_names={package}
+            source_url: https://github.com/abrt/retrace-server/
+            bugs_url:   https://github.com/abrt/retrace-server/issues
+            docs_url:   https://abrt.readthedocs.org/en/latest/howitworks.html#faf
+            # TODO - write SOPs for this
+            # https://fedorahosted.org/fedora-infrastructure/ticket/5151
+            #sops:
+            #    - url goes here
+            #    - and another one goes here
             description: >
                 The Problem Tracker is a platform for collecting and
                 analyzing package crashes reported via ABRT (Automatic Bug
@@ -165,6 +204,11 @@ children:
     -   name:   Blocker Bugs
         data:
             url:    https://qa.fedoraproject.org/blockerbugs
+            source_url: https://git.fedorahosted.org/cgit/blockerbugs.git
+            bugs_url:   https://phab.qadevel.cloud.fedoraproject.org/maniphest/query/cduryYBeHiBK/#R
+            docs_url:   https://tflink.fedorapeople.org/blockerbugs/docs/
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/blockerbugs.rst
             status_mappings: ['blockerbugs']
             description: >
                 The Fedora Blocker Bug Tracker tracks release blocking bugs
@@ -183,6 +227,10 @@ children:
         data:
             url:    https://fedoraproject.org/PackageReviewStatus/
             package_url: https://bugzilla.redhat.com/buglist.cgi?component=Package%20Review&query_format=advanced&short_desc_type=allwordssubstr&short_desc={package}
+            # TODO - write the SOP for this
+            # https://fedorahosted.org/fedora-infrastructure/ticket/5152
+            #sops:
+            #    - url goes here
             description: >
                 These pages contain periodically generated reports with
                 information on the current state of all Fedora <strong>package review
@@ -191,6 +239,11 @@ children:
         data:
             icon:   tux.png
             url:    https://apps.fedoraproject.org/kerneltest
+            source_url: https://github.com/jmflinuxtx/kerneltest-harness
+            bugs_url:   https://github.com/jmflinuxtx/kerneltest-harness/issues
+            docs_url:   https://fedoraproject.org/wiki/KernelTestingInitiative
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/kerneltest-harness.rst
             description: >
                 As part of the <a
                 href="https://fedoraproject.org/wiki/KernelTestingInitiative">kernel
@@ -204,6 +257,11 @@ children:
             url:    https://apps.fedoraproject.org/koschei/
             user_url: https://apps.fedoraproject.org/koschei/user/{user}
             package_url: https://apps.fedoraproject.org/koschei/package/{package}
+            source_url: https://github.com/msimacek/koschei
+            bugs_url:   https://github.com/msimacek/koschei/issues
+            docs_url:   https://fedoraproject.org/wiki/Koschei
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/koschei.rst
             status_mappings: ['koschei']
             description: >
                 Koschei is a continuous integration system for RPM packages. It
@@ -220,6 +278,13 @@ children:
     -   name:   Asknot
         data:
             url:    http://whatcanidoforfedora.org
+            source_url: https://github.com/fedora-infra/asknot-ng
+            bugs_url:   https://github.com/fedora-infra/asknot-ng/issues
+            docs_url:   https://github.com/fedora-infra/asknot-ng/blob/develop/README.md
+            # TODO - write SOP for asknot-ng
+            # https://fedorahosted.org/fedora-infrastructure/ticket/5154
+            #sops:
+            #    - url goes here
             status_mappings: []
             description: >
                 Ask not what Fedora can do for you, but <a
@@ -230,6 +295,12 @@ children:
     -   name:   Paste
         data:
             url:    https://paste.fedoraproject.org
+            source_url: https://github.com/sayakb/sticky-notes
+            # Theme is from https://github.com/athmane/sticky-notes-fedora-skin
+            bugs_url:   https://github.com/sayakb/sticky-notes/pulls
+            docs_url:   https://sayakb.github.io/sticky-notes/pages/home/
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/fedorapastebin.rst
             status_mappings: ['fedorapaste']
             description: >
                 Our very own pastebin server.  If you yum install the
@@ -238,6 +309,11 @@ children:
     -   name:   Elections
         data:
             url:    https://admin.fedoraproject.org/voting
+            source_url: https://github.com/fedora-infra/elections
+            bugs_url:   https://github.com/fedora-infra/elections/issues
+            docs_url:   https://github.com/fedora-infra/elections/blob/develop/README.rst
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/voting.rst
             status_mappings: ['elections']
             description: >
                 As a member of the community, you can now vote for the
@@ -249,13 +325,23 @@ children:
         data:
             icon:   nuancier.png
             url: https://apps.fedoraproject.org/nuancier
+            source_url: https://github.com/fedora-infra/nuancier
+            bugs_url:   https://github.com/fedora-infra/nuancier/issues
+            docs_url:   https://nuancier.readthedocs.org/en/latest/
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/nuancier.rst
             description: >
                 Nuancier is a simple voting application for the
                 supplementary wallpapers included in Fedora.
     -   name:   The Mailing lists
         data:
-            icon:   mail.png
+            icon:   hyperkitty.png
             url:    https://lists.fedoraproject.org
+            source_url: https://gitlab.com/mailman/hyperkitty
+            bugs_url:   https://gitlab.com/mailman/hyperkitty/issues
+            docs_url:   https://hyperkitty.readthedocs.org/en/latest/
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/mailman.rst
             status_mappings: ['mailinglists']
             description: >
                 Mailing lists are used for communication within the community.
@@ -265,6 +351,11 @@ children:
         data:
             icon:   fedocal.png
             url:    https://apps.fedoraproject.org/calendar
+            source_url: https://github.com/fedora-infra/fedocal
+            bugs_url:   https://github.com/fedora-infra/fedocal/issues
+            docs_url:   https://fedocal.readthedocs.org/en/latest/
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/fedocal.rst
             status_mappings: ['fedocal']
             description: >
                 The Fedora Calendar (or <strong>fedocal</strong>), you might
@@ -276,6 +367,12 @@ children:
         data:
             icon:   meetbot.png
             url:    https://meetbot.fedoraproject.org
+            source_url: https://github.com/fedora-infra/mote
+            bugs_url:   https://github.com/fedora-infra/mote/issues
+            docs_url:   https://github.com/fedora-infra/mote/blob/master/README.md
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/mote.rst
+                - https://infrastructure.fedoraproject.org/infra/docs/zodbot.rst
             status_mappings: ['zodbot']
             description: >
                 Fedora Infrastructure runs a friendly IRC bot that you may
@@ -294,6 +391,11 @@ children:
             data:
                 url:    https://apps.fedoraproject.org/packages
                 package_url: https://apps.fedoraproject.org/packages/{package}
+                source_url: https://github.com/fedora-infra/fedora-packages
+                bugs_url:   https://github.com/fedora-infra/fedora-packages/issues
+                docs_url:   http://threebean.org/blog/history-of-fedora-packages/
+                sops:
+                    - https://infrastructure.fedoraproject.org/infra/docs/fedorapackages.rst
                 status_mappings: ['packages']
                 description: >
                     A meta-app over the other packaging apps; the best place to
@@ -309,6 +411,11 @@ children:
                 icon:   tagger.png
                 url:    https://apps.fedoraproject.org/tagger
                 package_url: https://apps.fedoraproject.org/tagger/{package}
+                source_url: https://github.com/fedora-infra/fedora-tagger
+                bugs_url:   https://github.com/fedora-infra/fedora-tagger/issues
+                docs_url:   https://github.com/fedora-infra/fedora-tagger/blob/develop/README.rst
+                sops:
+                    - https://infrastructure.fedoraproject.org/infra/docs/fedora-tagger.rst
                 status_mappings: ['tagger']
                 description: >
                     Help build a tag cloud of all our packages.. It's actually
@@ -319,6 +426,14 @@ children:
                 icon:   copr.png
                 url:    https://copr.fedoraproject.org
                 user_url: https://copr.fedoraproject.org/coprs/{user}/
+                source_url: https://github.com/fedora-copr/copr
+                bugs_url:   https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&classification=Community&list_id=4767864&product=Copr&query_format=advanced
+                docs_url:   https://copr-backend.readthedocs.org/
+                # Also:
+                # - https://copr-keygen.readthedocs.org/
+                # - https://copr-rest-api.readthedocs.org/
+                sops:
+                    - https://infrastructure.fedoraproject.org/infra/docs/copr.rst
                 status_mappings: ['copr']
                 description: >
                     Copr is an easy-to-use automatic build system providing a
@@ -328,15 +443,26 @@ children:
                 url:    https://admin.fedoraproject.org/pkgdb
                 user_url: https://admin.fedoraproject.org/pkgdb/packager/{user}/
                 package_url: https://admin.fedoraproject.org/pkgdb/package/{package}/
+                source_url: https://github.com/fedora-infra/pkgdb2
+                bugs_url:   https://github.com/fedora-infra/pkgdb2/issues
+                docs_url:   https://pkgdb2.readthedocs.org/en/latest/
+                sops:
+                    - https://infrastructure.fedoraproject.org/infra/docs/packagedatabase.rst
                 status_mappings: ['pkgdb']
                 description: >
                     Manage ACLs of your packages.
         -   name:   Koji
             data:
                 icon:   koji.png
-                url:    http://koji.fedoraproject.org/koji
-                package_url: http://koji.fedoraproject.org/koji/search?match=glob&type=package&terms={package}
-                user_url: http://koji.fedoraproject.org/koji/userinfo?userID={user}
+                url:    https://koji.fedoraproject.org/koji
+                package_url: https://koji.fedoraproject.org/koji/search?match=glob&type=package&terms={package}
+                user_url: https://koji.fedoraproject.org/koji/userinfo?userID={user}
+                source_url: https://pagure.io/koji
+                bugs_url:   https://pagure.io/koji/issues
+                docs_url:   https://koji.build/
+                sops:
+                    - https://infrastructure.fedoraproject.org/infra/docs/koji.rst
+                    - https://infrastructure.fedoraproject.org/infra/docs/koji-builder-setup.rst
                 status_mappings: ['koji']
                 description: >
                     Koji is the software that builds RPM packages for the
@@ -346,9 +472,16 @@ children:
         -   name:   Bodhi
             data:
                 icon:   bodhi.png
-                url:    https://bodhi.fedoraproject.org
-                package_url: https://bodhi.fedoraproject.org/updates/{package}
-                user_url: https://bodhi.fedoraproject.org/users/{user}
+                url:    https://admin.fedoraproject.org/updates
+                package_url: https://admin.fedoraproject.org/updates/{package}
+                user_url: https://admin.fedoraproject.org/updates/user/{user}
+                source_url: https://github.com/fedora-infra/bodhi
+                bugs_url:   https://github.com/fedora-infra/bodhi/issues
+                # No built docs yet:
+                # https://github.com/fedora-infra/bodhi/issues/805
+                #docs_url:   put the url here
+                sops:
+                    - https://infrastructure.fedoraproject.org/infra/docs/bodhi.rst
                 status_mappings: ['bodhi']
                 description: >
                     The tool you will use to push your packages to the Fedora
@@ -359,8 +492,13 @@ children:
         -   name:   SCM
             data:
                 icon:   git-logo.png
-                url:    http://pkgs.fedoraproject.org/cgit
-                package_url: http://pkgs.fedoraproject.org/cgit/{package}.git
+                url:    https://src.fedoraproject.org/cgit
+                package_url: https://src.fedoraproject.org/cgit/{package}.git
+                source_url: https://github.com/sitaramc/gitolite
+                bugs_url:   http://gitolite.com/gitolite/#contact
+                docs_url:   https://github.com/sitaramc/gitolite#readme
+                sops:
+                    - https://infrastructure.fedoraproject.org/infra/docs/scmadmin.rst
                 status_mappings: ['pkgs']
                 description: >
                     Ever wonder <em>exactly</em> what is in the new release
@@ -370,6 +508,11 @@ children:
         -   name:   Darkserver
             data:
                 url:    https://darkserver.fedoraproject.org
+                source_url: https://github.com/kushaldas/darkserver
+                bugs_url:   https://github.com/kushaldas/darkserver/issues
+                docs_url:   https://fedoraproject.org/wiki/Darkserver
+                sops:
+                    - https://infrastructure.fedoraproject.org/infra/docs/darkserver.rst
                 status_mappings: ['darkserver']
                 description: >
                     A set of tools and JSON service to help userspace developers
@@ -400,6 +543,14 @@ children:
         data:
             url:    https://release-monitoring.org
             package_url: https://release-monitoring.org/projects/search/?pattern={package}
+            source_url: https://github.com/fedora-infra/anitya
+            bugs_url:   https://github.com/fedora-infra/anitya/issues
+            docs_url:   https://fedoraproject.org/wiki/Upstream_release_monitoring
+            # TODO - write sops for anitya and the-new-hotness
+            # https://fedorahosted.org/fedora-infrastructure/ticket/5157
+            #sops:
+            #    - https://infrastructure.fedoraproject.org/infra/docs/anitya.rst
+            #    - https://infrastructure.fedoraproject.org/infra/docs/hotness.rst
             description: >
                 Code named <a
                 href="https://github.com/fedora-infra/anitya">anitya</a>, this
@@ -415,6 +566,11 @@ children:
         data:
             icon:   github.png
             url:    https://apps.fedoraproject.org/github2fedmsg
+            source_url: https://github.com/fedora-infra/github2fedmsg
+            bugs_url:   https://github.com/fedora-infra/github2fedmsg/issues
+            docs_url:   https://github.com/fedora-infra/github2fedmsg/blob/develop/README.rst#github2fedmsg
+            sops:
+            - https://infrastructure.fedoraproject.org/infra/docs/github2fedmsg.rst
             status_mappings: ['fedmsg']
             description: >
                 github2fedmsg is a web service that bridges upstream
@@ -427,6 +583,16 @@ children:
         data:
             icon:   trac.png
             url:    https://fedorahosted.org
+            source_url: https://trac.edgewall.org/browser
+            bugs_url:   https://trac.edgewall.org/report
+            docs_url:   https://trac.edgewall.org/wiki/TracGuide
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/fedorahosted.rst
+                - https://infrastructure.fedoraproject.org/infra/docs/fedorahosted-fedmsg.rst
+                - https://infrastructure.fedoraproject.org/infra/docs/fedorahosted-project-cleanup.rst
+                - https://infrastructure.fedoraproject.org/infra/docs/fedorahosted-repo-setup.rst
+                - https://infrastructure.fedoraproject.org/infra/docs/fedorahostedrename.rst
+                - https://infrastructure.fedoraproject.org/infra/docs/hosted_git_to_svn.rst
             status_mappings: ['fedorahosted']
             description: >
                 Fedora is dedicated to open source software. This
@@ -458,6 +624,13 @@ children:
     -   name:   GeoIP
         data:
             url:    https://geoip.fedoraproject.org
+            source_url: https://github.com/fedora-infra/geoip-city-wsgi
+            bugs_url:   https://github.com/fedora-infra/geoip-city-wsgi/issues
+            docs_url:   https://github.com/fedora-infra/geoip-city-wsgi/blob/master/geoip-city.wsgi
+            # TODO - write a sop for this thing
+            # https://fedorahosted.org/fedora-infrastructure/ticket/5159
+            #sops:
+            #    - https://infrastructure.fedoraproject.org/infra/docs/geoip.rst
             description: >
                 A simple web service running <a
                 href="https://github.com/fedora-infra/geoip-city-wsgi">geoip-city-wsgi</a>
@@ -465,6 +638,11 @@ children:
     -   name:   Easyfix
         data:
             url:    https://fedoraproject.org/easyfix
+            source_url: https://github.com/fedora-infra/fedora-gather-easyfix
+            bugs_url:   https://github.com/fedora-infra/fedora-gather-easyfix/issues
+            docs_url:   https://github.com/fedora-infra/fedora-gather-easyfix/blob/master/README
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/gather-easyfix.rst
             description: >
                 A list of easy-to-fix problems for the different projects in
                 Fedora.  Interested in getting into helping out with sysadmin
@@ -476,6 +654,11 @@ children:
             url:    https://apps.fedoraproject.org/datagrepper
             package_url: https://apps.fedoraproject.org/datagrepper/raw?package={package}
             user_url: https://apps.fedoraproject.org/datagrepper/raw?user={user}
+            source_url: https://github.com/fedora-infra/datagrepper
+            bugs_url:   https://github.com/fedora-infra/datagrepper/issues
+            docs_url:   https://github.com/fedora-infra/datagrepper/blob/develop/README.rst
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/datanommer.rst
             status_mappings: ['fedmsg']
             description: >
                 DataGrepper is an HTTP API for querying the datanommer
@@ -488,6 +671,11 @@ children:
         data:
             icon:   status-good.png
             url:    http://status.fedoraproject.org
+            source_url: https://git.fedorahosted.org/git/fedora-status.git
+            bugs_url:   https://fedorahosted.org/fedora-infrastructure/newticket
+            docs_url:   https://git.fedorahosted.org/cgit/fedora-status.git/tree/README
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/status-fedora.rst
             description: >
                 Sometimes the Fedora Infrastructure team messes up (or
                 lightning strikes our datacenter(s)).  Sorry about that.
@@ -500,6 +688,14 @@ children:
         data:
             icon:   downloads.png
             url:    https://mirrors.fedoraproject.org
+            source_url: https://github.com/fedora-infra/mirrormanager2
+            bugs_url:   https://github.com/fedora-infra/mirrormanager2/issues
+            docs_url:   https://mirrormanager.readthedocs.org/en/latest/
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/mirrormanager.rst
+                - https://infrastructure.fedoraproject.org/infra/docs/mastermirror.rst
+                - https://infrastructure.fedoraproject.org/infra/docs/mirrorhiding.rst
+                - https://infrastructure.fedoraproject.org/infra/docs/mirrormanager-S3-EC2-netblocks.rst
             status_mappings: ['mirrormanager', 'mirrorlist']
             description: >
                 Fedora is distributed to millions of systems globally.
@@ -514,6 +710,11 @@ children:
         data:
             icon:   nagios-logo.png
             url:    https://admin.fedoraproject.org/nagios
+            source_url: https://github.com/NagiosEnterprises/nagioscore
+            bugs_url:   https://fedorahosted.org/fedora-infrastructure/newticket
+            docs_url:   https://www.nagios.org/documentation/
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/nagios.rst
             description: >
                 "Is telia down?"  The answer can most definitively be
                 found here (and in detail).  The Fedora Infrastructure
@@ -524,6 +725,11 @@ children:
         data:
             icon:   collectd.png
             url:    https://admin.fedoraproject.org/collectd/
+            source_url: https://github.com/collectd/collectd
+            bugs_url:   https://github.com/collectd/collectd/issues
+            docs_url:   https://collectd.org/documentation.shtml
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/collectd.rst
             description: >
                 Tracks and displays statistics on the Fedora
                 Infrastructure machines over time.  Useful for debugging
@@ -531,6 +737,11 @@ children:
     -   name:   HAProxy
         data:
             url:    https://admin.fedoraproject.org/haproxy/proxy1
+            source_url: https://git.haproxy.org/
+            bugs_url:   https://www.haproxy.org/knownbugs-1.3.html
+            docs_url:   https://www.haproxy.org/#docs
+            sops:
+                - https://infrastructure.fedoraproject.org/infra/docs/haproxy.rst
             description: >
                 Shows the health of our proxies.  How many bytes?
                 Concurrent sessions?  Health checks?
@@ -542,9 +753,24 @@ children:
             they're broken -- it's a big help!.
             Check back here from time to time, as this section will change.
     children:
+    -   name:   Product Definition Center
+        data:
+            url:    https://pdc.fedoraproject.org/
+            source_url: https://github.com/product-definition-center/product-definition-center
+            bugs_url:   https://github.com/product-definition-center/product-definition-center/issues
+            # Also, https://fedoraproject.org/wiki/Changes/PDC
+            docs_url:   https://github.com/product-definition-center/product-definition-center/issues/303
+            sops:
+            - https://infrastructure.fedoraproject.org/infra/docs/pdc.rst
+            description: >
+                The Product Definition Center (PDC) is a new app we're working
+                on which will track 1) all of the artifacts that release
+                engineering *should* be producing and 2) all of the artifacts
+                taht release engineering *did* produce.  The web interface isn't
+                much to write home about, but the API is where it's at.
     -   name:   Jenkins
         data:
-            url:    http://jenkins.cloud.fedoraproject.org
+            url:    https://jenkins.fedorainfracloud.org
             description: >
                 Our own continuous integration (CI) service!  It works now and
                 you can use it.. we just don't yet give it the same kind of
@@ -552,7 +778,7 @@ children:
                 promoting it soon..
     -   name:   faitout
         data:
-            url: http://209.132.184.152/faitout/
+            url: http://faitout.fedorainfracloud.org/
             description: >
                  Provides access to temporary postgresql databases. This
                  database can be used for unit-test thus reducing the
@@ -560,10 +786,20 @@ children:
     -   name:   Taiga
         data:
             icon:   taiga.png
-            url:    http://taiga.fedorainfracloud.org/
+            url:    https://taiga.fedorainfracloud.org/
             description: >
                  Taiga is a very pretty project management platform that we've
                  been messing around with.  Feel free to use it.  We backup the
                  database, but we don't necessarily support it yet with the same
                  kind of focus that we dedicate to our other services.  If you
                  run into problems with it, let us know!
+    -   name:   Ipsilon
+        data:
+            icon:
+            url: https://infrastructure.fedoraproject.org/infra/docs/ipsilon.rst
+            Description:
+                 Ipsilon is our central authentication agent that is used to
+                 authenticate users agains FAS. It is seperate from FAS. The
+                 only service that is not using this currently is the wiki.
+                 It is a web service that is presented via httpd and is load
+                 balanced by our standard haproxy setup.
