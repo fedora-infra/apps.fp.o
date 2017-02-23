@@ -803,3 +803,22 @@ children:
                  only service that is not using this currently is the wiki.
                  It is a web service that is presented via httpd and is load
                  balanced by our standard haproxy setup.
+    -   name:   Module Build Service
+        data:
+            url:    https://docs.pagure.org/modularity/
+            source_url: https://pagure.io/fm-orchestrator
+            bugs_url:   https://pagure.io/fm-orchestrator/issues
+            docs_url:   https://docs.pagure.org/modularity/docs.html
+            description: >
+                The Module Build Service (MBS) coordinates module builds
+                and is responsible for a number of tasks&#58;
+
+                Providing an interface for module client-side tooling via
+                which module build submission and build state queries
+                are possible.  Verifying the input data (modulemd,
+                RPM SPEC files and others) is available and correct.
+                Preparing the build environment in the supported build
+                systems, such as koji.  Scheduling and building of
+                the module components and tracking the build state.
+                Emitting bus messages about all state changes so that
+                other infrastructure services can pick up the work.
