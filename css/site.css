@@ -17,8 +17,8 @@
 
 #details-container {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 75px;
+    left: 10px;
     width: 450px;
     background-color: rgba(255, 255, 255, 0.85);
     padding: 15px;
@@ -31,9 +31,9 @@
 .hero-unit {
     z-index: 99;
     position: absolute;
-    top: 0px;
+    top: 60px;
     left: 0px;
-    height: calc(100% - 40px);  /* Leave room for the footer. */
+    height: calc(100% - 100px);  /* Leave room for the footer. */
     width: 100%;
     padding: 0px;
 }

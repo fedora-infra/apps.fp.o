@@ -3,22 +3,23 @@
   <head>
     <title>{{name}}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link type="text/css" rel="stylesheet"
-    href="bootstrap/css/bootstrap.min.css" />
-    <link type="text/css" rel="stylesheet"
-    href="bootstrap/css/bootstrap-responsive.min.css" />
+    <link href="https://apps.fedoraproject.org/global/fedora-bootstrap-1.0.2/fedora-bootstrap.css"
+          type="text/css" rel="stylesheet" />
     <link type="text/css" rel="stylesheet" href="css/site.css" />
   </head>
 
   <body onload="init();">
     <div id="wrap" class="container-fluid">
+      <div class="masthead pl-2">
+        {{{logo}}}
+      </div>
       <div id="details-container">
-        <h1 class="logo-wrapper">{{{logo}}}</h1>
+        <h1 class="logo-wrapper"></h1>
         <div id="details">
         </div><!--/.well -->
       </div>
 
-      <div class="hero-unit">
+      <div class="hero-unit bodycontent">
         <div id="mainvis"></div>
         <noscript>
           <iframe name="noscript-fallback" width="100%" height="100%"
@@ -30,7 +31,7 @@
 
     <div id="footer">
         <p class="text-muted credit">
-            ©2012 - 2015 Red Hat, Inc.,
+            ©2012 - 2017 Red Hat, Inc.,
             <a href="http://threebean.org">Ralph Bean</a>.
             You can get the source <a href="http://github.com/fedora-infra/apps.fp.o">
               from the github repo</a>.
@@ -45,9 +46,11 @@
   </script>
   <script language="javascript" type="text/javascript" src="js/config.js">
   </script>
+  <script type="text/javascript" src="https://apps.fedoraproject.org/global/fedora-bootstrap-1.0.2/fedora-bootstrap.js">
+  </script>
 
   <script>
-    var templates = ['title', '.logo-wrapper'];
+    var templates = ['title', '.masthead'];
     // Make handlebars aware of the templates we defined
     $.each(templates, function(i, selector) {
       Handlebars.registerPartial(selector, $(selector).html());

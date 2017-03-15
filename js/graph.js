@@ -69,7 +69,7 @@ function init() {
                     button += "IPv6 Only!";
                     button += "</p>";
                 } else {
-                    button += "<a href='" + node.data.url + "' target='_blank' class='btn btn-default'>";
+                    button += "<a href='" + node.data.url + "' target='_blank' class='btn btn-primary'>";
                     button += "Check it out!";
                     button += "</a>";
                 }
