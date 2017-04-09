@@ -579,29 +579,6 @@ children:
                 href="http://fedmsg.com">Fedora Infrastructure message
                 bus</a>.  Visit the self-service dashboard to toggle the
                 status of your repositories.
-    -   name:   Fedora Hosted
-        data:
-            icon:   trac.png
-            url:    https://fedorahosted.org
-            source_url: https://trac.edgewall.org/browser
-            bugs_url:   https://trac.edgewall.org/report
-            docs_url:   https://trac.edgewall.org/wiki/TracGuide
-            sops:
-                - https://infrastructure.fedoraproject.org/infra/docs/fedorahosted.rst
-                - https://infrastructure.fedoraproject.org/infra/docs/fedorahosted-fedmsg.rst
-                - https://infrastructure.fedoraproject.org/infra/docs/fedorahosted-project-cleanup.rst
-                - https://infrastructure.fedoraproject.org/infra/docs/fedorahosted-repo-setup.rst
-                - https://infrastructure.fedoraproject.org/infra/docs/fedorahostedrename.rst
-                - https://infrastructure.fedoraproject.org/infra/docs/hosted_git_to_svn.rst
-            status_mappings: ['fedorahosted']
-            description: >
-                Fedora is dedicated to open source software. This
-                commitment can extend beyond regular Fedora offerings.<br/>
-                <strong>Fedora Hosted</strong> is our most feature rich
-                hosting solution. It includes an scm, trac instance,
-                release dir, account system for access control, etc.
-                This is our most common hosting option.  When most groups
-                want hosting, this is what they want.
     -   name:   Pagure
         data:
             icon:   pagure.png
