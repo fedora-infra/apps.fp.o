@@ -173,16 +173,15 @@ children:
             icon:   taskotron.png
             url:    https://taskotron.fedoraproject.org
             package_url: https://taskotron.fedoraproject.org/resultsdb/results?item={package}
-            source_url: https://bitbucket.org/fedoraqa/
-            bugs_url:   https://phab.qadevel.cloud.fedoraproject.org/
-            docs_url:   https://libtaskotron.readthedocs.org/en/latest/
+            source_url:  https://pagure.io/group/taskotron
+            bugs_url:    https://pagure.io/group/taskotron
+            docs_url:    https://taskotron.fedoraproject.org
             sops:
                 - https://infrastructure.fedoraproject.org/infra/docs/taskotron.rst
                 - https://infrastructure.fedoraproject.org/infra/docs/resultsdb.rst
             description: >
-                Taskotron is a framework for automated task execution and is in
-                the very early stages of development with the objective to
-                replace AutoQA for automating selected QA tasks in Fedora.
+                Taskotron is a framework for automated task execution.
+                It currently runs selected package checks in Fedora.
     -   name:   Problem Tracker
         data:
             url:    https://retrace.fedoraproject.org
@@ -204,8 +203,8 @@ children:
     -   name:   Blocker Bugs
         data:
             url:    https://qa.fedoraproject.org/blockerbugs
-            source_url: https://git.fedorahosted.org/cgit/blockerbugs.git
-            bugs_url:   https://phab.qadevel.cloud.fedoraproject.org/maniphest/query/cduryYBeHiBK/#R
+            source_url: https://pagure.io/fedora-qa/blockerbugs
+            bugs_url:   https://pagure.io/fedora-qa/blockerbugs
             docs_url:   https://tflink.fedorapeople.org/blockerbugs/docs/
             sops:
                 - https://infrastructure.fedoraproject.org/infra/docs/blockerbugs.rst
