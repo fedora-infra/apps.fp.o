@@ -488,16 +488,14 @@ children:
                     (repository: updates-testing) then a stable update
                     (repository: updates).  Behold -- the <em>Magic
                     Cabbage.</em>
-        -   name:   SCM
+        -   name:   Package Sources
             data:
-                icon:   git-logo.png
-                url:    https://src.fedoraproject.org/cgit
-                package_url: https://src.fedoraproject.org/cgit/{package}.git
-                source_url: https://github.com/sitaramc/gitolite
-                bugs_url:   http://gitolite.com/gitolite/#contact
-                docs_url:   https://github.com/sitaramc/gitolite#readme
-                sops:
-                    - https://infrastructure.fedoraproject.org/infra/docs/scmadmin.rst
+                icon:   package-sources.png
+                url:    https://src.fedoraproject.org/
+                package_url: https://src.fedoraproject.org/rpms/{package}
+                source_url: https://pagure.io/pagure
+                bugs_url:   https://pagure.io/pagure/issues
+                docs_url:   https://pagure.io/docs/pagure/
                 status_mappings: ['pkgs']
                 description: >
                     Ever wonder <em>exactly</em> what is in the new release
