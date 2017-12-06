@@ -651,7 +651,7 @@ children:
             bugs_url:   https://pagure.io/fedora-status/issues
             docs_url:   https://pagure.io/fedora-status/blob/master/f/README
             sops:
-                - https://infrastructure.fedoraproject.org/infra/docs/status-fedora.rts
+                - https://infrastructure.fedoraproject.org/infra/docs/status-fedora.rst
             description: >
                 Sometimes the Fedora Infrastructure team messes up (or
                 lightning strikes our datacenter(s)).  Sorry about that.
