@@ -501,14 +501,14 @@ var json = {
         }, 
         {
           "data": {
-            "url": "http://pkgs.fedoraproject.org/cgit", 
-            "icon": "git-logo.png", 
+            "url": "https://src.fedoraproject.org/",
+            "icon": "package-sources.png",
             "description": "Ever wonder <em>exactly</em> what is in the new release of a Fedora package?  This is where the change histories of all the packages in Fedora for every release of Fedora (and EPEL) are kept.. forever!  A gold mine.\n", 
             "status_mappings": [
               "pkgs"
             ]
           }, 
-          "name": "SCM", 
+          "name": "Package Sources",
           "id": 51
         }, 
         {
