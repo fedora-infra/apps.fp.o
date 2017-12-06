@@ -294,18 +294,6 @@ var json = {
           }, 
           "name": "github2fedmsg", 
           "id": 30
-        }, 
-        {
-          "data": {
-            "url": "http://fedorahosted.org", 
-            "icon": "trac.png", 
-            "description": "Fedora is dedicated to open source software. This commitment can extend beyond regular Fedora offerings.<br/> <strong>Fedora Hosted</strong> is our most feature rich hosting solution. It includes an scm, trac instance, release dir, account system for access control, etc. This is our most common hosting option.  When most groups want hosting, this is what they want.\n", 
-            "status_mappings": [
-              "fedorahosted"
-            ]
-          }, 
-          "name": "Fedora Hosted", 
-          "id": 31
         }
       ]
     }, 
