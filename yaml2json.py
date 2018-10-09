@@ -1,9 +1,11 @@
 #!/usr/bin/env python
-""" Convert our apps.yaml file to raw HTMl, to stdout. """
-
+""" Convert our apps.yaml file to JSON, to stdout. """
 
 import os
 import yaml
+import json
+
+next_id = 0
 
 
 def find_data_file():
@@ -19,18 +21,22 @@ def find_data_file():
 
     raise IOError("No config file found %r %r" % (locations, name))
 
+
+def mangle(d):
+    global next_id
+    d['id'] = next_id
+    next_id = next_id + 1
+    if not 'ipv6_only' in d:
+        d['ipv6_only'] = False
+
+    if 'children' in d:
+        d['children'] = map(mangle, d['children'])
+
+    return d
+
 if __name__ == '__main__':
     filename = find_data_file()
     with open(filename, "r") as f:
-        raw = f.read()
-        print """<html><body>
-
-<!--
-Don't edit this html file, edit data/apps.yaml
-instead and regenerate this file with yaml2html.py
--->
-
-<pre>
-%s
-</pre>
-</body></html>""" % raw
+        d = yaml.load(f.read())
+        d = mangle(d)
+        print json.dumps(d, indent=2)

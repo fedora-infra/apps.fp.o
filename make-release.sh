@@ -3,15 +3,9 @@
 # Enable negative glob
 shopt -s extglob
 
-VERSION=2.0
+VERSION=3.0
 
 rm -rf build
-mkdir -p build/apps-fp-o-$VERSION
-mkdir -p dist
-cp -r !(build|dist) build/apps-fp-o-$VERSION/.
-rm -rf build/apps-fp-o-$VERSION/{build,dist}
-pushd build
-tar -czvf ../dist/apps-fp-o-$VERSION.tar.gz apps-fp-o-$VERSION
-popd
-
+rm -rf ./apps-fp-o-*.tar.gz
+tar -czvf ./apps-fp-o-$VERSION.tar.gz ./
 echo Wrote dist/apps-fp-o-$VERSION.tar.gz

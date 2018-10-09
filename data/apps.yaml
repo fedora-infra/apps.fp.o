@@ -491,11 +491,11 @@ children:
         -   name:   SCM
             data:
                 icon:   git-logo.png
-                url:    https://src.fedoraproject.org/cgit
-                package_url: https://src.fedoraproject.org/cgit/{package}.git
-                source_url: https://github.com/sitaramc/gitolite
-                bugs_url:   http://gitolite.com/gitolite/#contact
-                docs_url:   https://github.com/sitaramc/gitolite#readme
+                url:    https://src.fedoraproject.org/
+                package_url: https://src.fedoraproject.org/rpms/{package}
+                source_url: https://pagure.io/pagure
+                bugs_url:   https://pagure.io/pagure/issues
+                docs_url:   https://pagure.io/pagure/raw/master/f/README.rst
                 sops:
                     - https://infrastructure.fedoraproject.org/infra/docs/scmadmin.rst
                 status_mappings: ['pkgs']
@@ -773,7 +773,7 @@ children:
         data:
             icon:
             url: https://infrastructure.fedoraproject.org/infra/docs/ipsilon.rst
-            Description:
+            description:
                 Ipsilon is our central authentication agent that is used to
                 authenticate users agains FAS. It is seperate from FAS. The
                 only service that is not using this currently is the wiki.

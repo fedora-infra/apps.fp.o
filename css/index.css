@@ -1,0 +1,39 @@
+body {
+    font-family: Cantarell,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: #ffffff !important;
+}
+
+.footer a {
+    color: inherit;
+    opacity: 0.7;
+}
+
+.card-title {
+    display: inline;
+    text-decoration: underline dotted black;
+}
+
+.icon {
+    float: left;
+    height: 100%;
+    padding-right: 10px;
+}
+
+.helper {
+    display: flex;
+    height: inherit;
+    align-items: center;
+}
+
+#subheader {
+    margin-bottom: 0px;
+}
+
+@media (max-width: 575.98px) { 
+    .icon {
+        display: none;
+    }
+    .card-title {
+        text-decoration: none;
+    }
+ }
