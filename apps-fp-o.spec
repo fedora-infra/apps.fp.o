@@ -17,7 +17,7 @@ BuildArch:      noarch
 BuildRequires:  httpd
 
 # Used for the yaml2{json,html}.py scripts.
-Requires:       PyYAML
+Requires:       python3-pyyaml
 
 %description
 This is static HTML, CSS, and javascript for a landing page for
