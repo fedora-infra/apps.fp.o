@@ -23,7 +23,7 @@ if __name__ == '__main__':
     filename = find_data_file()
     with open(filename, "r") as f:
         raw = f.read()
-        print """<html><body>
+        print("""<html><body>
 
 <!--
 Don't edit this html file, edit data/apps.yaml
@@ -33,4 +33,4 @@ instead and regenerate this file with yaml2html.py
 <pre>
 %s
 </pre>
-</body></html>""" % raw
+</body></html>""" % raw)
