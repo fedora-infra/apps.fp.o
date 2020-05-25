@@ -30,7 +30,7 @@ def mangle(d):
         d['ipv6_only'] = False
 
     if 'children' in d:
-        d['children'] = map(mangle, d['children'])
+        d['children'] = [mangle(c) for c in d['children']]
 
     return d
 
@@ -47,5 +47,5 @@ if __name__ == '__main__':
     with open(filename, "r") as f:
         d = yaml.load(f.read())
         d = mangle(d)
-        print js_file_header
-        print "var json = " + json.dumps(d, indent=2)
+        print(js_file_header)
+        print("var json = " + json.dumps(d, indent=2))
