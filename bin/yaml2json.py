@@ -45,7 +45,7 @@ js_file_header = """
 if __name__ == '__main__':
     filename = find_data_file()
     with open(filename, "r") as f:
-        d = yaml.load(f.read())
+        d = yaml.load(f.read(), Loader=yaml.SafeLoader)
         d = mangle(d)
         print(js_file_header)
         print("var json = " + json.dumps(d, indent=2))
