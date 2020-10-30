@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 """ Convert our apps.yaml file to raw HTMl, to stdout. """
 
 
