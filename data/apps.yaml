@@ -253,11 +253,11 @@ children:
     -   name:   Koschei
         data:
             icon:   koschei.png
-            url:    https://apps.fedoraproject.org/koschei/
-            user_url: https://apps.fedoraproject.org/koschei/user/{user}
-            package_url: https://apps.fedoraproject.org/koschei/package/{package}
-            source_url: https://github.com/msimacek/koschei
-            bugs_url:   https://github.com/msimacek/koschei/issues
+            url:    https://koschei.fedoraproject.org/
+            user_url: https://koschei.fedoraproject.org/user/{user}
+            package_url: https://koschei.fedoraproject.org/package/{package}
+            source_url: https://github.com/fedora-infra/koschei
+            bugs_url:   https://github.com/fedora-infra/koschei/issues
             docs_url:   https://fedoraproject.org/wiki/Koschei
             sops:
                 - https://infrastructure.fedoraproject.org/infra/docs/koschei.rst
@@ -291,20 +291,6 @@ children:
                 Fedora?</a>  This site is a starting place for brand new
                 contributors to help them figure out where they can
                 hop on board!
-    -   name:   Paste
-        data:
-            url:    https://paste.fedoraproject.org
-            source_url: https://github.com/sayakb/sticky-notes
-            # Theme is from https://github.com/athmane/sticky-notes-fedora-skin
-            bugs_url:   https://github.com/sayakb/sticky-notes/pulls
-            docs_url:   https://sayakb.github.io/sticky-notes/pages/home/
-            sops:
-                - https://infrastructure.fedoraproject.org/infra/docs/fedorapastebin.rst
-            status_mappings: ['fedorapaste']
-            description: >
-                Our very own pastebin server.  If you yum install the
-                <strong>fpaste</strong> command, it will use this site
-                automatically.
     -   name:   Elections
         data:
             url:    https://admin.fedoraproject.org/voting
@@ -405,21 +391,6 @@ children:
                     answered here.
                     It is sometimes called "Fedora Community v2" after the old
                     <a href="https://admin.fedoraproject.org/community">Fedora Community</a> site.
-        -   name:   Tagger
-            data:
-                icon:   tagger.png
-                url:    https://apps.fedoraproject.org/tagger
-                package_url: https://apps.fedoraproject.org/tagger/{package}
-                source_url: https://github.com/fedora-infra/fedora-tagger
-                bugs_url:   https://github.com/fedora-infra/fedora-tagger/issues
-                docs_url:   https://github.com/fedora-infra/fedora-tagger/blob/develop/README.rst
-                sops:
-                    - https://infrastructure.fedoraproject.org/infra/docs/fedora-tagger.rst
-                status_mappings: ['tagger']
-                description: >
-                    Help build a tag cloud of all our packages.. It's actually
-                    really useful.  It'll help improve the search of the
-                    "Packages" webapp.
         -   name:   COPR
             data:
                 icon:   copr.png
@@ -437,19 +408,6 @@ children:
                 description: >
                     Copr is an easy-to-use automatic build system providing a
                     package repository as its output.  You can make your **own** repositories!
-        -   name:   PkgDB
-            data:
-                url:    https://admin.fedoraproject.org/pkgdb
-                user_url: https://admin.fedoraproject.org/pkgdb/packager/{user}/
-                package_url: https://admin.fedoraproject.org/pkgdb/package/{package}/
-                source_url: https://github.com/fedora-infra/pkgdb2
-                bugs_url:   https://github.com/fedora-infra/pkgdb2/issues
-                docs_url:   https://pkgdb2.readthedocs.org/en/latest/
-                sops:
-                    - https://infrastructure.fedoraproject.org/infra/docs/packagedatabase.rst
-                status_mappings: ['pkgdb']
-                description: >
-                    Manage ACLs of your packages.
         -   name:   Koji
             data:
                 icon:   koji.png
@@ -502,25 +460,6 @@ children:
                     of a Fedora package?  This is where the change histories
                     of all the packages in Fedora for every release of
                     Fedora (and EPEL) are kept.. forever!  A gold mine.
-        -   name:   Darkserver
-            data:
-                url:    https://darkserver.fedoraproject.org
-                source_url: https://github.com/kushaldas/darkserver
-                bugs_url:   https://github.com/kushaldas/darkserver/issues
-                docs_url:   https://fedoraproject.org/wiki/Darkserver
-                sops:
-                    - https://infrastructure.fedoraproject.org/infra/docs/darkserver.rst
-                status_mappings: ['darkserver']
-                description: >
-                    A set of tools and JSON service to help userspace developers
-                    to debug their applications and libraries. People are be
-                    able query the service based on <a
-                    href="https://fedoraproject.org/wiki/Releases/FeatureBuildId">build-id(s)</a>
-                    or rpm package names.
-
-                    You can read more about <a
-                    href="https://fedoraproject.org/wiki/Darkserver">why you
-                    might want to use it</a> or you can just click below to...
         -   name:   Mdapi
             data:
                 url: https://apps.fedoraproject.org/mdapi
@@ -744,22 +683,21 @@ children:
                 much to write home about, but the API is where it's at.
     -   name:   Jenkins
         data:
-            url:    https://jenkins.fedorainfracloud.org
+            url:    https://jenkins-fedora-infra.apps.ci.centos.org/
             description: >
-                Our own continuous integration (CI) service!  It works now and
-                you can use it.. we just don't yet give it the same kind of
-                guarantees that we give our other apps.  Look forwards to us
-                promoting it soon..
+                A Fedora namespace for Fedora related project hosted in
+                the ci.centos.org infrastructure. Have a look and see how
+                projects are doing!
     -   name:   Taiga
         data:
             icon:   taiga.png
-            url:    https://taiga.fedorainfracloud.org/
+            url:    https://teams.fedoraproject.org/
             description: >
-                Taiga is a very pretty project management platform that we've
-                been messing around with.  Feel free to use it.  We backup the
-                database, but we don't necessarily support it yet with the same
-                kind of focus that we dedicate to our other services.  If you
-                run into problems with it, let us know!
+                Taiga is a very pretty project management platform that the
+                project decided to provide access to. This instance is not
+                managed by the Fedora Infrastructure, instead the Fedora
+                project is paying for an hosted instance that you can use using
+                your Fedora account!
     -   name:   Ipsilon
         data:
             icon:  https://seccdn.libravatar.org/avatar/549cb16661a6fc449ef70adcfb67c71e30a0e4ed6410e1a7558991f19acb6c83?s=64&amp;d=retro
