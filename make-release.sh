@@ -5,6 +5,9 @@ shopt -s extglob
 
 VERSION=3.2
 
+echo "Updating js/data.js from data/apps.yaml"
+python3 bin/yaml2json.py data/apps.yaml > js/data.js
+
 rm -rf build
 mkdir -p build/apps-fp-o-$VERSION
 mkdir -p dist
