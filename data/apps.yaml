@@ -762,8 +762,8 @@ children:
                 run into problems with it, let us know!
     -   name:   Ipsilon
         data:
-            icon:
-            url: https://infrastructure.fedoraproject.org/infra/docs/ipsilon.rst
+            icon:  https://seccdn.libravatar.org/avatar/549cb16661a6fc449ef70adcfb67c71e30a0e4ed6410e1a7558991f19acb6c83?s=64&amp;d=retro
+            url:   https://pagure.io/ipsilon
             Description:
                 Ipsilon is our central authentication agent that is used to
                 authenticate users agains FAS. It is seperate from FAS. The
