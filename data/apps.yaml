@@ -125,7 +125,7 @@ children:
     -   name:   Fedora Magazine
         data:
             icon:   magazine.png
-            url:    http://fedoramagazine.org
+            url:    https://fedoramagazine.org
             docs_url:   https://codex.wordpress.org/
             # We don't have a SOP for the magazine yet.
             # https://pagure.io/fedora-infrastructure/issue/5149
@@ -139,7 +139,7 @@ children:
         data:
             icon:   planet_logo.png
             url:    http://fedoraplanet.org
-            docs_url:   http://www.intertwingly.net/code/venus/
+            docs_url:   https://www.intertwingly.net/code/venus/
             sops:
                 - https://infrastructure.fedoraproject.org/infra/docs/planetsubgroup.rst
             description: >
@@ -276,7 +276,7 @@ children:
     children:
     -   name:   Asknot
         data:
-            url:    http://whatcanidoforfedora.org
+            url:    https://whatcanidoforfedora.org
             source_url: https://github.com/fedora-infra/asknot-ng
             bugs_url:   https://github.com/fedora-infra/asknot-ng/issues
             docs_url:   https://github.com/fedora-infra/asknot-ng/blob/develop/README.md
@@ -287,7 +287,7 @@ children:
             status_mappings: []
             description: >
                 Ask not what Fedora can do for you, but <a
-                href="http://whatcanidoforfedora.org">what you can do for
+                href="https://whatcanidoforfedora.org">what you can do for
                 Fedora?</a>  This site is a starting place for brand new
                 contributors to help them figure out where they can
                 hop on board!
@@ -644,7 +644,7 @@ children:
     -   name:   Status
         data:
             icon:   status-good.png
-            url:    http://status.fedoraproject.org
+            url:    https://status.fedoraproject.org
             source_url: https://pagure.io/fedora-status
             bugs_url:   https://pagure.io/fedora-status/issues
             docs_url:   https://pagure.io/fedora-status/blob/master/f/README
