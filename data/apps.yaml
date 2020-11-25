@@ -310,7 +310,7 @@ children:
             url:    https://admin.fedoraproject.org/voting
             source_url: https://github.com/fedora-infra/elections
             bugs_url:   https://github.com/fedora-infra/elections/issues
-            docs_url:   https://github.com/fedora-infra/elections/blob/develop/README.rst
+            docs_url:   https://github.com/fedora-infra/elections/blob/develop/README.md
             sops:
                 - https://infrastructure.fedoraproject.org/infra/docs/voting.rst
             status_mappings: ['elections']
