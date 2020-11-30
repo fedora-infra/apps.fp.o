@@ -6,523 +6,878 @@
  */
 
 var json = {
-  "id": 0, 
+  "name": "Fedora Apps",
   "data": {
     "description": "This is a landing page for Fedora Apps.  Fedora Infrastructure is <em>huge</em>; this page details only the public facing portion of it all.  Explore!\n"
-  }, 
-  "name": "Fedora Apps", 
+  },
   "children": [
     {
-      "id": 1, 
-      "data": {
-        "description": "These are the apps that we're working on, but that aren't quite ready for prime-time yet.  Try and use them, and report bugs when they're broken -- it's a big help!. Check back here from time to time, as this section will change.\n"
-      }, 
-      "name": "In Development", 
-      "children": [
-        {
-          "data": {
-            "url": "http://koschei.cloud.fedoraproject.org", 
-            "description": "Koschei is a continuous integration system for RPM packages. It tracks dependency changes done in Koji repositories and rebuilds packages whose dependencies change. It can help packagers to detect failures early and provide relevant information to narrow down the cause.\n"
-          }, 
-          "name": "Koschei", 
-          "id": 2
-        }, 
-        {
-          "data": {
-            "url": "http://release-monitoring.org", 
-            "description": "Code named <a href=\"https://github.com/fedora-infra/anitya\">anitya</a>, this project is slated to replace <a href=\"https://fedoraproject.org/wiki/Upstream_Release_Monitoring\">the old wiki page</a> for Upstream Release Monitoring.  It will track upstream tarball locations and publish notifications to the fedmsg bus when new ones are found.  Other daemons will then be responsible for filing bugs, attempting to automatically build packages, perform some preliminary QA checks, etc..\n"
-          }, 
-          "name": "Release Monitoring", 
-          "id": 3
-        }, 
-        {
-          "data": {
-            "url": "http://jenkins.cloud.fedoraproject.org", 
-            "description": "Our own continuous integration (CI) service!  It works now and you can use it.. we just don't yet give it the same kind of guarantees that we give our other apps.  Look forwards to us promoting it soon..\n"
-          }, 
-          "name": "Jenkins", 
-          "id": 4
-        }
-      ]
-    }, 
-    {
-      "id": 5, 
-      "data": {
-        "description": "Tools for sysadmins -- the people who run the servers that run Fedora (and otherwise).\n"
-      }, 
-      "name": "Infrastructure", 
-      "children": [
-        {
-          "data": {
-            "url": "https://geoip.fedoraproject.org", 
-            "description": "A simple web service running <a href=\"https://github.com/fedora-infra/geoip-city-wsgi\">geoip-city-wsgi</a> that will return geoip information to you.\n"
-          }, 
-          "name": "GeoIP", 
-          "id": 6
-        }, 
-        {
-          "data": {
-            "url": "http://fedoraproject.org/easyfix", 
-            "description": "A list of easy-to-fix problems for the different projects in Fedora.  Interested in getting into helping out with sysadmin work or web application development?  This should be useful to you.\n"
-          }, 
-          "name": "Easyfix", 
-          "id": 7
-        }, 
-        {
-          "data": {
-            "url": "https://apps.fedoraproject.org/datagrepper", 
-            "icon": "fedmsg.png", 
-            "description": "DataGrepper is an HTTP API for querying the datanommer database.  You can use it to dig into the history of the <a href=\"http://fedmsg.com\">fedmsg</a> message bus.  You can grab events by username, by package, by message source, by topic... you name it.\n", 
-            "status_mappings": [
-              "fedmsg"
-            ]
-          }, 
-          "name": "DataGrepper", 
-          "id": 8
-        }, 
-        {
-          "data": {
-            "url": "http://status.fedoraproject.org", 
-            "description": "Sometimes the Fedora Infrastructure team messes up (or lightning strikes our datacenter(s)).  Sorry about that. You can use this website to check the status.  Is it \"down for everyone, or just me?\"<br/>Notice the favicon in your browser tab.  It changes based on the status, so if you keep this open you can check back to it at a glance.\n", 
-            "icon": "status-good.png"
-          }, 
-          "name": "Status", 
-          "id": 9
-        }, 
-        {
-          "data": {
-            "url": "http://mirrors.fedoraproject.org", 
-            "icon": "downloads.png", 
-            "description": "Fedora is distributed to millions of systems globally. This would not be possible without the donations of time, disk space, and bandwidth by hundreds of volunteer system administrators and their companies or institutions.  Your fast download experience is made possible by these donations.  The list on the <strong>MirrorManager</strong> site is dynamically generated every hour, listing only up-to-date mirrors.\n", 
-            "status_mappings": [
-              "mirrormanager", 
-              "mirrorlist"
-            ]
-          }, 
-          "name": "MirrorManager", 
-          "id": 10
-        }, 
-        {
-          "data": {
-            "url": "http://admin.fedoraproject.org/nagios", 
-            "description": "\"Is telia down?\"  The answer can most definitively be found here (and in detail).  The Fedora Infrastructure team uses Nagios to monitor the servers that serve Fedora.  Accessing most details requires membership in the <em>sysadmin</em> group.\n", 
-            "icon": "nagios-logo.png"
-          }, 
-          "name": "Nagios", 
-          "id": 11
-        }, 
-        {
-          "data": {
-            "url": "http://admin.fedoraproject.org/collectd/", 
-            "description": "Tracks and displays statistics on the Fedora Infrastructure machines over time.  Useful for debugging ineffeciencies and problems.\n", 
-            "icon": "collectd.png"
-          }, 
-          "name": "Collectd", 
-          "id": 12
-        }, 
-        {
-          "data": {
-            "url": "http://admin.fedoraproject.org/haproxy/proxy1", 
-            "description": "Shows the health of our proxies.  How many bytes? Concurrent sessions?  Health checks?\n"
-          }, 
-          "name": "HAProxy", 
-          "id": 13
-        }
-      ]
-    }, 
-    {
-      "id": 14, 
-      "data": {
-        "description": "Tools for testers -- the people who tell us its broken so we can fix it.\n"
-      }, 
-      "name": "QA", 
-      "children": [
-        {
-          "data": {
-            "url": "https://taskotron.fedoraproject.org", 
-            "description": "Taskotron is a framework for automated task execution and is in the very early stages of development with the objective to replace AutoQA for automating selected QA tasks in Fedora.\n"
-          }, 
-          "name": "Taskotron", 
-          "id": 15
-        }, 
-        {
-          "data": {
-            "url": "https://apps.fedoraproject.org/releng-dash/", 
-            "description": "Track the status of the Fedora Release Engineering process. Did the latest rawhide get rsynced out?  How about for the secondary arches?  This read-only dashboard can help you make a quick check.\n"
-          }, 
-          "name": "Releng-Dash", 
-          "id": 16
-        }, 
-        {
-          "data": {
-            "url": "https://retrace.fedoraproject.org", 
-            "description": "The Problem Tracker is a platform for collecting and analyzing package crashes reported via ABRT (Automatic Bug Reporting Tool). It makes it easy to see what problems users are hitting the most, and allows you to filter them by Fedora release, associate, or component.\n"
-          }, 
-          "name": "Problem Tracker", 
-          "id": 17
-        }, 
-        {
-          "data": {
-            "url": "http://qa.fedoraproject.org/blockerbugs", 
-            "description": "The Fedora Blocker Bug Tracker tracks release blocking bugs and related updates in Fedora releases currently under development.\n", 
-            "status_mappings": [
-              "blockerbugs"
-            ]
-          }, 
-          "name": "Blocker Bugs", 
-          "id": 18
-        }, 
-        {
-          "data": {
-            "url": "http://bugzilla.redhat.com", 
-            "description": "The Fedora Community makes use of a bugzilla instance run by Red Hat.  Notice something wrong with a Fedora package?  You can file an official bug here.\n", 
-            "icon": "bugzilla.png"
-          }, 
-          "name": "Bugzilla", 
-          "id": 19
-        }, 
-        {
-          "data": {
-            "url": "http://fedoraproject.org/PackageReviewStatus/", 
-            "description": "These pages contain periodically generated reports with information on the current state of all Fedora <strong>package review tickets</strong> -- a super useful window on bugzilla.\n"
-          }, 
-          "name": "Review Status", 
-          "id": 20
-        }, 
-        {
-          "data": {
-            "url": "https://apps.fedoraproject.org/kerneltest", 
-            "description": "As part of the <a href=\"https://fedoraproject.org/wiki/KernelTestingInitiative\">kernel testing initiative</a> we provide a webapp where users and automated systems can upload test results.  If you have access to hardware where we could catch tricky driver issues, your assistance here would be much appreciated.\n", 
-            "icon": "tux.png"
-          }, 
-          "name": "Kerneltest", 
-          "id": 21
-        }
-      ]
-    }, 
-    {
-      "id": 22, 
-      "data": {
-        "description": "Tools for people -- so we can talk to each other and share content and ideas.\n"
-      }, 
-      "name": "Coordination", 
-      "children": [
-        {
-          "data": {
-            "url": "http://paste.fedoraproject.org", 
-            "description": "Our very own pastebin server.  If you yum install the <strong>fpaste</strong> command, it will use this site automatically.\n", 
-            "status_mappings": [
-              "fedorapaste"
-            ]
-          }, 
-          "name": "Paste", 
-          "id": 23
-        }, 
-        {
-          "data": {
-            "url": "http://admin.fedoraproject.org/voting", 
-            "description": "As a member of the community, you can now vote for the different steering committees and for this you will use the Election application.  Voting is a right and a duty as a member of the community; it is one of the things you can do to influence the development of Fedora.\n", 
-            "status_mappings": [
-              "elections"
-            ]
-          }, 
-          "name": "Elections", 
-          "id": 24
-        }, 
-        {
-          "data": {
-            "url": "http://apps.fedoraproject.org/nuancier", 
-            "description": "Nuancier is a simple voting application for the supplementary wallpapers included in Fedora.\n", 
-            "icon": "nuancier.png"
-          }, 
-          "name": "Nuancier", 
-          "id": 25
-        }, 
-        {
-          "data": {
-            "url": "http://lists.fedoraproject.org", 
-            "icon": "mail.png", 
-            "description": "Mailing lists are used for communication within the community. There are lists for generic topics and lists more dedicated to a specific topic, there is for sure one for you.\n", 
-            "status_mappings": [
-              "mailinglists"
-            ]
-          }, 
-          "name": "The Mailing lists", 
-          "id": 26
-        }, 
-        {
-          "data": {
-            "url": "http://apps.fedoraproject.org/calendar", 
-            "icon": "fedocal.png", 
-            "description": "The Fedora Calendar (or <strong>fedocal</strong>), you might have already guessed, is a public calendar service.  You can create your own calendar, or subscribe to others.  Want to be kept abrest of releases, freezes, and events?  This is the tool for you.\n", 
-            "status_mappings": [
-              "fedocal"
-            ]
-          }, 
-          "name": "FedoCal", 
-          "id": 27
-        }, 
-        {
-          "data": {
-            "url": "https://meetbot.fedoraproject.org", 
-            "icon": "meetbot.png", 
-            "description": "Fedora Infrastructure runs a friendly IRC bot that you may know named <a href=\"https://fedoraproject.org/wiki/Zodbot\">zodbot</a>. Among its many and varied functions is logging IRC meetings, the archives of which you can find here.\n", 
-            "status_mappings": [
-              "zodbot"
-            ]
-          }, 
-          "name": "Meetbot", 
-          "id": 28
-        }
-      ]
-    }, 
-    {
-      "id": 29, 
-      "data": {
-        "description": "Tools for <a href=\"https://fedoraproject.org/wiki/Staying_close_to_upstream_projects\">upstream</a> developers -- because we love you.\n"
-      }, 
-      "name": "Upstream", 
-      "children": [
-        {
-          "data": {
-            "url": "https://apps.fedoraproject.org/github2fedmsg", 
-            "icon": "github.png", 
-            "description": "github2fedmsg is a web service that bridges upstream development activity from <a href=\"https://github.com\">GitHub</a> into the <a href=\"http://fedmsg.com\">Fedora Infrastructure message bus</a>.  Visit the self-service dashboard to toggle the status of your repositories.\n", 
-            "status_mappings": [
-              "fedmsg"
-            ]
-          }, 
-          "name": "github2fedmsg", 
-          "id": 30
-        }
-      ]
-    }, 
-    {
-      "id": 32, 
+      "name": "Accounts",
       "data": {
         "description": "Tools for everybody -- use these things to manage your Fedora Account.\n"
-      }, 
-      "name": "Accounts", 
+      },
       "children": [
         {
+          "name": "Ambassadors Map",
           "data": {
-            "url": "http://fedoraproject.org/membership-map/ambassadors.html", 
+            "url": "https://fedoraproject.org/membership-map/ambassadors.html",
             "description": "Ambassadors are the representatives of Fedora. Ambassadors ensure the public understand Fedora's principles and the work that Fedora is doing. Additionally Ambassadors are responsible for helping to grow the contributor base, and to act as a liaison between other FLOSS projects and the Fedora community.\nThis thing is a map of where all the <a href=\"https://fedoraproject.org/wiki/Ambassadors\">Fedora Ambassadors</a> live showing just how vibrant the Fedora Community really is.  (It's easy to <a href=\"https://fedoraproject.org/wiki/Fedora_ambassadors_map\">add yourself</a> to the map too, if you can't find yourself on it.)\n"
-          }, 
-          "name": "Ambassadors Map", 
-          "id": 33
-        }, 
+          },
+          "id": 2,
+          "ipv6_only": false
+        },
         {
+          "name": "FedoraPeople",
           "data": {
-            "url": "https://fedorapeople.org", 
-            "description": "Being a community member you gain access to fedorapeople which provides you with a space on the web where you can upload files to share them with the community.\n", 
+            "url": "https://fedorapeople.org",
+            "user_url": "https://{user}.fedorapeople.org",
             "status_mappings": [
               "people"
-            ]
-          }, 
-          "name": "FedoraPeople", 
-          "id": 34
-        }, 
+            ],
+            "description": "Being a community member you gain access to fedorapeople which provides you with a space on the web where you can upload files to share them with the community.\n"
+          },
+          "id": 3,
+          "ipv6_only": false
+        },
         {
+          "name": "FAS",
           "data": {
-            "url": "http://admin.fedoraproject.org/accounts", 
-            "description": "The Fedora Account System.  Update your profile information and apply for membership in groups.\n", 
+            "url": "https://admin.fedoraproject.org/accounts",
+            "user_url": "https://admin.fedoraproject.org/accounts/user/view/{user}",
+            "source_url": "https://github.com/fedora-infra/fas/",
+            "bugs_url": "https://github.com/fedora-infra/fas/issues/",
+            "docs_url": "https://github.com/fedora-infra/fas/blob/develop/README.rst",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/fas-notes.rst",
+              "https://infrastructure.fedoraproject.org/infra/docs/fas-openid.rst",
+              "https://infrastructure.fedoraproject.org/infra/docs/accountdeletion.rst",
+              "https://infrastructure.fedoraproject.org/infra/docs/nonhumanaccounts.rst"
+            ],
             "status_mappings": [
               "fas"
-            ]
-          }, 
-          "name": "FAS", 
-          "id": 35
-        }, 
+            ],
+            "description": "The Fedora Account System.  Update your profile information and apply for membership in groups.\n"
+          },
+          "id": 4,
+          "ipv6_only": false
+        },
         {
+          "name": "Notifications",
           "data": {
-            "url": "https://apps.fedoraproject.org/notifications", 
-            "icon": "fedmsg.png", 
-            "description": "Centrally managed preferences for Fedora Infrastructure notifications to your inbox, irc client, and mobile device.\n", 
+            "icon": "fedmsg.png",
+            "url": "https://apps.fedoraproject.org/notifications",
+            "source_url": "https://github.com/fedora-infra/fmn/",
+            "bugs_url": "https://github.com/fedora-infra/fmn/issues/",
+            "docs_url": "https://github.com/fedora-infra/fmn/blob/develop/README.rst",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/fmn.rst"
+            ],
             "status_mappings": [
               "fedmsg"
-            ]
-          }, 
-          "name": "Notifications", 
-          "id": 36
-        }, 
+            ],
+            "description": "Centrally managed preferences for Fedora Infrastructure notifications to your inbox, irc client, and mobile device.\n"
+          },
+          "id": 5,
+          "ipv6_only": false
+        },
         {
-          "id": 37, 
-          "data": {
-            "url": "https://badges.fedoraproject.org", 
-            "description": "An achievements system for Fedora Contributors!  \"Badges\" are awarded based on activity in the community.  Can you unlock them all? You can export your badges to Mozilla's <a href=\"http://openbadges.org\">Open Badges Infrastructure</a>\n", 
-            "icon": "badges.png"
-          }, 
-          "name": "Badges", 
+          "name": "Badges",
           "status_mappings": [
             "badges"
-          ]
+          ],
+          "data": {
+            "icon": "badges.png",
+            "url": "https://badges.fedoraproject.org",
+            "user_url": "https://badges.fedoraproject.org/user/{user}",
+            "source_url": "https://github.com/fedora-infra/tahrir/",
+            "bugs_url": "https://github.com/fedora-infra/tahrir/issues/",
+            "docs_url": "https://tahrir.readthedocs.org/en/latest/",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/badges.rst"
+            ],
+            "description": "An achievements system for Fedora Contributors!  \"Badges\" are awarded based on activity in the community.  Can you unlock them all? You can export your badges to Mozilla's <a href=\"http://openbadges.org\">Open Badges Infrastructure</a>\n"
+          },
+          "id": 6,
+          "ipv6_only": false
         }
-      ]
-    }, 
+      ],
+      "id": 1,
+      "ipv6_only": false
+    },
     {
-      "id": 38, 
+      "name": "Content",
       "data": {
         "description": "Tools for wordsmiths -- the apps that store and archive the troves of content that Fedora authors produce.  Blog posts, the wiki, and more..\n"
-      }, 
-      "name": "Content", 
+      },
       "children": [
         {
+          "name": "Ask Fedora",
           "data": {
-            "url": "http://ask.fedoraproject.org/", 
-            "icon": "ask_fedora.png", 
-            "description": "Any question at all about Fedora?  Ask it here.\n", 
+            "icon": "ask_fedora.png",
+            "url": "https://ask.fedoraproject.org/",
+            "source_url": "https://github.com/askbot/askbot-devel",
+            "bugs_url": "https://github.com/askbot/askbot-devel/issues/",
+            "docs_url": "http://askbot.org/doc/index.html",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/askbot.rst"
+            ],
             "status_mappings": [
               "ask"
-            ]
-          }, 
-          "name": "Ask Fedora", 
-          "id": 39
-        }, 
+            ],
+            "description": "Any question at all about Fedora?  Ask it here.\n"
+          },
+          "id": 8,
+          "ipv6_only": false
+        },
         {
+          "name": "The Wiki",
           "data": {
-            "url": "http://fedoraproject.org/wiki", 
-            "icon": "mediawiki.png", 
-            "description": "Maintain your own user profile page, contribute to documents about features, process, and governance.\n", 
+            "icon": "mediawiki.png",
+            "url": "https://fedoraproject.org/wiki",
+            "user_url": "https://fedoraproject.org/wiki/User:{user}",
+            "source_url": "https://www.mediawiki.org/",
+            "bugs_url": "https://www.mediawiki.org/wiki/Phabricator#Get_started",
+            "docs_url": "https://www.mediawiki.org/wiki/Sysadmin_hub",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/wiki.rst"
+            ],
             "status_mappings": [
               "wiki"
-            ]
-          }, 
-          "name": "The Wiki", 
-          "id": 40
-        }, 
+            ],
+            "description": "Maintain your own user profile page, contribute to documents about features, process, and governance.\n"
+          },
+          "id": 9,
+          "ipv6_only": false
+        },
         {
+          "name": "Fedora Magazine",
           "data": {
-            "url": "http://fedoramagazine.org", 
-            "description": "Fedora Magazine is a WordPress-based site which delivers all the news of the Fedora Community. (It replaces the previous Fedora Weekly News.)\n", 
-            "icon": "magazine.png"
-          }, 
-          "name": "Fedora Magazine", 
-          "id": 41
-        }, 
+            "icon": "magazine.png",
+            "url": "http://fedoramagazine.org",
+            "docs_url": "https://codex.wordpress.org/",
+            "description": "Fedora Magazine is a WordPress-based site which delivers all the news of the Fedora Community. (It replaces the previous Fedora Weekly News.)\n"
+          },
+          "id": 10,
+          "ipv6_only": false
+        },
         {
+          "name": "The Planet",
           "data": {
-            "url": "http://planet.fedoraproject.org", 
-            "description": "The planet is a blog aggregator, a space accessible to you as a community member where you can express your opinion and talk about what you are doing for Fedora.\n", 
-            "icon": "planet_logo.png"
-          }, 
-          "name": "The Planet", 
-          "id": 42
-        }, 
+            "icon": "planet_logo.png",
+            "url": "http://fedoraplanet.org",
+            "docs_url": "http://www.intertwingly.net/code/venus/",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/planetsubgroup.rst"
+            ],
+            "description": "The planet is a blog aggregator, a space accessible to you as a community member where you can express your opinion and talk about what you are doing for Fedora.\n"
+          },
+          "id": 11,
+          "ipv6_only": false
+        },
         {
+          "name": "Docs",
           "data": {
-            "url": "http://docs.fedoraproject.org", 
-            "description": "RTFM!  Everything you could ever want to know. Probably the best place to find documentation about Fedora, including the changes between releases (and a big kudos to the translation teams to keep this resource up to date in the different languages!)\n", 
+            "url": "https://docs.fedoraproject.org",
             "status_mappings": [
               "docs"
-            ]
-          }, 
-          "name": "Docs", 
-          "id": 43
+            ],
+            "description": "RTFM!  Everything you could ever want to know. Probably the best place to find documentation about Fedora, including the changes between releases (and a big kudos to the translation teams to keep this resource up to date in the different languages!)\n"
+          },
+          "id": 12,
+          "ipv6_only": false
         }
-      ]
-    }, 
+      ],
+      "id": 7,
+      "ipv6_only": false
+    },
     {
-      "id": 44, 
+      "name": "QA",
       "data": {
-        "description": "Tools for packagers -- where the pieces of the distribution get built.\n"
-      }, 
-      "name": "Packaging", 
+        "description": "Tools for testers -- the people who tell us its broken so we can fix it.\n"
+      },
       "children": [
         {
+          "name": "Taskotron",
           "data": {
-            "url": "http://apps.fedoraproject.org/packages", 
-            "description": "A meta-app over the other packaging apps; the best place to find out what is in the Fedora repositories.  Which packages are present in which version, who is maintaining them, what patches have been applied, what bugs have been reported against them. All these kind of questions can be answered here. It is sometimes called \"Fedora Community v2\" after the old <a href=\"http://admin.fedoraproject.org/community\">Fedora Community</a> site.\n", 
+            "icon": "taskotron.png",
+            "url": "https://taskotron.fedoraproject.org",
+            "package_url": "https://taskotron.fedoraproject.org/resultsdb/results?item={package}",
+            "source_url": "https://pagure.io/group/taskotron",
+            "bugs_url": "https://pagure.io/group/taskotron",
+            "docs_url": "https://taskotron.fedoraproject.org",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/taskotron.rst",
+              "https://infrastructure.fedoraproject.org/infra/docs/resultsdb.rst"
+            ],
+            "description": "Taskotron is a framework for automated task execution. It currently runs selected package checks in Fedora.\n"
+          },
+          "id": 14,
+          "ipv6_only": false
+        },
+        {
+          "name": "Problem Tracker",
+          "data": {
+            "url": "https://retrace.fedoraproject.org",
+            "package_url": "https://retrace.fedoraproject.org/faf/reports/?component_names={package}",
+            "source_url": "https://github.com/abrt/retrace-server/",
+            "bugs_url": "https://github.com/abrt/retrace-server/issues",
+            "docs_url": "https://abrt.readthedocs.org/en/latest/howitworks.html#faf",
+            "description": "The Problem Tracker is a platform for collecting and analyzing package crashes reported via ABRT (Automatic Bug Reporting Tool). It makes it easy to see what problems users are hitting the most, and allows you to filter them by Fedora release, associate, or component.\n"
+          },
+          "id": 15,
+          "ipv6_only": false
+        },
+        {
+          "name": "Blocker Bugs",
+          "data": {
+            "url": "https://qa.fedoraproject.org/blockerbugs",
+            "source_url": "https://pagure.io/fedora-qa/blockerbugs",
+            "bugs_url": "https://pagure.io/fedora-qa/blockerbugs",
+            "docs_url": "https://tflink.fedorapeople.org/blockerbugs/docs/",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/blockerbugs.rst"
+            ],
+            "status_mappings": [
+              "blockerbugs"
+            ],
+            "description": "The Fedora Blocker Bug Tracker tracks release blocking bugs and related updates in Fedora releases currently under development.\n"
+          },
+          "id": 16,
+          "ipv6_only": false
+        },
+        {
+          "name": "Bugzilla",
+          "data": {
+            "icon": "bugzilla.png",
+            "url": "https://bugzilla.redhat.com",
+            "package_url": "https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&product=Fedora&product=Fedora%20EPEL&query_format=advanced&component={package}",
+            "description": "The Fedora Community makes use of a bugzilla instance run by Red Hat.  Notice something wrong with a Fedora package?  You can file an official bug here.\n"
+          },
+          "id": 17,
+          "ipv6_only": false
+        },
+        {
+          "name": "Review Status",
+          "data": {
+            "url": "https://fedoraproject.org/PackageReviewStatus/",
+            "package_url": "https://bugzilla.redhat.com/buglist.cgi?component=Package%20Review&query_format=advanced&short_desc_type=allwordssubstr&short_desc={package}",
+            "description": "These pages contain periodically generated reports with information on the current state of all Fedora <strong>package review tickets</strong> -- a super useful window on bugzilla.\n"
+          },
+          "id": 18,
+          "ipv6_only": false
+        },
+        {
+          "name": "Kerneltest",
+          "data": {
+            "icon": "tux.png",
+            "url": "https://apps.fedoraproject.org/kerneltest",
+            "source_url": "https://github.com/jmflinuxtx/kerneltest-harness",
+            "bugs_url": "https://github.com/jmflinuxtx/kerneltest-harness/issues",
+            "docs_url": "https://fedoraproject.org/wiki/KernelTestingInitiative",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/kerneltest-harness.rst"
+            ],
+            "description": "As part of the <a href=\"https://fedoraproject.org/wiki/KernelTestingInitiative\">kernel testing initiative</a> we provide a webapp where users and automated systems can upload test results.  If you have access to hardware where we could catch tricky driver issues, your assistance here would be much appreciated.\n"
+          },
+          "id": 19,
+          "ipv6_only": false
+        },
+        {
+          "name": "Koschei",
+          "data": {
+            "icon": "koschei.png",
+            "url": "https://apps.fedoraproject.org/koschei/",
+            "user_url": "https://apps.fedoraproject.org/koschei/user/{user}",
+            "package_url": "https://apps.fedoraproject.org/koschei/package/{package}",
+            "source_url": "https://github.com/msimacek/koschei",
+            "bugs_url": "https://github.com/msimacek/koschei/issues",
+            "docs_url": "https://fedoraproject.org/wiki/Koschei",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/koschei.rst"
+            ],
+            "status_mappings": [
+              "koschei"
+            ],
+            "description": "Koschei is a continuous integration system for RPM packages. It tracks dependency changes done in Koji repositories and rebuilds packages whose dependencies change. It can help packagers to detect failures early and provide relevant information to narrow down the cause.\n"
+          },
+          "id": 20,
+          "ipv6_only": false
+        }
+      ],
+      "id": 13,
+      "ipv6_only": false
+    },
+    {
+      "name": "Coordination",
+      "data": {
+        "description": "Tools for people -- so we can talk to each other and share content and ideas.\n"
+      },
+      "children": [
+        {
+          "name": "Asknot",
+          "data": {
+            "url": "http://whatcanidoforfedora.org",
+            "source_url": "https://github.com/fedora-infra/asknot-ng",
+            "bugs_url": "https://github.com/fedora-infra/asknot-ng/issues",
+            "docs_url": "https://github.com/fedora-infra/asknot-ng/blob/develop/README.md",
+            "status_mappings": [],
+            "description": "Ask not what Fedora can do for you, but <a href=\"http://whatcanidoforfedora.org\">what you can do for Fedora?</a>  This site is a starting place for brand new contributors to help them figure out where they can hop on board!\n"
+          },
+          "id": 22,
+          "ipv6_only": false
+        },
+        {
+          "name": "Paste",
+          "data": {
+            "url": "https://paste.fedoraproject.org",
+            "source_url": "https://github.com/sayakb/sticky-notes",
+            "bugs_url": "https://github.com/sayakb/sticky-notes/pulls",
+            "docs_url": "https://sayakb.github.io/sticky-notes/pages/home/",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/fedorapastebin.rst"
+            ],
+            "status_mappings": [
+              "fedorapaste"
+            ],
+            "description": "Our very own pastebin server.  If you yum install the <strong>fpaste</strong> command, it will use this site automatically.\n"
+          },
+          "id": 23,
+          "ipv6_only": false
+        },
+        {
+          "name": "Elections",
+          "data": {
+            "url": "https://admin.fedoraproject.org/voting",
+            "source_url": "https://github.com/fedora-infra/elections",
+            "bugs_url": "https://github.com/fedora-infra/elections/issues",
+            "docs_url": "https://github.com/fedora-infra/elections/blob/develop/README.rst",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/voting.rst"
+            ],
+            "status_mappings": [
+              "elections"
+            ],
+            "description": "As a member of the community, you can now vote for the different steering committees and for this you will use the Election application.  Voting is a right and a duty as a member of the community; it is one of the things you can do to influence the development of Fedora.\n"
+          },
+          "id": 24,
+          "ipv6_only": false
+        },
+        {
+          "name": "Nuancier",
+          "data": {
+            "icon": "nuancier.png",
+            "url": "https://apps.fedoraproject.org/nuancier",
+            "source_url": "https://github.com/fedora-infra/nuancier",
+            "bugs_url": "https://github.com/fedora-infra/nuancier/issues",
+            "docs_url": "https://nuancier.readthedocs.org/en/latest/",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/nuancier.rst"
+            ],
+            "description": "Nuancier is a simple voting application for the supplementary wallpapers included in Fedora.\n"
+          },
+          "id": 25,
+          "ipv6_only": false
+        },
+        {
+          "name": "The Mailing lists",
+          "data": {
+            "icon": "hyperkitty.png",
+            "url": "https://lists.fedoraproject.org",
+            "source_url": "https://gitlab.com/mailman/hyperkitty",
+            "bugs_url": "https://gitlab.com/mailman/hyperkitty/issues",
+            "docs_url": "https://hyperkitty.readthedocs.org/en/latest/",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/mailman.rst"
+            ],
+            "status_mappings": [
+              "mailinglists"
+            ],
+            "description": "Mailing lists are used for communication within the community. There are lists for generic topics and lists more dedicated to a specific topic, there is for sure one for you.\n"
+          },
+          "id": 26,
+          "ipv6_only": false
+        },
+        {
+          "name": "FedoCal",
+          "data": {
+            "icon": "fedocal.png",
+            "url": "https://apps.fedoraproject.org/calendar",
+            "source_url": "https://github.com/fedora-infra/fedocal",
+            "bugs_url": "https://github.com/fedora-infra/fedocal/issues",
+            "docs_url": "https://fedocal.readthedocs.org/en/latest/",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/fedocal.rst"
+            ],
+            "status_mappings": [
+              "fedocal"
+            ],
+            "description": "The Fedora Calendar (or <strong>fedocal</strong>), you might have already guessed, is a public calendar service.  You can create your own calendar, or subscribe to others.  Want to be kept abrest of releases, freezes, and events?  This is the tool for you.\n"
+          },
+          "id": 27,
+          "ipv6_only": false
+        },
+        {
+          "name": "Meetbot",
+          "data": {
+            "icon": "meetbot.png",
+            "url": "https://meetbot.fedoraproject.org",
+            "source_url": "https://github.com/fedora-infra/mote",
+            "bugs_url": "https://github.com/fedora-infra/mote/issues",
+            "docs_url": "https://github.com/fedora-infra/mote/blob/master/README.md",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/mote.rst",
+              "https://infrastructure.fedoraproject.org/infra/docs/zodbot.rst"
+            ],
+            "status_mappings": [
+              "zodbot"
+            ],
+            "description": "Fedora Infrastructure runs a friendly IRC bot that you may know named <a href=\"https://fedoraproject.org/wiki/Zodbot\">zodbot</a>. Among its many and varied functions is logging IRC meetings, the archives of which you can find here.\n"
+          },
+          "id": 28,
+          "ipv6_only": false
+        }
+      ],
+      "id": 21,
+      "ipv6_only": false
+    },
+    {
+      "name": "Packaging",
+      "data": {
+        "description": "Tools for packagers -- where the pieces of the distribution get built.\n"
+      },
+      "children": [
+        {
+          "name": "Packages",
+          "data": {
+            "url": "https://apps.fedoraproject.org/packages",
+            "package_url": "https://apps.fedoraproject.org/packages/{package}",
+            "source_url": "https://github.com/fedora-infra/fedora-packages",
+            "bugs_url": "https://github.com/fedora-infra/fedora-packages/issues",
+            "docs_url": "http://threebean.org/blog/history-of-fedora-packages/",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/fedorapackages.rst"
+            ],
             "status_mappings": [
               "packages"
-            ]
-          }, 
-          "name": "Packages", 
-          "id": 45
-        }, 
+            ],
+            "description": "A meta-app over the other packaging apps; the best place to find out what is in the Fedora repositories.  Which packages are present in which version, who is maintaining them, what patches have been applied, what bugs have been reported against them. All these kind of questions can be answered here. It is sometimes called \"Fedora Community v2\" after the old <a href=\"https://admin.fedoraproject.org/community\">Fedora Community</a> site.\n"
+          },
+          "id": 30,
+          "ipv6_only": false
+        },
         {
+          "name": "Tagger",
           "data": {
-            "url": "http://apps.fedoraproject.org/tagger", 
-            "icon": "tagger.png", 
-            "description": "Help build a tag cloud of all our packages.. It's actually really useful.  It'll help improve the search of the \"Packages\" webapp.\n", 
+            "icon": "tagger.png",
+            "url": "https://apps.fedoraproject.org/tagger",
+            "package_url": "https://apps.fedoraproject.org/tagger/{package}",
+            "source_url": "https://github.com/fedora-infra/fedora-tagger",
+            "bugs_url": "https://github.com/fedora-infra/fedora-tagger/issues",
+            "docs_url": "https://github.com/fedora-infra/fedora-tagger/blob/develop/README.rst",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/fedora-tagger.rst"
+            ],
             "status_mappings": [
               "tagger"
-            ]
-          }, 
-          "name": "Tagger", 
-          "id": 46
-        }, 
+            ],
+            "description": "Help build a tag cloud of all our packages.. It's actually really useful.  It'll help improve the search of the \"Packages\" webapp.\n"
+          },
+          "id": 31,
+          "ipv6_only": false
+        },
         {
+          "name": "COPR",
           "data": {
-            "url": "https://copr.fedoraproject.org", 
-            "icon": "copr.png", 
-            "description": "Copr is an easy-to-use automatic build system providing a package repository as its output.  You can make your **own** repositories!\n", 
+            "icon": "copr.png",
+            "url": "https://copr.fedoraproject.org",
+            "user_url": "https://copr.fedoraproject.org/coprs/{user}/",
+            "source_url": "https://github.com/fedora-copr/copr",
+            "bugs_url": "https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=POST&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&classification=Community&list_id=4767864&product=Copr&query_format=advanced",
+            "docs_url": "https://copr-backend.readthedocs.org/",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/copr.rst"
+            ],
             "status_mappings": [
               "copr"
-            ]
-          }, 
-          "name": "COPR", 
-          "id": 47
-        }, 
+            ],
+            "description": "Copr is an easy-to-use automatic build system providing a package repository as its output.  You can make your **own** repositories!\n"
+          },
+          "id": 32,
+          "ipv6_only": false
+        },
         {
+          "name": "PkgDB",
           "data": {
-            "url": "http://admin.fedoraproject.org/pkgdb", 
-            "description": "Manage ACLs of your packages.\n", 
+            "url": "https://admin.fedoraproject.org/pkgdb",
+            "user_url": "https://admin.fedoraproject.org/pkgdb/packager/{user}/",
+            "package_url": "https://admin.fedoraproject.org/pkgdb/package/{package}/",
+            "source_url": "https://github.com/fedora-infra/pkgdb2",
+            "bugs_url": "https://github.com/fedora-infra/pkgdb2/issues",
+            "docs_url": "https://pkgdb2.readthedocs.org/en/latest/",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/packagedatabase.rst"
+            ],
             "status_mappings": [
               "pkgdb"
-            ]
-          }, 
-          "name": "PkgDB", 
-          "id": 48
-        }, 
+            ],
+            "description": "Manage ACLs of your packages.\n"
+          },
+          "id": 33,
+          "ipv6_only": false
+        },
         {
+          "name": "Koji",
           "data": {
-            "url": "http://koji.fedoraproject.org/koji", 
-            "icon": "koji.png", 
-            "description": "Koji is the software that builds RPM packages for the Fedora project.  It uses Mock to create chroot environments to perform builds that are both safe and trusted.\n", 
+            "icon": "koji.png",
+            "url": "https://koji.fedoraproject.org/koji",
+            "package_url": "https://koji.fedoraproject.org/koji/search?match=glob&type=package&terms={package}",
+            "user_url": "https://koji.fedoraproject.org/koji/userinfo?userID={user}",
+            "source_url": "https://pagure.io/koji",
+            "bugs_url": "https://pagure.io/koji/issues",
+            "docs_url": "https://koji.build/",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/koji.rst",
+              "https://infrastructure.fedoraproject.org/infra/docs/koji-builder-setup.rst"
+            ],
             "status_mappings": [
               "koji"
-            ]
-          }, 
-          "name": "Koji", 
-          "id": 49
-        }, 
+            ],
+            "description": "Koji is the software that builds RPM packages for the Fedora project.  It uses Mock to create chroot environments to perform builds that are both safe and trusted.\n"
+          },
+          "id": 34,
+          "ipv6_only": false
+        },
         {
+          "name": "Bodhi",
           "data": {
-            "url": "http://admin.fedoraproject.org/updates", 
-            "icon": "bodhi.png", 
-            "description": "The tool you will use to push your packages to the Fedora repositories as an update, first an update to be tested (repository: updates-testing) then a stable update (repository: updates).  Behold -- the <em>Magic Cabbage.</em>\n", 
+            "icon": "bodhi.png",
+            "url": "https://admin.fedoraproject.org/updates",
+            "package_url": "https://admin.fedoraproject.org/updates/{package}",
+            "user_url": "https://admin.fedoraproject.org/updates/user/{user}",
+            "source_url": "https://github.com/fedora-infra/bodhi",
+            "bugs_url": "https://github.com/fedora-infra/bodhi/issues",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/bodhi.rst"
+            ],
             "status_mappings": [
               "bodhi"
-            ]
-          }, 
-          "name": "Bodhi", 
-          "id": 50
-        }, 
+            ],
+            "description": "The tool you will use to push your packages to the Fedora repositories as an update, first an update to be tested (repository: updates-testing) then a stable update (repository: updates).  Behold -- the <em>Magic Cabbage.</em>\n"
+          },
+          "id": 35,
+          "ipv6_only": false
+        },
         {
+          "name": "Package Sources",
           "data": {
-            "url": "https://src.fedoraproject.org/",
             "icon": "package-sources.png",
-            "description": "Ever wonder <em>exactly</em> what is in the new release of a Fedora package?  This is where the change histories of all the packages in Fedora for every release of Fedora (and EPEL) are kept.. forever!  A gold mine.\n", 
+            "url": "https://src.fedoraproject.org/",
+            "package_url": "https://src.fedoraproject.org/rpms/{package}",
+            "source_url": "https://pagure.io/pagure",
+            "bugs_url": "https://pagure.io/pagure/issues",
+            "docs_url": "https://pagure.io/docs/pagure/",
             "status_mappings": [
               "pkgs"
-            ]
-          }, 
-          "name": "Package Sources",
-          "id": 51
-        }, 
+            ],
+            "description": "Ever wonder <em>exactly</em> what is in the new release of a Fedora package?  This is where the change histories of all the packages in Fedora for every release of Fedora (and EPEL) are kept.. forever!  A gold mine.\n"
+          },
+          "id": 36,
+          "ipv6_only": false
+        },
         {
+          "name": "Darkserver",
           "data": {
-            "url": "https://darkserver.fedoraproject.org", 
-            "description": "A set of tools and JSON service to help userspace developers to debug their applications and libraries. People are be able query the service based on <a href=\"https://fedoraproject.org/wiki/Releases/FeatureBuildId\">build-id(s)</a> or rpm package names.\nYou can read more about <a href=\"https://fedoraproject.org/wiki/Darkserver\">why you might want to use it</a> or you can just click below to...\n", 
+            "url": "https://darkserver.fedoraproject.org",
+            "source_url": "https://github.com/kushaldas/darkserver",
+            "bugs_url": "https://github.com/kushaldas/darkserver/issues",
+            "docs_url": "https://fedoraproject.org/wiki/Darkserver",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/darkserver.rst"
+            ],
             "status_mappings": [
               "darkserver"
-            ]
-          }, 
-          "name": "Darkserver", 
-          "id": 52
+            ],
+            "description": "A set of tools and JSON service to help userspace developers to debug their applications and libraries. People are be able query the service based on <a href=\"https://fedoraproject.org/wiki/Releases/FeatureBuildId\">build-id(s)</a> or rpm package names.\nYou can read more about <a href=\"https://fedoraproject.org/wiki/Darkserver\">why you might want to use it</a> or you can just click below to...\n"
+          },
+          "id": 37,
+          "ipv6_only": false
+        },
+        {
+          "name": "Mdapi",
+          "data": {
+            "url": "https://apps.fedoraproject.org/mdapi",
+            "description": "mdapi is a small API exposing the metadata contained in different RPM repositories.\n"
+          },
+          "id": 38,
+          "ipv6_only": false
         }
-      ]
+      ],
+      "id": 29,
+      "ipv6_only": false
+    },
+    {
+      "name": "Upstream",
+      "data": {
+        "description": "Tools for <a href=\"https://fedoraproject.org/wiki/Staying_close_to_upstream_projects\">upstream</a> developers -- because we love you.\n"
+      },
+      "children": [
+        {
+          "name": "Release Monitoring",
+          "data": {
+            "url": "https://release-monitoring.org",
+            "package_url": "https://release-monitoring.org/projects/search/?pattern={package}",
+            "source_url": "https://github.com/fedora-infra/anitya",
+            "bugs_url": "https://github.com/fedora-infra/anitya/issues",
+            "docs_url": "https://fedoraproject.org/wiki/Upstream_release_monitoring",
+            "description": "Code named <a href=\"https://github.com/fedora-infra/anitya\">anitya</a>, this project is slated to replace <a href=\"https://fedoraproject.org/wiki/Upstream_Release_Monitoring\">the old wiki page</a> for Upstream Release Monitoring.  It will track upstream tarball locations and publish notifications to the fedmsg bus when new ones are found.  Other daemons will then be responsible for filing bugs, attempting to automatically build packages, perform some preliminary QA checks, etc..\n"
+          },
+          "id": 40,
+          "ipv6_only": false
+        },
+        {
+          "name": "github2fedmsg",
+          "data": {
+            "icon": "github.png",
+            "url": "https://apps.fedoraproject.org/github2fedmsg",
+            "source_url": "https://github.com/fedora-infra/github2fedmsg",
+            "bugs_url": "https://github.com/fedora-infra/github2fedmsg/issues",
+            "docs_url": "https://github.com/fedora-infra/github2fedmsg/blob/develop/README.rst#github2fedmsg",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/github2fedmsg.rst"
+            ],
+            "status_mappings": [
+              "fedmsg"
+            ],
+            "description": "github2fedmsg is a web service that bridges upstream development activity from <a href=\"https://github.com\">GitHub</a> into the <a href=\"http://fedmsg.com\">Fedora Infrastructure message bus</a>.  Visit the self-service dashboard to toggle the status of your repositories.\n"
+          },
+          "id": 41,
+          "ipv6_only": false
+        },
+        {
+          "name": "Pagure",
+          "data": {
+            "icon": "pagure.png",
+            "url": "https://pagure.io/",
+            "status_mappings": [
+              "pagure"
+            ],
+            "description": "Pagure is a git-centered forge, python based using pygit2. With pagure you can host your project with its documentation, let your users report issues or request enhancements using the ticketing system and build your community of contributors by allowing them to fork your projects and contribute to it via the now-popular pull-request mechanism.\n"
+          },
+          "id": 42,
+          "ipv6_only": false
+        }
+      ],
+      "id": 39,
+      "ipv6_only": false
+    },
+    {
+      "name": "Infrastructure",
+      "data": {
+        "description": "Tools for sysadmins -- the people who run the servers that run Fedora (and otherwise).\n"
+      },
+      "children": [
+        {
+          "name": "GeoIP",
+          "data": {
+            "url": "https://geoip.fedoraproject.org",
+            "source_url": "https://github.com/fedora-infra/geoip-city-wsgi",
+            "bugs_url": "https://github.com/fedora-infra/geoip-city-wsgi/issues",
+            "docs_url": "https://github.com/fedora-infra/geoip-city-wsgi/blob/master/geoip-city.wsgi",
+            "description": "A simple web service running <a href=\"https://github.com/fedora-infra/geoip-city-wsgi\">geoip-city-wsgi</a> that will return geoip information to you.\n"
+          },
+          "id": 44,
+          "ipv6_only": false
+        },
+        {
+          "name": "Easyfix",
+          "data": {
+            "url": "https://fedoraproject.org/easyfix",
+            "source_url": "https://github.com/fedora-infra/fedora-gather-easyfix",
+            "bugs_url": "https://github.com/fedora-infra/fedora-gather-easyfix/issues",
+            "docs_url": "https://github.com/fedora-infra/fedora-gather-easyfix/blob/master/README",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/gather-easyfix.rst"
+            ],
+            "description": "A list of easy-to-fix problems for the different projects in Fedora.  Interested in getting into helping out with sysadmin work or web application development?  This should be useful to you.\n"
+          },
+          "id": 45,
+          "ipv6_only": false
+        },
+        {
+          "name": "DataGrepper",
+          "data": {
+            "icon": "fedmsg.png",
+            "url": "https://apps.fedoraproject.org/datagrepper",
+            "package_url": "https://apps.fedoraproject.org/datagrepper/raw?package={package}",
+            "user_url": "https://apps.fedoraproject.org/datagrepper/raw?user={user}",
+            "source_url": "https://github.com/fedora-infra/datagrepper",
+            "bugs_url": "https://github.com/fedora-infra/datagrepper/issues",
+            "docs_url": "https://github.com/fedora-infra/datagrepper/blob/develop/README.rst",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/datanommer.rst"
+            ],
+            "status_mappings": [
+              "fedmsg"
+            ],
+            "description": "DataGrepper is an HTTP API for querying the datanommer database.  You can use it to dig into the history of the <a href=\"http://fedmsg.com\">fedmsg</a> message bus.  You can grab events by username, by package, by message source, by topic... you name it.\n"
+          },
+          "id": 46,
+          "ipv6_only": false
+        },
+        {
+          "name": "Status",
+          "data": {
+            "icon": "status-good.png",
+            "url": "http://status.fedoraproject.org",
+            "source_url": "https://pagure.io/fedora-status",
+            "bugs_url": "https://pagure.io/fedora-status/issues",
+            "docs_url": "https://pagure.io/fedora-status/blob/master/f/README",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/status-fedora.rst"
+            ],
+            "description": "Sometimes the Fedora Infrastructure team messes up (or lightning strikes our datacenter(s)).  Sorry about that. You can use this website to check the status.  Is it \"down for everyone, or just me?\"<br/>Notice the favicon in your browser tab.  It changes based on the status, so if you keep this open you can check back to it at a glance.\n"
+          },
+          "id": 47,
+          "ipv6_only": false
+        },
+        {
+          "name": "MirrorManager",
+          "data": {
+            "icon": "downloads.png",
+            "url": "https://mirrors.fedoraproject.org",
+            "source_url": "https://github.com/fedora-infra/mirrormanager2",
+            "bugs_url": "https://github.com/fedora-infra/mirrormanager2/issues",
+            "docs_url": "https://mirrormanager.readthedocs.org/en/latest/",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/mirrormanager.rst",
+              "https://infrastructure.fedoraproject.org/infra/docs/mastermirror.rst",
+              "https://infrastructure.fedoraproject.org/infra/docs/mirrorhiding.rst",
+              "https://infrastructure.fedoraproject.org/infra/docs/mirrormanager-S3-EC2-netblocks.rst"
+            ],
+            "status_mappings": [
+              "mirrormanager",
+              "mirrorlist"
+            ],
+            "description": "Fedora is distributed to millions of systems globally. This would not be possible without the donations of time, disk space, and bandwidth by hundreds of volunteer system administrators and their companies or institutions.  Your fast download experience is made possible by these donations.  The list on the <strong>MirrorManager</strong> site is dynamically generated every hour, listing only up-to-date mirrors.\n"
+          },
+          "id": 48,
+          "ipv6_only": false
+        },
+        {
+          "name": "Nagios",
+          "data": {
+            "icon": "nagios-logo.png",
+            "url": "https://admin.fedoraproject.org/nagios",
+            "source_url": "https://github.com/NagiosEnterprises/nagioscore",
+            "bugs_url": "https://pagure.io/fedora-infrastructure/issues",
+            "docs_url": "https://www.nagios.org/documentation/",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/nagios.rst"
+            ],
+            "description": "\"Is telia down?\"  The answer can most definitively be found here (and in detail).  The Fedora Infrastructure team uses Nagios to monitor the servers that serve Fedora.  Accessing most details requires membership in the <em>sysadmin</em> group.\n"
+          },
+          "id": 49,
+          "ipv6_only": false
+        },
+        {
+          "name": "Collectd",
+          "data": {
+            "icon": "collectd.png",
+            "url": "https://admin.fedoraproject.org/collectd/",
+            "source_url": "https://github.com/collectd/collectd",
+            "bugs_url": "https://github.com/collectd/collectd/issues",
+            "docs_url": "https://collectd.org/documentation.shtml",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/collectd.rst"
+            ],
+            "description": "Tracks and displays statistics on the Fedora Infrastructure machines over time.  Useful for debugging ineffeciencies and problems.\n"
+          },
+          "id": 50,
+          "ipv6_only": false
+        },
+        {
+          "name": "HAProxy",
+          "data": {
+            "url": "https://admin.fedoraproject.org/haproxy/proxy1",
+            "source_url": "https://git.haproxy.org/",
+            "bugs_url": "https://www.haproxy.org/knownbugs-1.3.html",
+            "docs_url": "https://www.haproxy.org/#docs",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/haproxy.rst"
+            ],
+            "description": "Shows the health of our proxies.  How many bytes? Concurrent sessions?  Health checks?\n"
+          },
+          "id": 51,
+          "ipv6_only": false
+        }
+      ],
+      "id": 43,
+      "ipv6_only": false
+    },
+    {
+      "name": "In Development",
+      "data": {
+        "description": "These are the apps that we're working on, but that aren't quite ready for prime-time yet.  Try and use them, and report bugs when they're broken -- it's a big help!. Check back here from time to time, as this section will change.\n"
+      },
+      "children": [
+        {
+          "name": "Product Definition Center",
+          "data": {
+            "url": "https://pdc.fedoraproject.org/",
+            "source_url": "https://github.com/product-definition-center/product-definition-center",
+            "bugs_url": "https://github.com/product-definition-center/product-definition-center/issues",
+            "docs_url": "https://github.com/product-definition-center/product-definition-center/issues/303",
+            "sops": [
+              "https://infrastructure.fedoraproject.org/infra/docs/pdc.rst"
+            ],
+            "description": "The Product Definition Center (PDC) is a new app we're working on which will track 1) all of the artifacts that release engineering *should* be producing and 2) all of the artifacts taht release engineering *did* produce.  The web interface isn't much to write home about, but the API is where it's at.\n"
+          },
+          "id": 53,
+          "ipv6_only": false
+        },
+        {
+          "name": "Jenkins",
+          "data": {
+            "url": "https://jenkins.fedorainfracloud.org",
+            "description": "Our own continuous integration (CI) service!  It works now and you can use it.. we just don't yet give it the same kind of guarantees that we give our other apps.  Look forwards to us promoting it soon..\n"
+          },
+          "id": 54,
+          "ipv6_only": false
+        },
+        {
+          "name": "faitout",
+          "data": {
+            "url": "http://faitout.fedorainfracloud.org/",
+            "description": "Provides access to temporary postgresql databases. This database can be used for unit-test thus reducing the differences between testing and production environment.\n"
+          },
+          "id": 55,
+          "ipv6_only": false
+        },
+        {
+          "name": "Taiga",
+          "data": {
+            "icon": "taiga.png",
+            "url": "https://taiga.fedorainfracloud.org/",
+            "description": "Taiga is a very pretty project management platform that we've been messing around with.  Feel free to use it.  We backup the database, but we don't necessarily support it yet with the same kind of focus that we dedicate to our other services.  If you run into problems with it, let us know!\n"
+          },
+          "id": 56,
+          "ipv6_only": false
+        },
+        {
+          "name": "Ipsilon",
+          "data": {
+            "icon": null,
+            "url": "https://infrastructure.fedoraproject.org/infra/docs/ipsilon.rst",
+            "Description": "Ipsilon is our central authentication agent that is used to authenticate users agains FAS. It is seperate from FAS. The only service that is not using this currently is the wiki. It is a web service that is presented via httpd and is load balanced by our standard haproxy setup."
+          },
+          "id": 57,
+          "ipv6_only": false
+        }
+      ],
+      "id": 52,
+      "ipv6_only": false
     }
-  ]
+  ],
+  "id": 0,
+  "ipv6_only": false
 }

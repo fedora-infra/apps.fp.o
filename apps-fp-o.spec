@@ -1,7 +1,7 @@
 %global prefix /srv/web
 
 Name:           apps-fp-o
-Version:        3.2
+Version:        3.3
 Release:        1%{?dist}
 Summary:        A landing page for apps.fedoraproject.org
 
@@ -57,6 +57,10 @@ cp -r {index.html,apps-yaml.html,bootstrap,bootstrap-3.1.1-fedora,css,img,js} %{
 %attr(755, httpd, httpd) %dir %{prefix}/%{name}/
 
 %changelog
+* Mon Nov 30 2020 Pierre-Yves Chibon <pingou@pingoured.fr> - 3.3-1
+- Update to 3.3
+- Fix the link to dist-git/src.fp.o
+
 * Fri Oct 30 2020 Pierre-Yves Chibon <pingou@pingoured.fr> - 3.2-1
 - Update to 3.2
 - Make the shebang of the scripts be python3

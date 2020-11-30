@@ -3,7 +3,7 @@
 # Enable negative glob
 shopt -s extglob
 
-VERSION=3.2
+VERSION=3.3
 
 echo "Updating js/data.js from data/apps.yaml"
 python3 bin/yaml2json.py data/apps.yaml > js/data.js
