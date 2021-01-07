@@ -346,7 +346,7 @@ children:
                 The Fedora Calendar (or <strong>fedocal</strong>), you might
                 have already guessed, is a public calendar service.  You can
                 create your own calendar, or subscribe to others.  Want to
-                be kept abrest of releases, freezes, and events?  This is
+                be kept abreast of releases, freezes, and events?  This is
                 the tool for you.
     -   name:   Meetbot
         data:
@@ -646,7 +646,7 @@ children:
             description: >
                 Tracks and displays statistics on the Fedora
                 Infrastructure machines over time.  Useful for debugging
-                ineffeciencies and problems.
+                inefficiencies and problems.
     -   name:   HAProxy
         data:
             url:    https://admin.fedoraproject.org/haproxy/proxy1
@@ -679,7 +679,7 @@ children:
                 The Product Definition Center (PDC) is a new app we're working
                 on which will track 1) all of the artifacts that release
                 engineering *should* be producing and 2) all of the artifacts
-                taht release engineering *did* produce.  The web interface isn't
+                that release engineering *did* produce.  The web interface isn't
                 much to write home about, but the API is where it's at.
     -   name:   Jenkins
         data:
