@@ -79,3 +79,15 @@ body {
 #footer {
     padding: 10px;
 }
+#dis{
+
+ font-size: large;
+ margin-left: 850px;
+ font-style: oblique;
+ font-weight: bold;
+
+}
+a:hover {
+  background: #f0f1f1;
+  color: #AAAAAA;
+}
