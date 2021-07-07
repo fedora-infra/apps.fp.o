@@ -857,7 +857,7 @@ var json = {
           "name": "Taiga",
           "data": {
             "icon": "taiga.png",
-            "url": "https://taiga.fedorainfracloud.org/",
+            "url": "https://teams.fedoraproject.org/discover",
             "description": "Taiga is a very pretty project management platform that we've been messing around with.  Feel free to use it.  We backup the database, but we don't necessarily support it yet with the same kind of focus that we dedicate to our other services.  If you run into problems with it, let us know!\n"
           },
           "id": 56,
