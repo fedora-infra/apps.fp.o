@@ -1,6 +1,6 @@
 %YAML 1.2
 # This file is managed in two places, please keep them synchronised:
-# - https://infrastructure.fedoraproject.org/cgit/ansible.git/tree/roles/apps-fp-o/files/apps.yaml
+# - https://pagure.io/fedora-infra/ansible/blob/main/f/roles/apps-fp-o/files/apps.yaml
 # - https://github.com/fedora-infra/apps.fp.o/blob/develop/data/apps.yaml
 ---
 name:   Fedora Apps
@@ -44,16 +44,16 @@ children:
                 files to share them with the community.
     -   name:   FAS
         data:
-            url:    https://admin.fedoraproject.org/accounts
-            user_url: https://admin.fedoraproject.org/accounts/user/view/{user}
-            source_url: https://github.com/fedora-infra/fas/
-            bugs_url:   https://github.com/fedora-infra/fas/issues/
-            docs_url:   https://github.com/fedora-infra/fas/blob/develop/README.rst
+            url:    https://accounts.fedoraproject.org/
+            user_url: https://accounts.fedoraproject.org/user/{user}
+            source_url: https://github.com/fedora-infra/noggin/
+            bugs_url:   https://github.com/fedora-infra/noggin/issues/
+            docs_url:   https://noggin-aaa.readthedocs.io/en/latest/
             sops:
-                - https://infrastructure.fedoraproject.org/infra/docs/fas-notes.rst
-                - https://infrastructure.fedoraproject.org/infra/docs/fas-openid.rst
-                - https://infrastructure.fedoraproject.org/infra/docs/accountdeletion.rst
-                - https://infrastructure.fedoraproject.org/infra/docs/nonhumanaccounts.rst
+                - https://fedora-infra-docs.readthedocs.io/en/latest/sysadmin-guide/sops/fas-notes.html
+                - https://fedora-infra-docs.readthedocs.io/en/latest/sysadmin-guide/sops/fas-openid.html
+                - https://fedora-infra-docs.readthedocs.io/en/latest/sysadmin-guide/sops/accountdeletion.html
+                - https://fedora-infra-docs.readthedocs.io/en/latest/sysadmin-guide/sops/nonhumanaccounts.html
             status_mappings: ['fas']
             description: >
                 The Fedora Account System.  Update your profile
@@ -293,7 +293,7 @@ children:
                 hop on board!
     -   name:   Elections
         data:
-            url:    https://admin.fedoraproject.org/voting
+            url:    https://elections.fedoraproject.org/
             source_url: https://github.com/fedora-infra/elections
             bugs_url:   https://github.com/fedora-infra/elections/issues
             docs_url:   https://github.com/fedora-infra/elections/blob/develop/README.md
@@ -434,9 +434,7 @@ children:
                 user_url: https://admin.fedoraproject.org/updates/user/{user}
                 source_url: https://github.com/fedora-infra/bodhi
                 bugs_url:   https://github.com/fedora-infra/bodhi/issues
-                # No built docs yet:
-                # https://github.com/fedora-infra/bodhi/issues/805
-                #docs_url:   put the url here
+                docs_url:   https://bodhi.fedoraproject.org/docs
                 sops:
                     - https://infrastructure.fedoraproject.org/infra/docs/bodhi.rst
                 status_mappings: ['bodhi']
@@ -464,8 +462,8 @@ children:
             data:
                 url: https://apps.fedoraproject.org/mdapi
                 description: >
-                    mdapi is a small API exposing the metadata contained in
-                    different RPM repositories.
+                     mdapi is a small API exposing the metadata contained in
+                     different RPM repositories.
 
 -   name:   Upstream
     data:
@@ -583,10 +581,10 @@ children:
     -   name:   Status
         data:
             icon:   status-good.png
-            url:    https://status.fedoraproject.org
-            source_url: https://pagure.io/fedora-status
-            bugs_url:   https://pagure.io/fedora-status/issues
-            docs_url:   https://pagure.io/fedora-status/blob/master/f/README
+            url:    http://www.fedorastatus.org
+            source_url: https://github.com/fedora-infra/statusfpo/
+            bugs_url:   https://github.com/fedora-infra/statusfpo/issues
+            docs_url:   https://github.com/fedora-infra/statusfpo/README
             sops:
                 - https://infrastructure.fedoraproject.org/infra/docs/status-fedora.rst
             description: >
@@ -681,30 +679,12 @@ children:
                 engineering *should* be producing and 2) all of the artifacts
                 taht release engineering *did* produce.  The web interface isn't
                 much to write home about, but the API is where it's at.
-    -   name:   Jenkins
-        data:
-            url:    https://jenkins-fedora-infra.apps.ci.centos.org/
-            description: >
-                A Fedora namespace for Fedora related project hosted in
-                the ci.centos.org infrastructure. Have a look and see how
-                projects are doing!
-    -   name:   Taiga
-        data:
-            icon:   taiga.png
-            url:    https://teams.fedoraproject.org/
-            description: >
-                Taiga is a very pretty project management platform that the
-                project decided to provide access to. This instance is not
-                managed by the Fedora Infrastructure, instead the Fedora
-                project is paying for an hosted instance that you can use using
-                your Fedora account!
     -   name:   Ipsilon
         data:
-            icon:  https://seccdn.libravatar.org/avatar/549cb16661a6fc449ef70adcfb67c71e30a0e4ed6410e1a7558991f19acb6c83?s=64&amp;d=retro
-            url:   https://pagure.io/ipsilon
-            Description:
-                Ipsilon is our central authentication agent that is used to
-                authenticate users agains FAS. It is seperate from FAS. The
-                only service that is not using this currently is the wiki.
-                It is a web service that is presented via httpd and is load
-                balanced by our standard haproxy setup.
+            url: https://pagure.io/ipsilon
+            description:
+                 Ipsilon is our central authentication agent that is used to
+                 authenticate users agains FAS. It is seperate from FAS. The
+                 only service that is not using this currently is the wiki.
+                 It is a web service that is presented via httpd and is load
+                 balanced by our standard haproxy setup.
