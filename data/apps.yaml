@@ -42,7 +42,7 @@ children:
                 Being a community member you gain access to fedorapeople which
                 provides you with a space on the web where you can upload
                 files to share them with the community.
-    -   name:   FAS
+    -   name:   Fedora Accounts
         data:
             url:    https://accounts.fedoraproject.org/
             user_url: https://accounts.fedoraproject.org/user/{user}
@@ -56,7 +56,7 @@ children:
                 - https://fedora-infra-docs.readthedocs.io/en/latest/sysadmin-guide/sops/nonhumanaccounts.html
             status_mappings: ['fas']
             description: >
-                The Fedora Account System.  Update your profile
+                Fedora Accounts. Update your profile
                 information and apply for membership in groups.
     -   name:   Notifications
         data:
@@ -168,20 +168,6 @@ children:
             Tools for testers -- the people who tell us its broken so we can
             fix it.
     children:
-    -   name:   Taskotron
-        data:
-            icon:   taskotron.png
-            url:    https://taskotron.fedoraproject.org
-            package_url: https://taskotron.fedoraproject.org/resultsdb/results?item={package}
-            source_url:  https://pagure.io/group/taskotron
-            bugs_url:    https://pagure.io/group/taskotron
-            docs_url:    https://taskotron.fedoraproject.org
-            sops:
-                - https://infrastructure.fedoraproject.org/infra/docs/taskotron.rst
-                - https://infrastructure.fedoraproject.org/infra/docs/resultsdb.rst
-            description: >
-                Taskotron is a framework for automated task execution.
-                It currently runs selected package checks in Fedora.
     -   name:   Problem Tracker
         data:
             url:    https://retrace.fedoraproject.org
@@ -374,10 +360,10 @@ children:
     children:
         -   name:   Packages
             data:
-                url:    https://apps.fedoraproject.org/packages
+                url:    https://packages.fedoraproject.org/
                 package_url: https://apps.fedoraproject.org/packages/{package}
-                source_url: https://github.com/fedora-infra/fedora-packages
-                bugs_url:   https://github.com/fedora-infra/fedora-packages/issues
+                source_url: https://pagure.io/fedora-packages-static
+                bugs_url:   https://pagure.io/fedora-packages-static/issues
                 docs_url:   http://threebean.org/blog/history-of-fedora-packages/
                 sops:
                     - https://infrastructure.fedoraproject.org/infra/docs/fedorapackages.rst
@@ -510,7 +496,7 @@ children:
                 github2fedmsg is a web service that bridges upstream
                 development activity from <a
                 href="https://github.com">GitHub</a> into the <a
-                href="http://fedmsg.com">Fedora Infrastructure message
+                href="https://fedmsg.readthedocs.io/">Fedora Infrastructure message
                 bus</a>.  Visit the self-service dashboard to toggle the
                 status of your repositories.
     -   name:   Pagure
@@ -574,7 +560,7 @@ children:
             description: >
                 DataGrepper is an HTTP API for querying the datanommer
                 database.  You can use it to dig into the history of the
-                <a href="http://fedmsg.com">fedmsg</a> message bus.  You
+                <a href="https://fedmsg.readthedocs.io/">fedmsg</a> message bus.  You
                 can grab events by username, by package, by message
                 source, by topic... you name it.
 
