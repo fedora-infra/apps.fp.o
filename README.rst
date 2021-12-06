@@ -49,4 +49,4 @@ pieces from ``data/apps.yaml``::
 Contact
 -------
 
-Stop into ``#fedora-apps`` on freenode and say "hello".
+Stop into ``#fedora-apps`` on libera and say "hello".
