@@ -16,23 +16,6 @@ children:
             Tools for everybody -- use these things to manage your Fedora
             Account.
     children:
-    -   name:   Ambassadors Map
-        data:
-            url:    https://fedoraproject.org/membership-map/ambassadors.html
-            # TODO -- add source, bugs, and docs urls for this.
-            description: >
-                Ambassadors are the representatives of Fedora. Ambassadors
-                ensure the public understand Fedora's principles and the work
-                that Fedora is doing. Additionally Ambassadors are responsible
-                for helping to grow the contributor base, and to act as a
-                liaison between other FLOSS projects and the Fedora community.
-
-                This thing is a map of where all the <a
-                href="https://fedoraproject.org/wiki/Ambassadors">Fedora
-                Ambassadors</a> live showing just how vibrant the Fedora
-                Community really is.  (It's easy to <a
-                href="https://fedoraproject.org/wiki/Fedora_ambassadors_map">add
-                yourself</a> to the map too, if you can't find yourself on it.)
     -   name:   FedoraPeople
         data:
             url:    https://fedorapeople.org
@@ -415,9 +398,9 @@ children:
         -   name:   Bodhi
             data:
                 icon:   bodhi.png
-                url:    https://admin.fedoraproject.org/updates
-                package_url: https://admin.fedoraproject.org/updates/{package}
-                user_url: https://admin.fedoraproject.org/updates/user/{user}
+                url:    https://bodhi.fedoraproject.org/
+                package_url: https://bodhi.fedoraproject.org/updates/{package}
+                user_url: https://bodhi.fedoraproject.org/user/{user}
                 source_url: https://github.com/fedora-infra/bodhi
                 bugs_url:   https://github.com/fedora-infra/bodhi/issues
                 docs_url:   https://bodhi.fedoraproject.org/docs
@@ -606,7 +589,7 @@ children:
     -   name:   Nagios
         data:
             icon:   nagios-logo.png
-            url:    https://admin.fedoraproject.org/nagios
+            url:    https://nagios.fedoraproject.org/
             source_url: https://github.com/NagiosEnterprises/nagioscore
             bugs_url:   https://pagure.io/fedora-infrastructure/issues
             docs_url:   https://www.nagios.org/documentation/
@@ -633,7 +616,7 @@ children:
                 ineffeciencies and problems.
     -   name:   HAProxy
         data:
-            url:    https://admin.fedoraproject.org/haproxy/proxy1
+            url:    https://admin.fedoraproject.org/haproxy/proxy01
             source_url: https://git.haproxy.org/
             bugs_url:   https://www.haproxy.org/knownbugs-1.3.html
             docs_url:   https://www.haproxy.org/#docs
